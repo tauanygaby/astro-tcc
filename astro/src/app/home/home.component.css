@@ -1,0 +1,59 @@
+.nav-list-home{
+    justify-content: left;
+    width: 100%;
+}
+.container{
+    float: left;
+    width: 488px;
+    height: 488px;
+    
+  /* overflow: hidden; */
+}
+.img{
+    object-fit: cover;
+    width: 300%;
+    height: 100%;
+}
+.texto-home{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.texto-home-cabecalho{
+    position:absolute;
+    margin-top: 100px;
+    margin-left: 300px;
+}
+.container2{
+    display: block;
+    width: 143%;
+    height: 1180px;
+    background-color: #D9D9D9;
+}
+.nav-inferior{
+    justify-content: left;
+}
+.img-rosto{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    margin: 10px;
+}
+.barra-inferior{
+    justify-content: center;
+}
+.btn_cadastro{
+    position: relative;
+    margin-top: 800px;
+    background-color:rgb(174, 60, 240);
+    /*color:black;*/ /*caso queira mudar a cor do input que o user coloca*/
+    border: none; /*remove a borda padrão*/
+    width: 60px;
+    height: 45px; /*grossura dos campos*/
+    outline: none; /*tira borda quando clica no campo*/
+    border-radius: 20px; /*add borda arredondada*/
+    color: aliceblue;
+}
+.icon{
+    background-color: rgb(194, 162, 224);
+    object-fit: cover;
+    margin-left: 700px;   
+}
