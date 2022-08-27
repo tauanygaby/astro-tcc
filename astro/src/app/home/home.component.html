@@ -1,5 +1,5 @@
-<header>
-  <nav class="nav-list-home">
+<header class="">
+  <nav class="nav-list-home" role="navigation">
     <ul class="nav-list">
       <li><a href="#">Sobre o astro</a></li>
       <li><a href="#">Funcionalidades</a></li>
@@ -22,25 +22,44 @@
     </ul>
   </nav>
 </header>
-<div>
-  <div class="container">
-    <img url="" src="/assets/img/borboleta.jpg" class="img" />
+<section>
+  <div>
+    <div class="container">
+      <img url="" src="/assets/img/borboleta.jpg" class="img" />
+    </div>
+    <div class="texto-home-cabecalho">
+      <h2 class="texto-home">
+        A expressão Lorem ipsum em design gráfico e editoração é um texto padrão
+        em latim utilizado na produção gráfica para preencher os espaços de
+        texto em publicações para testar e ajustar aspectos visuais antes de
+        utilizar conteúdo real.
+      </h2>
+    </div>
+    <div class="container2">
+      <div class="row">
+        <div class="col-4">
+          <div class="card">
+            <mat-card>
+              <img
+                mat-card-image
+                src="/assets/img/angular.png"
+                style="margin-left: 10vh; margin-top: 20vh"
+              />
+              <p class="card_texto"><strong>editoração</strong></p>
+            </mat-card>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="barra-inferior">
+      <div class="texto_barra-inferior">
+        <h2 style="margin-left: 8vh">Desenvolvedores</h2>
+        <ul>
+          <img src="/assets/img/rosto1.jpeg" class="img-rosto" />
+          <img src="/assets/img/rosto2.jpeg" class="img-rosto" />
+          <img src="/assets/img/rosto3.jpeg" class="img-rosto" />
+        </ul>
+      </div>
+    </div>
   </div>
-  <div class="texto-home-cabecalho">
-    <h2 class="texto-home">
-      A expressão Lorem ipsum em design gráfico e editoração é um texto padrão
-      em latim utilizado na produção gráfica para preencher os espaços de texto
-      em publicações para testar e ajustar aspectos visuais antes de utilizar
-      conteúdo real.
-    </h2>
-  </div>
-  <div class="container2"></div>
-  <div class="barra-inferior">
-    <h2>Desenvolvedores</h2>
-    <ul>
-      <img src="/assets/img/rosto1.jpeg" class="img-rosto" />
-      <img src="/assets/img/rosto2.jpeg" class="img-rosto" />
-      <img src="/assets/img/rosto3.jpeg" class="img-rosto" />
-    </ul>
-  </div>
-</div>
+</section>

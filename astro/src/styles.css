@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-body {
+.body {
     /*background-image: linear-gradient(to bottom, #EA00A3,#8C00A3, #7E00AA);*/
     background-image: linear-gradient(to bottom, #00B79D,#9F20DA, #E000D4);
     background-color: aliceblue;
@@ -95,7 +95,7 @@ body {
     background-color: rgb(14, 8, 57);
  }
  
- p{
+ .p{
     color: aliceblue;
  }
  
