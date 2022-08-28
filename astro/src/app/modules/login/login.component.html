@@ -1,0 +1,47 @@
+<body class="body">
+  <header>
+    <nav class="nav">
+      <a class="logo" href="/">Astro</a>
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+
+      <ul class="nav-list">
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Ferramentas</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <!-- section -> para o fundo preencher a tela toda, basicamente -->
+    <div class="telas">
+      <div class="login">
+        <div>
+          <img src="/assets/img/logo.png" />
+        </div>
+
+        <form method="POST">
+          <!-- autofocus -> para ficar a barrinha piscando indicando onde tem que preencher -->
+          <input
+            type="text"
+            name="nome"
+            placeholder="Nome de usuário"
+            autofocus
+          />
+          <input type="password" name="senha" placeholder="Sua senha" />
+          <input
+            type="submit"
+            value="Entrar"
+            style="background-color: rgb(14, 8, 57); color: white"
+          />
+
+          <P class="p">Ainda não tem uma conta?</P>
+          <a class="link-conta" href="cadastro.html">Criar conta</a>
+        </form>
+      </div>
+    </div>
+  </section>
+</body>

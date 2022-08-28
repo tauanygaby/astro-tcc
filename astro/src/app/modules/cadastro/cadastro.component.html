@@ -25,16 +25,38 @@
       <form method="POST">
         <!-- autofocus -> para ficar a barrinha piscando indicando onde tem que preencher -->
         <input
+          style="background: white"
           type="text"
           name="nome"
           placeholder="Nome de usuário"
           autofocus
         />
-        <input type="password" name="senha" placeholder="Sua senha" />
-        <input type="submit" value="Entrar" />
+        <input
+          style="background: white"
+          type="email"
+          name="nome"
+          placeholder="Email de cadastro"
+        />
+        <input
+          style="background: white"
+          type="password"
+          name="senha"
+          placeholder="Sua senha"
+        />
 
-        <P class="p">Ainda não tem uma conta?</P>
-        <a class="link-conta" href="cadastro.html">Criar conta</a>
+        <p class="termos">
+          Li e aceito os<a class="link-termos" href="#"
+            >termos de privacidade</a
+          >
+          <input type="checkbox" />
+        </p>
+
+        <input
+          class="btn"
+          type="submit"
+          value="Cadastrar"
+          style="background-color: rgb(14, 8, 57); color: white"
+        />
       </form>
     </div>
   </div>
