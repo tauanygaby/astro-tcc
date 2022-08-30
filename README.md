@@ -1,6 +1,6 @@
 # astro-tcc
 
-para subir rodar o comando
+-npm i @angular/cli
 
 -npm install
 
