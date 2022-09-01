@@ -1,14 +1,25 @@
 # astro-tcc
+-> passos para executar o nosso projeto
 
--npm i @angular/cli
+baixar o projeto zip
 
--npm install
+entrar na pasta ---> ASTRO <---
 
--ng serve
+rodar -> git init <- no terminal
 
-caso de erro no bootstrap rodar o comando
+Rodar -> git remote add origin https://github.com/tauanygaby/astro-tcc.git <-
 
--npm i bootstrap --save
+rodar -> git remote -v <-
+
+rodar -> npm i @angular/cli <-
+
+rodar -> npm i <-
+
+rodar -> ng serve <- 
+
+-> clicar no link que aparece no terminal <-
+
+caso de erro no bootstrap rodar o comando -> npm i bootstrap --save <-
 
 --------
 
