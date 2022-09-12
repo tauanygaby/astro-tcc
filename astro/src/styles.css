@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
 .body {
     /*background-image: linear-gradient(to bottom, #EA00A3,#8C00A3, #7E00AA);*/
     background-image: linear-gradient(to bottom, #00B79D,#9F20DA, #E000D4);
@@ -10,6 +12,8 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
   }
  
  .logo { /*nome do Astro*/
@@ -20,14 +24,12 @@
   }
  
   nav { /* cria o menu*/
-    display: flex;
-    justify-content: space-around;
+    padding: 0 20px;
+    justify-content: space-between;
+    background: rgb(14, 8, 57);
     align-items: center;
-    font-family: system-ui, Helvetica, Arial, sans-serif;
-    background: #230a32;
-    height: 8vh;
   }
-  
+
   .nav-list li { /*espaçamento*/
     letter-spacing: 3px;
     margin-left: 32px;
@@ -49,3 +51,5 @@
  .nav-list a:hover{
    background-color: #6f1470;
  }
+
+  

@@ -1,210 +1,75 @@
-<header>
-  <nav class="nav">
-    <ul class="nav-list">
-      <li><a href="#">Sobre o astro</a></li>
-      <li><a href="#">Funcionalidades</a></li>
-      <li><a href="#">Comunidade</a></li>
-      <li class="icon">
-        <a routerLinkActive="active"><a routerLink="/cadastro">Cadastro</a> </a>
-        <a routerLinkActive="active"
-          ><a routerLink="/login">Login</a>
+<body class="body">
+  <header>
+    <nav id="menu-h">
+      <a class="logo" href="/">Astro</a>
+      <ul class="icone">
+        <button class="menu">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="40"
-            height="40"
+            width="35"
+            height="30"
             fill="currentColor"
-            class="bi bi-person"
+            class="bi bi-justify"
+            style="padding: 0"
             viewBox="0 0 16 16"
           >
             <path
-              d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"
+              fill-rule="evenodd"
+              d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"
             />
           </svg>
-        </a>
-      </li>
-    </ul>
-  </nav>
-</header>
-<section>
+        </button>
+        <li><a href="#">Sobre o astro</a></li>
+        <li><a href="#">Funcionalidades</a></li>
+        <li><a href="#">Comunidade</a></li>
+      </ul>
+      <nav id="menu-icon">
+        <ul class="icon">
+          <button class="user">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="35"
+              height="30"
+              fill="currentColor"
+              class="bi bi-person"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"
+              />
+            </svg>
+          </button>
+          <li>
+            <a routerLinkActive="active"><a routerLink="/cadastro">Cadastro</a></a>
+            <a routerLinkActive="active"><a routerLink="/login">Login</a></a>
+          </li>
+        </ul>
+      </nav>
+    </nav>
+  </header>
   <div>
     <div class="container">
-      <div class="texto-home-cabecalho">
-        <h2 class="texto-home">
-          Bem vindo ao Astro, aqui você pode fazer o seu TCC sem quebrar a
-          cabeça. Venha conhecer todas as ferramentas disponíveis para você, não
-          deixe para amanhã aquilo que você pode começar hoje!
-        </h2>
-      </div>
-      <img url="" src="/assets/img/rocket.jpg" class="img" />
+      <h2 class="texto-home"> <strong>Aproveite a viagem e venha conhecer Astro, o gerenciador de TCC!</strong></h2>
+      <img url="" src="/assets/img/rocket-animado.svg" class="img" />
       <div class="container-inferior">
-        <ul>
-          <li>
-            <div class="card" style="width: 20rem; height: 20rem">
-              <div class="card-body">
-                <h5 class="card-title" style="font-size: 20px">Feira</h5>
-                <img
-                  class="card-img-top"
-                  src="/assets/img/feira.jpg"
-                  alt="card1"
-                />
-                <p class="card-text">
-                  Acesso a uma feira técnológica, com os trabalhos publicados
-                  pelos veteranos.
-                </p>
-                <a href="#" class="card-link">Mais Detalhes</a>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="card" style="width: 20rem; height: 20rem">
-              <div class="card-body">
-                <h5 class="card-title" style="font-size: 20px">
-                  Molde de Diario de Bordo
-                </h5>
-                <img
-                  class="card-img-top"
-                  src="/assets/img/livro.jpg"
-                  alt="card1"
-                />
-                <p class="card-text">
-                  Acesso moldes para a realização do diário de bordo de forma
-                  eficiênte
-                </p>
-                <a href="#" class="card-link">Mais Detalhes</a>
-              </div>
-            </div>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <div class="card" style="width: 20rem; height: 20rem">
-              <div class="card-body">
-                <h5 class="card-title" style="font-size: 20px">
-                  Edição normas da ABNT
-                </h5>
-                <img
-                  class="card-img-top"
-                  src="/assets/img/editor.jpg"
-                  alt="card1"
-                />
-                <p class="card-text">
-                  Acesso a um editor de texto de acordo com as normas da ABNT
-                </p>
-                <a href="#" class="card-link">Mais Detalhes</a>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="card" style="width: 20rem; height: 20rem">
-              <div class="card-body">
-                <h5 class="card-title" style="font-size: 20px">
-                  Gerenciador de tarefas
-                </h5>
-                <img
-                  class="card-img-top"
-                  src="/assets/img/gerenciar.png"
-                  alt="card1"
-                />
-                <p class="card-text">
-                  Acesso a um gerenciador de tarefas, permitindo mais
-                  organização no seu projeto
-                </p>
-                <a href="#" class="card-link">Mais Detalhes</a>
-              </div>
-            </div>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <div class="card" style="width: 20rem; height: 20rem">
-              <div class="card-body">
-                <h5 class="card-title" style="font-size: 20px">
-                  Molde de Plano de Pesquisa
-                </h5>
-                <img
-                  class="card-img-top"
-                  src="/assets/img/pesquisa.jpg"
-                  alt="card1"
-                />
-                <p class="card-text">
-                  Acesso moldes para a realização do plano de pesquisa de forma
-                  eficiênte
-                </p>
-                <a href="#" class="card-link">Mais Detalhes</a>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="card" style="width: 20rem; height: 20rem">
-              <div class="card-body">
-                <h5 class="card-title" style="font-size: 20px">
-                  Criação de Grupos
-                </h5>
-                <img
-                  class="card-img-top"
-                  src="/assets/img/alunos.jpg"
-                  alt="card1"
-                />
-                <p class="card-text">
-                  Permissão para criação de grupos, permitindo uma melhor
-                  cominicação entre os integrantes do grupo
-                </p>
-                <a href="#" class="card-link">Mais Detalhes</a>
-              </div>
-            </div>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <div class="card" style="width: 20rem; height: 20rem">
-              <div class="card-body">
-                <h5 class="card-title" style="font-size: 20px">
-                  Interação com o Professor/Orientador
-                </h5>
-                <img
-                  class="card-img-top"
-                  src="/assets/img/professor.jpg"
-                  alt="card1"
-                />
-                <p class="card-text">
-                  Maior interação com o orientador e organização dos grupos em
-                  que lidera
-                </p>
-                <a href="#" class="card-link">Mais Detalhes</a>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="card" style="width: 20rem; height: 20rem">
-              <div class="card-body">
-                <h5 class="card-title" style="font-size: 20px">
-                  Molde de Relatório de pesquisa
-                </h5>
-                <img
-                  class="card-img-top"
-                  src="/assets/img/relatorio.jpg"
-                  alt="card1"
-                />
-                <p class="card-text">
-                  Acesso moldes para a realização do relatório de pesquisa de
-                  forma eficiênte
-                </p>
-                <a href="#" class="card-link">Mais Detalhes</a>
-              </div>
-            </div>
-          </li>
-        </ul>
+        <app-BlocoComponent></app-BlocoComponent>
       </div>
     </div>
     <div class="barra-inferior">
       <div class="texto_barra-inferior">
-        <h2 style="margin-left: 8vh">Desenvolvedores</h2>
+        <h2>Desenvolvedores</h2>
         <ul>
-          <img src="/assets/img/Line.jpg" class="img-rosto" />
-          <img src="/assets/img/Nathan.jpg" class="img-rosto" />
-          <img src="/assets/img/Tauany.gif" class="img-rosto" />
+          <li>
+            <img src="/assets/img/Line.jpg" class="img-rosto" />
+          </li>
+          <li>
+            <img src="/assets/img/Nathan.jpg" class="img-rosto" />
+          </li>
+          <li>
+            <img src="/assets/img/Tauany.gif" class="img-rosto" />
+          </li>
         </ul>
       </div>
     </div>
   </div>
-</section>
+</body>

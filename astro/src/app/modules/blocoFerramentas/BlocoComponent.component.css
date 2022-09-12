@@ -14,29 +14,6 @@
     background: #230a32;
     height: 8vh;
   }
-  
-  .nav-list li { /*espaçamento*/
-    letter-spacing: 3px;
-    margin-left: 32px;
-  }
- 
-  .nav-list { /*alinhamento*/
-    list-style: none; /*tira a bolinha de link*/
-    display: flex; /*alinha*/
-  }
-
-  .nav-list a{ 
-   color: aliceblue;
- }
-
- .logo{
-   color: aliceblue;
- }
-
- .nav-list a:hover{
-   background-color: #6f1470;
- }
-
  
 * {
     margin: 0;
@@ -59,7 +36,7 @@ body {
     font-size: 16px;
 }
 
-main.cards {
+main.cards ul {
     display: flex;
     padding: 32px;
 }
@@ -134,7 +111,7 @@ main.cards section.card.about {
 }
 
 @media screen and (max-width: 720px) {
-    main.cards {
+    main.cards ul {
         flex-direction: column;
     }
 

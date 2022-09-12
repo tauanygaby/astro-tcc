@@ -1,85 +1,295 @@
-@import '~bootstrap/dist/css/bootstrap.min.css';
-.container{
-    float: left;
-    display: contents;
-    width: 400px;
-    height: 400px;
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Noto Sans", sans-serif;
+  overflow: hidden; /* oculta a barra de rolagem, pois não tem necessidade na pág de login*/
+  background: #f6f9ff;
 }
-.img{
+.img {
+  object-fit: cover;
+  width: 50%;
+}
+.texto-home{
+    color: rgb(63, 39, 100);
+    margin-top: 5rem;
+    margin-left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.nav-inferior {
+  justify-content: left;
+}
+.img-rosto {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  margin: 10px;
+}
+.barra-inferior {
+  position: absolute;
+  height: 20vh;
+  width: 100%;
+  background: rgb(14, 8, 57);
+}
+.texto_barra-inferior {
+  width: 100%;
+  margin-left: 0;
+  display: contents;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+.texto_barra-inferior h2 {
+  margin-top: 15px;
+  justify-content: center;
+}
+.texto_barra-inferior ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+li {
+  list-style: none; /*tira a bolinha de link*/
+  display: flexbox; /*alinha*/
+  justify-items: end;
+}
+a {
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  margin-left: 10px;
+  text-decoration: none;
+}
+ul {
+  display: inline-flex;
+}
+.container {
+  float: left;
+  display: contents;
+  width: 400%;
+  height: 400%;
+  background: #f6f9ff;
+}
+.container-inferior {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100%;
+  background: #f6f9ff;
+}
+#menu-h {
+  width: 100%;
+}
+#menu-h ul {
+  /*alinhamento*/
+  list-style: none; /*tira a bolinha de link*/
+  padding: 0;
+  background: rgb(14, 8, 57);
+  overflow: hidden;
+  align-items: unset;
+  margin: 0;
+}
+#menu-h ul li {
+  /*alinhamento*/
+  list-style: none; /*tira a bolinha de link*/
+  display: inline-block; /*alinha*/
+  padding: 0 20px;
+}
+#menu-h ul li a {
+  /*alinhamento*/
+  padding: 10px;
+  color: #d9d9d9;
+  text-decoration: none;
+  transition: background 0.4s;
+  display: block;
+}
+#menu-h ul li a:hover {
+  /*alinhamento*/
+  background-color: #6f1470;
+}
+.icon {
+  display: flex;
+  float: right;
+  margin: 0;
+  height: 0;
+}
+.menu {
+  background-color: transparent;
+  color: white;
+  border: 0;
+  position: absolute;
+  right: 10px;
+  top: 14px;
+  display: none;
+  height: 100%;
+}
+.user {
+  background-color: transparent;
+  color: white;
+  border: 0;
+  position: absolute;
+  right: 10px;
+  top: 14px;
+  display: none;
+}
+#menu-icon ul:hover {
+  margin: 0;
+  justify-content: end;
+  display: block;
+  height: 140px;
+}
+#menu-icon ul li {
+  list-style: none; /*tira a bolinha de link*/
+  flex-direction: column;
+  display: contents; /*alinha*/
+  padding: 0 40px;
+}
+#menu-icon ul li a {
+  /*alinhamento*/
+  padding: 10px;
+  color: #d9d9d9;
+  text-decoration: none;
+  transition: background 0.4s;
+}
+#menu-icon {
+  position: relative;
+  flex-direction: column;
+  display: contents;
+}
+#menu-h {
+  margin: 0;
+  display: block;
+  position: relative;
+}
+.menu-link {
+  margin: 10px;
+}
+.user {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+
+  #menu-h ul:hover {
+    height: 160px;
+  }
+  .logo {
+    margin-top: 5rem;
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+  }
+  #menu-h ul {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: unset;
+    margin: 0;
+    height: 0;
+  }
+  #menu-h ul li {
+    justify-content: center;
+    list-style: none;
+  }
+  #menu-h ul li a {
+    display: inline-block;
+    margin: 0;
+  }
+  #menu-h {
+    padding: 0;
+    align-items: unset;
+    justify-content: center;
+    align-items: center;
+  }
+  .icon {
+    align-items: center;
+    justify-content: center;
+  }
+  .menu {
+    display: flex;
+    margin: 0 5vh;
+  }
+  .user {
+    display: flex;
+  }
+  .img {
     object-fit: cover;
     width: 100%;
     height: 80vh;
-}
-.texto-home{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  .container-inferior {
+    width: 100%;
+    display: inline-block;
+    height: 100%;
+  }
+  .container {
+    float: left;
+    display: contents;
+    width: 80px;
+    height: 400px;
+  }
+  .texto-home {
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
     position: relative;
     padding-right: 10vh;
     margin: 20px 20px;
-}
-.texto-home-cabecalho{
-    position:absolute;
+  }
+  .texto-home-cabecalho {
+    position: absolute;
     margin-top: 50vh;
-    margin-left: 300px;
+    margin-left: 100px;
     color: white;
     background: rgba(37, 37, 37, 0.5);
     backdrop-filter: blur(25px);
     border-radius: 15px;
-}
-.container-inferior{
-    width: 100%;
-    display: flex;
-    height: 110vh;
-    background-color: #D9D9D9;
-}
-.nav-inferior{
+  }
+  .nav-inferior {
     justify-content: left;
-}
-.img-rosto{
+  }
+  .img-rosto {
     width: 100px;
     height: 100px;
     border-radius: 50px;
     margin: 10px;
-}
-.barra-inferior{
+  }
+  .barra-inferior {
+    position: absolute;
     height: 20vh;
-    background-color: rgb(14, 8, 57);
-}
-.icon{
-    background-color: rgb(194, 162, 224);
-    object-fit: cover;
-    margin-left: 100vh;   
-}
-.card-body {
+    width: 100%;
+    background-color: #230a32;
+  }
+
+  .texto_barra-inferior {
+    width: 100%;
+    margin-left: 0;
+    display: contents;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     color: white;
-    background-color: rgb(14, 8, 57);
-    border-radius: 5px;
-}  
-.card-text{
-    margin-top: 15px;
-    font-size: 18px;
-    text-transform: capitalize;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: white;
-}
-.card-link{
-    color: white;
-}
-.texto_barra-inferior{
-    color: white;
-    margin-left: 80vh;
-}
-.card{
-    margin-left: 10vh;
-    margin-top: 10vh;
-    border-radius: 18px;
-}
-li{
+  }
+  .texto_barra-inferior h2 {
+    justify-content: center;
+  }
+  .texto_barra-inferior ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  li {
     list-style: none; /*tira a bolinha de link*/
-    display: flexbox; /*alinha*/
-}
-a{
+    display: flex; /*alinha*/
+    padding: 10px;
+  }
+  a {
     font-size: 20px;
     color: rgb(255, 255, 255);
-    margin-left: 10px;
-    text-decoration: none
- }
+    text-decoration: none;
+  }
+}
