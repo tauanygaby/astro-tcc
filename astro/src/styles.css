@@ -37,80 +37,15 @@
     list-style: none; /*tira a bolinha de link*/
     display: flex; /*alinha*/
   }
- .telas{
-    display: flex; /*alinha os itens da tela*/
-    height: 100vh; /* vh -> para pegar toda a area disponivel da tela*/
-    justify-content: center;
-    align-items: center;
+
+  .nav-list a{ 
+   color: aliceblue;
  }
- 
- .login{
-    background: rgba(228, 219, 224, 0.5);
-    backdrop-filter: blur(25px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 25px;
-    width: 420px;
-    height: 350px;
-    padding: 35px; /* descola os inputs da borda*/
+
+ .logo{
+   color: aliceblue;
  }
- 
- .login form{
-    display: flex;
-    width: 100%;
-    flex-direction: column; /*com isso o input fica um abaixo do outro*/
- }
- 
- .login input{
-    margin-top: 10px; /*espaçamento dos inputs*/
-    background-color:rgb(226, 225, 225);
-    /*color:black;*/ /*caso queira mudar a cor do input que o user coloca*/
-    border: none; /*remove a borda padrão*/
-    height: 45px; /*grossura dos campos*/
-    outline: none; /*tira borda quando clica no campo*/
-    border-radius: 10px; /*add borda arredondada*/
- }
- .login img{
-    width: 65px;
-    height: auto;
- }
- 
- /*input::placeholder{
-    color:aliceblue;
-    font-size: 14px;
- }*/ /*caso queira mudar a cor do pacleholder*/
- 
- form [type="submit"]{ /*btn*/
-    padding: 15px 30px;
-    font-size: 24px;
-    background-color:rgb(24, 40, 121);
-    border: 1px solid #250332;
-    border-radius: 50px;
-    color:rgb(0, 0, 0);
-    cursor: pointer; /*muda o cursor quando chega no btn de entrar*/
- }
- 
- form [type="submit"]:hover{
-    background-color: rgb(14, 8, 57);
- }
- 
- .p{
-    color: aliceblue;
- }
- 
- a{
-    font-size: 20px;
-    color: rgb(255, 255, 255);
-    margin-left: 10px;
- }
- .link-conta{
-    color: rgb(24, 85, 216);
- }
- .termos{
-    font-size: 15px;
- }
- .link-termos{
-    font-size: 15px;
-    color: blue;
+
+ .nav-list a:hover{
+   background-color: #6f1470;
  }
