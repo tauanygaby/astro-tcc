@@ -1,4 +1,5 @@
 <body class="body">
+  
   <header>
     <nav class="nav">
       <a class="logo" href="/">Astro</a>
@@ -15,49 +16,60 @@
     </nav>
   </header>
 
-  <!-- section -> para o fundo preencher a tela toda, basicamente -->
-  <div class="telas">
-    <div class="login">
-      <div>
-        <img src="/assets/img/logo.png" />
+  <div class="main-login">
+    <div class="left-login">
+      <h1>Cadastre-se <br>e faça parte do nosso time!</h1>
+      <img src="../../../assets/img/imgfuguete.svg" class="left-login-image" alt="Image-foguete">
+    </div>
+
+
+    <div class="right-login">
+
+      <div class="card-login">
+
+        <h1>Cadastro</h1>
+
+        <div class="social-media">
+          <li class="item-social-media"><a href="#"><i class="fa-brands fa-google"></i></a></li>
+
+          <li class="item-social-media"><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+
+          <li class="item-social-media"><a href="#"><i class="fa-brands fa-github"></i></a></li>
+        </div>
+
+        <p class="descricao"> ou crie uma conta</p>
+
+        <div class="textfield">
+          <label>
+            <i class="fa-solid fa-user"></i>
+            <input type="text" name="usuario" placeholder="Usuário" required>
+          </label>
+        </div>
+
+        <div class="textfield">
+          <label>
+            <i class="fa-solid fa-user"></i>
+            <input type="email" name="email" placeholder="Email" required>
+          </label>
+        </div>
+
+        <div class="textfield">
+          <label>
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" name="senha" placeholder="Senha" required>
+          </label>
+        </div>
+
+        <div>
+          <input type="checkbox" name="termos-politica" value="li-e-aceito"> Li e aceito os <a class="link" href="#">termos de politica de privacidade</a>
+        </div>
+
+        <button class="btn-login">Entrar</button>
+        <p class="registro">Já possui uma conta? <a class=""href="#">Entre agora</a></p>
+
       </div>
-
-      <form method="POST">
-        <!-- autofocus -> para ficar a barrinha piscando indicando onde tem que preencher -->
-        <input
-          style="background: white"
-          type="text"
-          name="nome"
-          placeholder="Nome de usuário"
-          autofocus
-        />
-        <input
-          style="background: white"
-          type="email"
-          name="nome"
-          placeholder="Email de cadastro"
-        />
-        <input
-          style="background: white"
-          type="password"
-          name="senha"
-          placeholder="Sua senha"
-        />
-
-        <p class="termos">
-          Li e aceito os<a class="link-termos" href="#"
-            >termos de privacidade</a
-          >
-          <input type="checkbox" />
-        </p>
-
-        <input
-          class="btn"
-          type="submit"
-          value="Cadastrar"
-          style="background-color: rgb(14, 8, 57); color: white"
-        />
-      </form>
     </div>
   </div>
+
+
 </body>
