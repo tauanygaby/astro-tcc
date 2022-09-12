@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { CadastroComponent } from './modules/cadastro/cadastro.component';
 import { HomeComponent } from './modules/home/pages/home.component';
 import { LoginComponent } from './modules/login/login.component';
+import { BlocoComponent } from './modules/blocoFerramentas/BlocoComponent.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { LoginComponent } from './modules/login/login.component';
     AppComponent,
     HomeComponent,
     LoginComponent,
-    CadastroComponent
+    BlocoComponent,
+    CadastroComponent,
   ],
   imports: [
     BrowserModule,
