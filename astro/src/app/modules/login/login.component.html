@@ -1,4 +1,5 @@
 <body class="body">
+  
   <header>
     <nav class="nav">
       <a class="logo" href="/">Astro</a>
@@ -15,33 +16,49 @@
     </nav>
   </header>
 
-  <section>
-    <!-- section -> para o fundo preencher a tela toda, basicamente -->
-    <div class="telas">
-      <div class="login">
-        <div>
-          <img src="/assets/img/logo.png" />
+  <div class="main-login">
+    <div class="left-login">
+      <h1>Bem-vindo(a)! <br>Sentimos sua falta.</h1>
+      <img src="../../../assets/img/foguete.svg" class="left-login-image" alt="Image-foguete">
+    </div>
+
+
+    <div class="right-login">
+
+      <div class="card-login">
+
+        <h1>Login</h1>
+
+        <div class="social-media">
+          <li class="item-social-media"><a href="#"><i class="fa-brands fa-google"></i></a></li>
+
+          <li class="item-social-media"><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+
+          <li class="item-social-media"><a href="#"><i class="fa-brands fa-github"></i></a></li>
         </div>
 
-        <form method="POST">
-          <!-- autofocus -> para ficar a barrinha piscando indicando onde tem que preencher -->
-          <input
-            type="text"
-            name="nome"
-            placeholder="Nome de usuário"
-            autofocus
-          />
-          <input type="password" name="senha" placeholder="Sua senha" />
-          <input
-            type="submit"
-            value="Entrar"
-            style="background-color: rgb(14, 8, 57); color: white"
-          />
+        <p class="descricao"> ou use sua conta de registro</p>
 
-          <P class="p">Ainda não tem uma conta?</P>
-          <a class="link-conta" href="cadastro.html">Criar conta</a>
-        </form>
+        <div class="textfield">
+          <label>
+            <i class="fa-solid fa-user"></i>
+            <input type="text" name="usuario" placeholder="Usuário">
+          </label>
+        </div>
+
+        <div class="textfield">
+          <label>
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" name="senha" placeholder="Senha">
+          </label>
+        </div>
+
+        <button class="btn-login">Entrar</button>
+        <p class="registro">Não possui uma conta? <a href="">Registre-se agora</a></p>
+
       </div>
     </div>
-  </section>
+  </div>
+
+
 </body>
