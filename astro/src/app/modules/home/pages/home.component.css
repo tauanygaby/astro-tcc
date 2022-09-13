@@ -7,18 +7,40 @@ body {
   overflow: hidden; /* oculta a barra de rolagem, pois não tem necessidade na pág de login*/
   background: #f6f9ff;
 }
-.img {
-  object-fit: cover;
-  width: 50%;
+
+.img { 
+  width: 40vw;
 }
+
 .texto-home{
-    color: rgb(63, 39, 100);
-    margin-top: 5rem;
-    margin-left: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  font-size: 2vw;
+  text-align:start;
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  color: #ffffff;
+  display:inline-flexbox;
+  
+}
+
+.left-home{
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main-home{
+  width: 100vw;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to bottom, #3f5c84,#6f1470, #ede2ede2);
 }
 
 .nav-inferior {
@@ -174,7 +196,7 @@ ul {
   display: flex;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 720px) {
 
   #menu-h ul:hover {
     height: 160px;
