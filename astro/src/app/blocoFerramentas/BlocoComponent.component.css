@@ -24,7 +24,7 @@
 
 body {
     background: #F6F9FF;
-    height: 100vh;
+    height: 100%;
     width: 100%;
 
     display: flex;
@@ -110,7 +110,7 @@ main.cards section.card.about {
     box-shadow: 20px 20px 50px -30px #FFC1D5;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 600px) {
     main.cards ul {
         flex-direction: column;
     }

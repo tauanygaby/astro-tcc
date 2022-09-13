@@ -4,7 +4,7 @@
 .body {
     /*background-image: linear-gradient(to bottom, #EA00A3,#8C00A3, #7E00AA);*/
     background-image: linear-gradient(to bottom, #00B79D,#9F20DA, #E000D4);
-    background-color: aliceblue;
+    background: #f6f9ff;
     overflow: hidden; /* oculta a barra de rolagem, pois não tem necessidade na pág de login*/
  }
  

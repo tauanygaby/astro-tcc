@@ -3,10 +3,11 @@ import { MatCardModule } from '@angular/material/card';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BlocoComponent } from './blocoFerramentas/BlocoComponent.component';
 import { CadastroComponent } from './modules/cadastro/cadastro.component';
+import { FerramentasComponent } from './modules/ferramentas/ferramentas.component';
 import { HomeComponent } from './modules/home/pages/home.component';
 import { LoginComponent } from './modules/login/login.component';
-import { BlocoComponent } from './modules/blocoFerramentas/BlocoComponent.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { BlocoComponent } from './modules/blocoFerramentas/BlocoComponent.compon
     LoginComponent,
     BlocoComponent,
     CadastroComponent,
+    FerramentasComponent,
   ],
   imports: [
     BrowserModule,
