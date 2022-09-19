@@ -212,7 +212,7 @@ a {
   letter-spacing: 4px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 760px) {
 
   #menu-h ul:hover {
     height: 160px;
