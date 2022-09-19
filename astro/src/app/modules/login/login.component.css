@@ -163,16 +163,16 @@ body * {
 #menu-h ul li { /*alinhamento*/
     list-style: none; /*tira a bolinha de link*/
     display: inline-block; /*alinha*/
+    transition: background .4s;
     padding: 0 20px;
 }
 #menu-h ul li a { /*alinhamento*/
     padding: 10px;
     color: #D9D9D9;
     text-decoration: none;
-    transition: background .4s;
     display: block;
 }
-#menu-h ul li a:hover { /*alinhamento*/
+#menu-h ul li:hover { /*alinhamento*/
     background-color: #6f1470;
 }
 
@@ -195,6 +195,17 @@ body * {
 .menu-link {
     margin: 10px;
 }
+a {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    margin-left: 10px;
+    text-decoration: none;
+  }
+  .logo {
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+  }
 
 
 @media only screen and (max-width: 600px){
@@ -250,7 +261,12 @@ body * {
      .menu{
         display: flex;
      }
+     .logo {
+        font-size: 32px;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+      }
      header{
-         background-color: #230a32;
+        background: rgb(14, 8, 57);
      }
 }
