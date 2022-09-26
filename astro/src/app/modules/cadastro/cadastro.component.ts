@@ -21,7 +21,8 @@ export class CadastroComponent implements OnInit {
     this.crudService.cadastrarAluno(this.aluno).subscribe(aluno => {
       this.aluno = new AlunoModel();
     }, err => {
-      console.log("Erro ao cadastrar", err);
+      (console.log("Erro ao cadastrar", err));
+      alert("Erro ao cadastrar. Tente novamente ou mais tarde!");
     })
   }
 
