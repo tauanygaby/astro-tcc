@@ -22,7 +22,6 @@ export class CadastroComponent implements OnInit {
       this.aluno = new AlunoModel();
     }, err => {
       (console.log("Erro ao cadastrar", err));
-      alert("Erro ao cadastrar. Tente novamente ou mais tarde!");
     })
   }
 
