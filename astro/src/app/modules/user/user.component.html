@@ -73,7 +73,8 @@
           </div>
   
           <button class="btn-login" (click)="atualizar()">Alterar</button>
-          <button class="btn-login" (click)="remover()">Remover</button>
+
+          <button class="btn-login"><a (click)="remover()"  [routerLink]="['/home']">Deletar conta</a></button>
   
         </div>
       </div>

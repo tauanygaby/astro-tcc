@@ -89,7 +89,7 @@
           <input type="checkbox" name="termos-politica" value="li-e-aceito"> Li e aceito os <a class="link" href="#">termos de politica de privacidade</a>
         </div>
 
-        <button class="btn-login" (click)="cadastrar()">Entrar</button>
+        <button class="btn-login"><a (click)="cadastrar()"  [routerLink]="['/login']">Cadastro</a></button>
 
         <p class="registro">Já possui uma conta? <a class=""href="/login">Entre agora</a></p>
 
