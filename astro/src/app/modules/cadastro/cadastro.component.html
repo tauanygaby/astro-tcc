@@ -53,21 +53,35 @@
         <div class="textfield">
           <label>
             <i class="fa-solid fa-user"></i>
-            <input type="text" name="usuario" placeholder="Usuário" required>
+            <input type="text" name="nome" placeholder="Nome" [(ngModel)]="aluno.nome" required>
           </label>
         </div>
 
         <div class="textfield">
           <label>
             <i class="fa-solid fa-user"></i>
-            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="apelido" placeholder="Apelido" [(ngModel)]="aluno.nickname" required>
+          </label>
+        </div>
+
+        <div class="textfield">
+          <label>
+            <i class="fa-solid fa-user"></i>
+            <input type="email" name="email" placeholder="Email" [(ngModel)]="aluno.email" required>
           </label>
         </div>
 
         <div class="textfield">
           <label>
             <i class="fa-solid fa-lock"></i>
-            <input type="password" name="senha" placeholder="Senha" required>
+            <input type="password" name="senha" placeholder="Senha" [(ngModel)]="aluno.senha" required>
+          </label>
+        </div>
+
+        <div class="textfield">
+          <label>
+            <i class="fa-solid fa-user"></i>
+            <input type="text" name="instituicao" placeholder="Instituição" [(ngModel)]="aluno.instituicao" required>
           </label>
         </div>
 
@@ -75,7 +89,8 @@
           <input type="checkbox" name="termos-politica" value="li-e-aceito"> Li e aceito os <a class="link" href="#">termos de politica de privacidade</a>
         </div>
 
-        <button class="btn-login">Entrar</button>
+        <button class="btn-login" (click)="cadastrar()">Entrar</button>
+
         <p class="registro">Já possui uma conta? <a class=""href="/login">Entre agora</a></p>
 
       </div>

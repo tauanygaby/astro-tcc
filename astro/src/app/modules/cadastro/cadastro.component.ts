@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CrudService } from '../../service/crud.service';
+import { AlunoModel } from '../aluno.model';
 
 @Component({
   selector: 'app-cadastro',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastroComponent implements OnInit {
 
-  constructor() { }
+  aluno : AlunoModel = new AlunoModel();
+
+  constructor(private crudService: CrudService) { }
 
   ngOnInit() {
+  }
+
+  cadastrar() {
+    console.log(this.aluno);
+    this.crudService.cadastrarAluno(this.aluno).subscribe(aluno => {
+      this.aluno = new AlunoModel();
+    }, err => {
+      console.log("Erro ao cadastrar", err);
+    })
   }
 
 }

@@ -4,6 +4,7 @@ import { CadastroComponent } from './modules/cadastro/cadastro.component';
 import { FerramentasComponent } from './modules/ferramentas/ferramentas.component';
 import { HomeComponent } from './modules/home/pages/home.component';
 import { LoginComponent } from './modules/login/login.component';
+import { UserComponent } from './modules/user/user.component';
 
 
 const routes: Routes = [
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: 'cadastro', component: CadastroComponent },
   { path: 'ferramentas', component: FerramentasComponent },
   { path: 'home', component: HomeComponent },
+  { path: 'user/:email', component: UserComponent},
   { path: '', pathMatch: 'full', redirectTo: '/home' },
 ];
 

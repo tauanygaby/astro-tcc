@@ -53,18 +53,18 @@
         <div class="textfield">
           <label>
             <i class="fa-solid fa-user"></i>
-            <input type="text" name="usuario" placeholder="Usuário" required>
+            <input type="text" name="email" placeholder="Email" [(ngModel)]="aluno.email" required>
           </label>
         </div>
 
         <div class="textfield">
           <label>
             <i class="fa-solid fa-lock"></i>
-            <input type="password" name="senha" placeholder="Senha" required>
+            <input type="password" name="senha" placeholder="Senha" [(ngModel)]="aluno.senha" required>
           </label>
         </div>
 
-        <button class="btn-login">Entrar</button>
+        <button class="btn-login"><a [routerLink]="['/user/', aluno.email]" (click)="entrar()">Entrar</a></button>
         <p class="registro">Não possui uma conta? <a href="/cadastro">Registre-se agora</a></p>
 
       </div>

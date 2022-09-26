@@ -1,4 +1,6 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -8,6 +10,8 @@ import { CadastroComponent } from './modules/cadastro/cadastro.component';
 import { FerramentasComponent } from './modules/ferramentas/ferramentas.component';
 import { HomeComponent } from './modules/home/pages/home.component';
 import { LoginComponent } from './modules/login/login.component';
+import { CrudService } from './service/crud.service';
+import { UserComponent } from './modules/user/user.component';
 
 
 @NgModule({
@@ -18,14 +22,17 @@ import { LoginComponent } from './modules/login/login.component';
     BlocoComponent,
     CadastroComponent,
     FerramentasComponent,
+    UserComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatCardModule,
     AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [CrudService, HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
