@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CrudService } from '../../service/crud.service';
@@ -15,7 +16,7 @@ export class UserComponent implements OnInit {
   aluno: AlunoModel = new AlunoModel();
   updateAluno: ResponseUpdate = new ResponseUpdate();
   
-  constructor(private crudService: CrudService, private router: ActivatedRoute) { }
+  constructor(private crudService: CrudService, private router: ActivatedRoute, private location: Location) { }
 
   ngOnInit() {
     this.email = this.router.snapshot.paramMap.get('email');
@@ -32,10 +33,15 @@ export class UserComponent implements OnInit {
     })
   }
 
+  load() {
+    location.reload()
+  }
+  
   atualizar() {
     console.log(this.updateAluno);
     this.crudService.atualizarAluno(this.email, this.updateAluno).subscribe(aluno => {
       this.updateAluno = new ResponseUpdate();
+      this.load();
     }, err => {
       console.log("Erro ao atualizar", err);
     })
