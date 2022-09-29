@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CrudService } from 'src/app/service/crud.service';
 import { AlunoModel } from '../aluno.model';
 
@@ -11,7 +12,7 @@ export class LoginComponent implements OnInit {
 
   aluno : AlunoModel = new AlunoModel();
 
-  constructor(private crudService: CrudService) { }
+  constructor(private crudService: CrudService, private router: Router) { }
 
   ngOnInit() {
   }
@@ -19,8 +20,8 @@ export class LoginComponent implements OnInit {
   entrar() {
     console.log(this.aluno);
     this.crudService.getUser(this.aluno.email).subscribe(aluno => {
+      this.router.navigate(['/user/' + this.aluno.email]);
       this.aluno = new AlunoModel();
-
     }, err => {
       console.log("Erro ao entrar", err);
     })

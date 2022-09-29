@@ -10,8 +10,8 @@ import { CadastroComponent } from './modules/cadastro/cadastro.component';
 import { FerramentasComponent } from './modules/ferramentas/ferramentas.component';
 import { HomeComponent } from './modules/home/pages/home.component';
 import { LoginComponent } from './modules/login/login.component';
-import { CrudService } from './service/crud.service';
 import { UserComponent } from './modules/user/user.component';
+import { CrudService } from './service/crud.service';
 
 
 @NgModule({
@@ -30,9 +30,9 @@ import { UserComponent } from './modules/user/user.component';
     MatCardModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
   ],
-  providers: [CrudService, HttpClientModule],
+  providers: [CrudService, HttpClientModule, Location],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
