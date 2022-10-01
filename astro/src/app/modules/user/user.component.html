@@ -1,51 +1,63 @@
 <body class="body">
 
-  <div class= "main-user">
-    
-    <div class="left-login">
+  <div class="main-user">
+    <div class="left-user">
+      <h2>Minhas informações</h2>
+      <div class="card-user">
+        <button class="circulo"> Foto</button>
+        <div>
+          <button>Enviar foto</button>
+          <button>Deletar foto</button>
+        </div>
 
-      <button>Enviar foto</button>
-      <button>Deletar foto</button>
-      <button class="circulo"></button>
+        <div class="textfield">
+          <label>
+            <i class="fa-solid fa-user"></i>
+            Email:
+            <input name="email" placeholder="email" [(ngModel)]="updateAluno.email" required>
+          </label>
+        </div>
 
-      <div class="textfield">
-        <label>
-          <i class="fa-solid fa-user"></i>
-          Email:
-          <input name="email" placeholder="email" [(ngModel)]="updateAluno.email" required>
-        </label>
+        <div class="textfield">
+          <label>
+            <i class="fa-solid fa-user"></i>
+            Nome:
+            <input name="nome" placeholder="Nome" [(ngModel)]="updateAluno.nome" required>
+          </label>
+        </div>
+
+        <div class="textfield">
+          <label>
+            Apelido:
+            <i class="fa-solid fa-user"></i>
+            <input name="apelido" placeholder="Apelido" [(ngModel)]="updateAluno.nickname" required>
+          </label>
+        </div>
+
+        <div class="textfield">
+          <label>
+            Senha:
+            <i class="fa-solid fa-lock"></i>
+            <input name="senha" placeholder="Senha" [(ngModel)]="updateAluno.senha" required>
+          </label>
+        </div>
+
+        <div class="textfield">
+          <label>
+            Instituição:
+            <i class="fa-solid fa-user"></i>
+            <input name="instituicao" placeholder="Instituição" [(ngModel)]="updateAluno.instituicao" required>
+          </label>
+        </div>
+
+        <button>Salvar</button>
+        <button>Editar informações</button>
+        <button>Excluir conta</button>
       </div>
-  
-      <div class="textfield">
-        <label>
-          <i class="fa-solid fa-user"></i>
-          Nome:
-          <input name="nome" placeholder="Nome" [(ngModel)]="updateAluno.nome" required>
-        </label>
-      </div>
-  
-      <div class="textfield">
-        <label>
-          Apelido:
-          <i class="fa-solid fa-user"></i>
-          <input name="apelido" placeholder="Apelido" [(ngModel)]="updateAluno.nickname" required>
-        </label>
-      </div>
-  
-      <div class="textfield">
-        <label>
-          Senha:
-          <i class="fa-solid fa-lock"></i>
-          <input name="senha" placeholder="Senha" [(ngModel)]="updateAluno.senha" required>
-        </label>
-      </div>
-  
-      <div class="textfield">
-        <label>
-          Instituição:
-          <i class="fa-solid fa-user"></i>
-          <input name="instituicao" placeholder="Instituição" [(ngModel)]="updateAluno.instituicao" required>
-        </label>
+    </div>
+
+    <div class="proj-user">
+      <div class="card-user">
       </div>
     </div>
 
