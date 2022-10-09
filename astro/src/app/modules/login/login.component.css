@@ -14,19 +14,21 @@ body * {
 .social-media{
     display: flex;
     list-style-type: none;
+    margin: 0;
 }
 
 .item-social-media{
     border: 1px solid #d0cdcd;
     border-radius: 50%;
     width: 38px;
-    height: 38px;
+    height: 36px;
     line-height: 35px;
     text-align:center;
 }
 
 .item-social-media a{
     color: #000000;
+    margin: 0;
 }
 .item-social-media:hover{
     background-color: #ffffff;
@@ -133,6 +135,16 @@ body * {
 
 .textfield > input::placeholder{
     color: rgb(0, 0, 0);
+}
+
+.fa-brands{
+    width: 100%;
+    font-size: 24px;
+    color: #000000;
+}
+
+.fa-solid{
+    margin-right: 10px;
 }
 
 .btn-login{
