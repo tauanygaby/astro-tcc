@@ -30,14 +30,11 @@
   <div class="main-user">
     <div class="left-user">
       <div class="card-user">
+        
         <div>
-          <label class="picture" for="picture__input" tabIndex="0">
-            <span class="picture__image"></span>
-          </label>
-          
-          <input type="file" name="picture__input" id="picture__input">
+          <img [src]="url" height="200"><br>
+          <input type="file" (change)="inputFileChange($event)"/>
         </div>
-
         <div class="textfield">
           <label>
             <i class="fa-solid fa-user"></i>

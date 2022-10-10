@@ -1,4 +1,5 @@
 import { Location } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CrudService } from '../../service/crud.service';
@@ -16,7 +17,7 @@ export class UserComponent implements OnInit {
   aluno: AlunoModel = new AlunoModel();
   updateAluno: ResponseUpdate = new ResponseUpdate();
   
-  constructor(private crudService: CrudService, private router: ActivatedRoute, private location: Location) { }
+  constructor(private crudService: CrudService, private router: ActivatedRoute, private location: Location, private http: HttpClient){ }
 
   ngOnInit() {
     this.email = this.router.snapshot.paramMap.get('email');
@@ -29,7 +30,6 @@ export class UserComponent implements OnInit {
         instituicao: res.aluno.instituicao
       }
       console.log(this.updateAluno);
-      
     })
   }
 
@@ -55,6 +55,15 @@ export class UserComponent implements OnInit {
       console.log("Erro ao remover", err);
     })
   }
+  url="././assets/img/user.png";
 
-  
-}
+  inputFileChange(event){
+    if (event.target.files){
+      var reader = new FileReader();
+      reader.readAsDataURL(event.target.files[0]);
+      reader.onload=(event:any)=>{
+        this.url=event.target.result;
+          }
+        }
+      }
+    }
