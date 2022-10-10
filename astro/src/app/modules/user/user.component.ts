@@ -55,4 +55,6 @@ export class UserComponent implements OnInit {
       console.log("Erro ao remover", err);
     })
   }
+
+  
 }
