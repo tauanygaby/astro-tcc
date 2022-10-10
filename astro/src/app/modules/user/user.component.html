@@ -1,5 +1,32 @@
 <body class="body">
 
+  <header>
+    <nav id="menu-h">
+      <a class="logo" href="/">Astro</a>
+      <ul class="icone">
+        <button class="menu">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="35"
+            height="30"
+            fill="currentColor"
+            class="bi bi-justify"
+            style="padding: 0"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"
+            />
+          </svg>
+        </button>
+        <li><a href="#">Sobre o astro</a></li>
+        <li><a href="#">Funcionalidades</a></li>
+        <li><a href="#">Comunidade</a></li>
+      </ul>
+    </nav>
+  </header>
+
   <div class="main-user">
     <div class="left-user">
       <div class="card-user">
@@ -9,14 +36,6 @@
           </label>
           
           <input type="file" name="picture__input" id="picture__input">
-        </div>
-
-        <div class="textfield">
-          <label>
-            <i class="fa-solid fa-user"></i>
-            Email:
-            <input name="email" [(ngModel)]="updateAluno.email">
-          </label>
         </div>
 
         <div class="textfield">
@@ -50,18 +69,10 @@
             <input name="instituicao" [(ngModel)]="updateAluno.instituicao">
           </label>
         </div>
-
-        <button>Salvar</button>
-        <button>Editar informações</button>
-        <button>Excluir conta</button>
+        
+        <button class="btn-user"><a (click)="atualizar()">Salvar</a></button>
+        <button class="btn-user"><a (click)="remover()"  [routerLink]="['/login']">Excluir conta</a></button>
       </div>
     </div>
-
-    <div class="proj-user">
-      <div>Meus projetos</div>
-    </div>
-
   </div>
-
-
 </body>
