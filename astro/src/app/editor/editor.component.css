@@ -22,6 +22,18 @@ body * {
     background-color: rgb(255, 255, 255);
 }
 
+.exportar{
+    display: flex;
+}
+
+.meu-input{   
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgb(0, 15, 231);
+    color: rgb(21, 20, 20);
+    text-align: center;
+}
+
 #menu-h ul{ /*alinhamento*/
     list-style: none; /*tira a bolinha de link*/
     padding: 0;
