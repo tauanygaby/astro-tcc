@@ -1,20 +1,54 @@
 <body class="body">
 
+  <header>
+      <nav id="menu-h">
+          <a class="logo" href="/">Astro</a>
+          <ul class="icone">
+              <button class="menu">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="35" height="30" fill="currentColor"
+                      class="bi bi-justify" style="padding: 0" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd"
+                          d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z" />
+                  </svg>
+              </button>
+              <li><a href="#">Sobre o astro</a></li>
+              <li><a href="#">Funcionalidades</a></li>
+              <li><a href="#">Comunidade</a></li>
+          </ul>
+      </nav>
+  </header>
 
-<div id="cheklist" class="checklist">
-    <h2>Checklist</h2>
-    <input type="text" id="myInput" placeholder="Title...">
-    <span (click)="cadastrar()" class="addBtn">Add</span>
+  <div class="checklist">
+    <table>
+        <tr class="checklist">
+            <td>conteúdo da célula</td>
+            <td>conteúdo da célula</td>
+            <td>conteúdo da célula</td>
+        </tr>
+        <tr class="checklist">
+            <td>conteúdo da célula</td>
+            <td>conteúdo da célula</td>
+            <td>conteúdo da célula</td>
+        </tr>
+    </table>
   </div>
 
-  <ul id="myUL">
-    <li>Fazer tcc</li>
-    <li class="checked">Lavar a louça</li>
-    <li>Ver série</li>
-    <li>Fazer comida</li>
-    <li>Fazer treino</li>
-    <li>Organizar o escritorio</li>
-  </ul>
-  
-
+  <div class="main-editor">
+      <div class="editor">
+        <h4 class="descricao">Descrição</h4>
+        <div class="campos">
+          <label class="title">Titulo:
+          <input type="text" required>
+          </label>
+          <label class="title">Inicio:
+          <input type="datetime-local" required>
+          </label>
+          <label class="title">Fim:
+          <input type="datetime-local" required>
+          </label>
+          </div>
+          <button class="btn-login" (click)="cadastrar()">Salvar</button>
+          <angular-editor [placeholder]="'Enter text here...'" [config]="config"></angular-editor>
+      </div>
+  </div>
 </body>

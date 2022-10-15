@@ -1,7 +1,7 @@
 body{
     margin: 0;
     overflow: hidden;
-    background-image: linear-gradient(to bottom, #a0b3ce,#bb9dbc, #ede2ede2);
+    background-color: #e2eaf0;
 }
 
 
@@ -11,10 +11,10 @@ body * {
 
 
 .editor{
-    margin-right: 190px;
-    margin-left: 190px;
-    margin-bottom: 200px;
-    margin-top: 200px;
+    margin-right: 400px;
+    margin-left: 400px;
+    margin-bottom: 10px;
+    margin-top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
