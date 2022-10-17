@@ -1,68 +1,75 @@
 <body class="body">
 
+  <header>
+    <nav id="menu-h">
+      <a class="logo" href="/">Astro</a>
+      <ul class="icone">
+        <button class="menu">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="35"
+            height="30"
+            fill="currentColor"
+            class="bi bi-justify"
+            style="padding: 0"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"
+            />
+          </svg>
+        </button>
+        <li><a href="#">Sobre o astro</a></li>
+        <li><a href="#">Funcionalidades</a></li>
+        <li><a href="#">Comunidade</a></li>
+      </ul>
+    </nav>
+  </header>
+
   <div class="main-user">
     <div class="left-user">
-      <h2>Minhas informações</h2>
       <div class="card-user">
-        <button class="circulo"> Foto</button>
-        <div>
-          <button>Enviar foto</button>
-          <button>Deletar foto</button>
+        
+        <div class="insertImg">
+          <img [src]="url"><br>
+          <input type="file" accept="image/*" class="file" (change)="inputFileChange($event)"/>
         </div>
-
-        <div class="textfield">
-          <label>
-            <i class="fa-solid fa-user"></i>
-            Email:
-            <input name="email" placeholder="email" [(ngModel)]="updateAluno.email" required>
-          </label>
-        </div>
-
         <div class="textfield">
           <label>
             <i class="fa-solid fa-user"></i>
             Nome:
-            <input name="nome" placeholder="Nome" [(ngModel)]="updateAluno.nome" required>
+            <input name="nome" [(ngModel)]="updateAluno.nome">
           </label>
         </div>
 
         <div class="textfield">
           <label>
+            <i class="fa-solid fa-user"></i>
             Apelido:
-            <i class="fa-solid fa-user"></i>
-            <input name="apelido" placeholder="Apelido" [(ngModel)]="updateAluno.nickname" required>
+            <input name="apelido" [(ngModel)]="updateAluno.nickname">
           </label>
         </div>
 
         <div class="textfield">
           <label>
-            Senha:
             <i class="fa-solid fa-lock"></i>
-            <input name="senha" placeholder="Senha" [(ngModel)]="updateAluno.senha" required>
+            Senha:
+            <input name="senha" [(ngModel)]="updateAluno.senha">
           </label>
         </div>
 
         <div class="textfield">
           <label>
-            Instituição:
             <i class="fa-solid fa-user"></i>
-            <input name="instituicao" placeholder="Instituição" [(ngModel)]="updateAluno.instituicao" required>
+            Instituição:
+            <input name="instituicao" [(ngModel)]="updateAluno.instituicao">
           </label>
         </div>
-
-        <button>Salvar</button>
-        <button>Editar informações</button>
-        <button>Excluir conta</button>
+        
+        <button class="btn-user"><a (click)="atualizar()">Salvar</a></button>
+        <button class="btn-user"><a (click)="remover()"  [routerLink]="['/login']">Excluir conta</a></button>
       </div>
     </div>
-
-    <div class="proj-user">
-      <div class="card-user">
-        <h6>Ver mais</h6>
-      </div>
-    </div>
-
   </div>
-
-
 </body>

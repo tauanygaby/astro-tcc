@@ -1,9 +1,11 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularEditorModule } from '@kolkov/angular-editor';
+import { ModalModule } from 'ngx-bootstrap/modal';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BlocoComponent } from './blocoFerramentas/BlocoComponent.component';
@@ -14,7 +16,9 @@ import { FerramentasComponent } from './modules/ferramentas/ferramentas.componen
 import { HomeComponent } from './modules/home/pages/home.component';
 import { LoginComponent } from './modules/login/login.component';
 import { UserComponent } from './modules/user/user.component';
+import { ChecklistComponent } from './modules/checklist/checklist.component';
 import { CrudService } from './service/crud.service';
+import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
@@ -27,7 +31,8 @@ import { CrudService } from './service/crud.service';
     FerramentasComponent,
     UserComponent,
     EditorComponent,
-    EditorTextoComponent
+    EditorTextoComponent,
+    ChecklistComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +41,11 @@ import { CrudService } from './service/crud.service';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    AngularEditorModule
+    AngularEditorModule,
+    ReactiveFormsModule,
+    ModalModule.forRoot(),
+    BrowserAnimationsModule,
+    SharedModule
   ],
   providers: [CrudService, HttpClientModule, Location],
   bootstrap: [AppComponent]
