@@ -34,9 +34,9 @@
     </div>
 
 
-    <div class="right-login">
+    <form class="right-login">
 
-      <div class="card-login">
+      <div class="card-login" [formGroup]="form">
 
         <h1>Cadastro</h1>
 
@@ -53,48 +53,63 @@
         <div class="textfield">
           <label>
             <i class="fa-solid fa-user"></i>
-            <input type="text" name="nome" placeholder="Nome" [(ngModel)]="aluno.nome" required>
+            <input formControlName="nome" type="text" name="nome" placeholder="Nome" [(ngModel)]="aluno.nome" autofocus >
           </label>
+          <div *ngIf="verificaValidTouched('nome')" class="alert alert-danger" role="alert">
+            Nome obrigatório
+          </div>
         </div>
 
         <div class="textfield">
           <label>
             <i class="fa-solid fa-user"></i>
-            <input type="text" name="apelido" placeholder="Apelido" [(ngModel)]="aluno.nickname" required>
+            <input formControlName="nickname" type="text" name="apelido" placeholder="Apelido" [(ngModel)]="aluno.nickname" required >
           </label>
+          <div *ngIf="verificaValidTouched('apelido')" class="alert alert-danger" role="alert">
+            Apelido obrigatório
+          </div>
         </div>
 
         <div class="textfield">
           <label>
             <i class="fa-solid fa-user"></i>
-            <input type="email" name="email" placeholder="Email" [(ngModel)]="aluno.email" required>
+            <input formControlName="email" type="email" name="email" placeholder="Email" [(ngModel)]="aluno.email" required>
           </label>
+          <div *ngIf="verificaValidTouched('email')" class="alert alert-danger" role="alert">
+            Email obrigatório
+          </div>
         </div>
 
         <div class="textfield">
           <label>
             <i class="fa-solid fa-lock"></i>
-            <input type="password" name="senha" placeholder="Senha" [(ngModel)]="aluno.senha" required>
+            <input formControlName="senha" type="password" name="senha" placeholder="Senha" [(ngModel)]="aluno.senha" required>
           </label>
+          <div *ngIf="verificaValidTouched('senha')" class="alert alert-danger" role="alert">
+            Senha obrigatória
+          </div>
         </div>
 
         <div class="textfield">
           <label>
             <i class="fa-solid fa-user"></i>
-            <input type="text" name="instituicao" placeholder="Instituição" [(ngModel)]="aluno.instituicao" required>
+            <input formControlName="instituicao" type="text" name="instituicao" placeholder="Instituição" [(ngModel)]="aluno.instituicao" required>
           </label>
+          <div *ngIf="verificaValidTouched('instituicao')" class="alert alert-danger" role="alert">
+            Instituição obrigatória
+          </div>
         </div>
 
         <div>
-          <input type="checkbox" name="termos-politica" value="li-e-aceito"> Li e aceito os <a class="link" href="#" required>termos de politica de privacidade </a> 
+          <input type="checkbox" name="termos-politica" value="li-e-aceito"> Li e aceito os <a class="link" href="#" >termos de politica de privacidade </a> 
         </div>
 
-        <button class="btn-login"><a (click)="cadastrar()"  [routerLink]="['/login']">Cadastro</a></button>
+        <button type="submit" class="btn-login"(click)="cadastrar()">Cadastro</button>
 
         <p class="registro">Já possui uma conta? <a class=""href="/login">Entre agora</a></p>
 
       </div>
-    </div>
+    </form>
   </div>
 
 
