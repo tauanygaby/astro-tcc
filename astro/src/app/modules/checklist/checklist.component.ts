@@ -40,7 +40,7 @@ export class ChecklistComponent implements OnInit {
     translate: 'no',
     defaultParagraphSeparator: 'p',
     defaultFontName: 'Arial',
-    defaultFontSize: '4',
+    defaultFontSize: '2',
    
   };
 

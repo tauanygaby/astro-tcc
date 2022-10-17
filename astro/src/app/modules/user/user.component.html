@@ -31,9 +31,9 @@
     <div class="left-user">
       <div class="card-user">
         
-        <div>
-          <img [src]="url" height="200"><br>
-          <input type="file" (change)="inputFileChange($event)"/>
+        <div class="insertImg">
+          <img [src]="url"><br>
+          <input type="file" accept="image/*" class="file" (change)="inputFileChange($event)"/>
         </div>
         <div class="textfield">
           <label>

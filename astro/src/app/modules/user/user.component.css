@@ -139,44 +139,12 @@ body * {
     cursor: pointer;
 }
 
-#picture__input {
-    display: none;
-  }
   
-  .picture {
+  img {
+    background-color: #aaa;
     border-radius: 50%;
-    width: 140px;
-    height: 140px;
-    background: #ddd;
-    
-    align-items: center;
-    justify-content: center;
-    color: #aaa;
-    cursor: pointer;
-    font-family: sans-serif;
-    outline: none;
-    overflow: hidden;
-  }
-  
-  .picture:hover {
-    color: #777;
-    background: #ccc;
-  }
-  
-  .picture:active {
-    border-color: turquoise;
-    color: turquoise;
-    background: #eee;
-  }
-  
-  .picture:focus {
-    color: #777;
-    background: #ccc;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  }
-  
-  .picture__img {
-    max-width: 100%;
+    width: 150px;
+    height: 150px;
   }
 
   #menu-h ul{ /*alinhamento*/
