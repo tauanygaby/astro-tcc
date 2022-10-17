@@ -83,7 +83,7 @@ body * {
     align-items: center;
     flex-direction: column;
     padding: 30px 35px;
-    background: rgba(255, 254, 255, 0.382);
+    background: rgba(255, 255, 255, 0.672);
     /*background: rgba(180, 142, 227, 0.72);*/
     backdrop-filter: blur(25px);
     border-radius: 20px;
