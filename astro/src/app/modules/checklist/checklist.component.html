@@ -1,54 +1,76 @@
-<body class="body">
+<body>
 
-  <header>
-      <nav id="menu-h">
-          <a class="logo" href="/">Astro</a>
-          <ul class="icone">
-              <button class="menu">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="35" height="30" fill="currentColor"
-                      class="bi bi-justify" style="padding: 0" viewBox="0 0 16 16">
-                      <path fill-rule="evenodd"
-                          d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z" />
-                  </svg>
-              </button>
-              <li><a href="#">Sobre o astro</a></li>
-              <li><a href="#">Funcionalidades</a></li>
-              <li><a href="#">Comunidade</a></li>
-          </ul>
-      </nav>
+<header>
+    <nav id="menu-h">
+      <a class="logo" href="/">Astro</a>
+      <ul class="icone">
+        <button class="menu">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="35"
+            height="30"
+            fill="currentColor"
+            class="bi bi-justify"
+            style="padding: 0"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"
+            />
+          </svg>
+        </button>
+        <li><a href="#">Sobre o astro</a></li>
+        <li><a href="#">Funcionalidades</a></li>
+        <li><a href="#">Comunidade</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <div class="checklist">
-    <table>
-        <tr class="checklist">
-            <td>conteúdo da célula</td>
-            <td>conteúdo da célula</td>
-            <td>conteúdo da célula</td>
-        </tr>
-        <tr class="checklist">
-            <td>conteúdo da célula</td>
-            <td>conteúdo da célula</td>
-            <td>conteúdo da célula</td>
-        </tr>
-    </table>
-  </div>
-
-  <div class="main-editor">
-      <div class="editor">
-        <h4 class="descricao">Descrição</h4>
-        <div class="campos">
-          <label class="title">Titulo:
-          <input type="text" required>
-          </label>
-          <label class="title">Inicio:
-          <input type="datetime-local" required>
-          </label>
-          <label class="title">Fim:
-          <input type="datetime-local" required>
-          </label>
+<div class="container">
+    <div class="row">
+       <div class="col-sm-12 p-0">
+               <div class="capa">
+                   <i class="left"></i>
+                   <div class="menu"></div>
+                   <img src="https://res.cloudinary.com/ashokpurohit/image/upload/v1571334703/add_qegctu.png" class="add" data-toggle="modal" data-target="#myModal">
+                    <h3>To Do List</h3>
+            </div>	
+       </div>
+    </div>
+    <div class="row">
+       <div class="col-sm-12 p-0">
+           <div class="content pt-3">
+            <ul id="list">
+              
+            </ul>
+        </div>
+       </div>
+     </div>
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+          
+            
+            <div class="modal-header">
+              <h4 class="modal-title">Add Remainder</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            
+            <div class="modal-body">
+              <input type="text" id="input" class="form-control mb-1" placeholder="Title">
+              <input type="text" id="descField" class="form-control mb-2" placeholder="Description">
+              <label class="mb-0">Remainder Date: </label> <input type="date" id="date" class="form-control" name="date">
+            </div>
+            
+    
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary submit" data-dismiss="modal">submit</button>
+            </div>
+            
           </div>
-          <button class="btn-login" (click)="cadastrarChecklist()">Salvar</button>
-          <angular-editor [placeholder]="'Enter text here...'" [config]="config"></angular-editor>
+        </div>
       </div>
-  </div> 
+</div>
+
 </body>
