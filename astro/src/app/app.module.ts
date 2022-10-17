@@ -16,6 +16,7 @@ import { FerramentasComponent } from './modules/ferramentas/ferramentas.componen
 import { HomeComponent } from './modules/home/pages/home.component';
 import { LoginComponent } from './modules/login/login.component';
 import { UserComponent } from './modules/user/user.component';
+import { ChecklistComponent } from './modules/checklist/checklist.component';
 import { CrudService } from './service/crud.service';
 import { SharedModule } from './shared/shared.module';
 
@@ -30,7 +31,8 @@ import { SharedModule } from './shared/shared.module';
     FerramentasComponent,
     UserComponent,
     EditorComponent,
-    EditorTextoComponent
+    EditorTextoComponent,
+    ChecklistComponent
   ],
   imports: [
     BrowserModule,

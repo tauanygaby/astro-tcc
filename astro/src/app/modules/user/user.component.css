@@ -1,16 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200&display=swap');
+@import "~bootstrap/dist/css/bootstrap.min.css";
 
 body{
     margin: 0;
     font-family: 'Noto Sans', sans-serif;
     overflow: hidden; /* oculta a barra de rolagem*/
-}
-
-.circulo {
-    background: lightblue;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
 }
 
 body * {
@@ -42,9 +36,9 @@ body * {
     width: 100vw;
     height: 100vh;
    /* background-image: linear-gradient(to bottom, #4990c0,#a81eab, #ede2ed);*/
-    background-image: linear-gradient(to bottom, #3f5c84,#6f1470, #ede2ede2);
+    background-image: linear-gradient(to right, #9F66FF, #DFCBFF);
     display: flex;
-    justify-content: center;
+    justify-content:center;
     align-items: center;
     
 }
@@ -52,10 +46,19 @@ body * {
 .left-user{
     width: 50vw;
     height: 100vh;
+   /* background-image: linear-gradient(to bottom, #4990c0,#a81eab, #ede2ed);*/
     display: flex;
-    justify-content: center;
+    justify-content:center;
     align-items: center;
-    flex-direction: column;
+}
+
+.right-user{
+    width: 100vw;
+    height: 100vh;
+   /* background-image: linear-gradient(to bottom, #4990c0,#a81eab, #ede2ed);*/
+    display: flex;
+    justify-content:right;
+    align-items: center;
 }
 
 .left-user > h1 {
@@ -68,8 +71,6 @@ body * {
 }
 
 .proj-user{
-    width: 50vw;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -82,7 +83,7 @@ body * {
     align-items: center;
     flex-direction: column;
     padding: 30px 35px;
-    background: rgba(255, 254, 255, 0.382);
+    background: rgba(255, 255, 255, 0.672);
     /*background: rgba(180, 142, 227, 0.72);*/
     backdrop-filter: blur(25px);
     border-radius: 20px;
@@ -122,20 +123,138 @@ body * {
     color: rgb(0, 0, 0);
 }
 
-.btn-login{
+.btn-user{
+    flex-direction: column;
+    align-items: center;
     width: 100%;
-    padding: 16px 0px;
     margin: 25px;
     border: none;
     border-radius: 8px;
     outline: none;
     text-transform: uppercase;
-    font-weight: 800;
-    letter-spacing: 3px;
     color: #ffffff;
     background: rgb(14, 8, 57);
     cursor: pointer;
-    box-shadow: 0px 10px 40px -12px #e8eae8;
+}
 
+  
+  img {
+    background-color: #aaa;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+  }
+
+  #menu-h ul{ /*alinhamento*/
+    list-style: none; /*tira a bolinha de link*/
+    padding: 0;
+    background: rgb(14, 8, 57);
+    overflow: hidden;
+    align-items: unset;
+    margin: 0;
+}
+#menu-h ul li { /*alinhamento*/
+    list-style: none; /*tira a bolinha de link*/
+    display: inline-block; /*alinha*/
+    transition: background .4s;
+    padding: 0 20px;
+}
+#menu-h ul li a { /*alinhamento*/
+    padding: 10px;
+    color: #D9D9D9;
+    text-decoration: none;
+    display: block;
+}
+#menu-h ul li:hover { /*alinhamento*/
+    background-color: #6f1470;
+}
+
+.menu{
+    background-color: transparent;
+    color: white;
+    border: 0;
+    position: absolute;
+    right: 10px;
+    top: 14px;
+    display: none;
+    height: 100%;
+}
+#menu-h {
+    margin: 0;
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+.menu-link {
+    margin: 10px;
+}
+a {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    margin-left: 10px;
+    text-decoration: none;
+  }
+  .logo {
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+  }
+
+@media only screen and (max-width: 760px){
+    .main-user{
+        flex-direction: column;
+    }
+    .left-user > h1 {
+        display: none;
+    }
+    .left-user{
+        width: 100%;
+        height: auto;
+    }
+    .left-user-image{
+        width: 50vw;
+    }
+
+    .card-user{
+        width: 90%;
+    }
+    #menu-h ul:hover{
+        height: 160px;
+    }
+    .logo {
+        font-size: 32px;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+      }
+      #menu-h ul{
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        align-items: unset;
+        margin: 0;
+        height: 0;
+     }
+     #menu-h ul li{
+        justify-content: center;
+        list-style: none;
+     }
+     #menu-h ul li a{
+        display: inline-block;
+        margin: 0;
+     }
+     #menu-h{
+        padding: 0;
+        display: contents;
+        align-items: unset;
+        justify-content: center;
+        align-items: center;
+     }
+     .menu{
+        align-items: unset;
+        display: flex;
+     }
+     header{
+        background: rgb(14, 8, 57);
+     }
 }
 

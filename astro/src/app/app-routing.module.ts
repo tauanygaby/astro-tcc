@@ -6,6 +6,8 @@ import { FerramentasComponent } from './modules/ferramentas/ferramentas.componen
 import { HomeComponent } from './modules/home/pages/home.component';
 import { LoginComponent } from './modules/login/login.component';
 import { UserComponent } from './modules/user/user.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ChecklistComponent } from './modules/checklist/checklist.component';
 
 
 const routes: Routes = [
@@ -15,11 +17,15 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'editor', component: EditorTextoComponent },
   { path: 'user/:email', component: UserComponent},
+  { path: 'checklist', component: ChecklistComponent },
   { path: '', pathMatch: 'full', redirectTo: '/home' },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes),
+    HttpClientModule
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
