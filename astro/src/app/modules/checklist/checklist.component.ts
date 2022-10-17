@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { CrudService } from 'src/app/service/crud.service';
 import { ChecklistModel } from '../checklist.model';
 import { AngularEditorConfig } from '@kolkov/angular-editor';
+import { noAuto } from '@fortawesome/fontawesome-svg-core';
 
 @Component({
   selector: 'app-checklist',
@@ -18,25 +19,28 @@ export class ChecklistComponent implements OnInit {
   ngOnInit() {
   }
   
-  cadastrar() {
+  cadastrarChecklist() {
     console.log(this.checklist);
     this.crudService.cadastrarChecklist(this.checklist).subscribe(checklist => {
       this.checklist = new ChecklistModel();
       
     }, err => {
-      (console.log("Erro ao cadastrar banana", err));
+      (console.log("Erro ao cadastrar checklist", err));
     })
   }
 
   config: AngularEditorConfig = {
     editable: true,
     spellcheck: true,
-    height: '5rem',
-    minHeight: '5rem',
+    outline: false,
+    showToolbar: false,
+    width: '43.5rem',
+    height: '2rem',
     placeholder: 'Enter text here...',
     translate: 'no',
     defaultParagraphSeparator: 'p',
     defaultFontName: 'Arial',
+    defaultFontSize: '4',
    
   };
 
