@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { ResponseUpdate } from '../modules/aluno-update.model';
 import { AlunoModel } from '../modules/aluno.model';
 import { ChecklistModel } from '../modules/checklist.model';
-
+import { EditorModel } from './../modules/editor.model';
 @Injectable({
   providedIn: 'root'
 })
@@ -33,5 +33,12 @@ export class CrudService {
 
   cadastrarChecklist(checklist : ChecklistModel) : Observable<any> {
     return this.http.post('http://localhost:8080/checklist', checklist);
-   }
+  }
+  listarChecklist() {
+    return this.http.get<ChecklistModel>('http://localhost:8080/checklist-all');
+  }
+
+  cadastrarEditor(editor : EditorModel) : Observable<any> {
+    return this.http.post('http://localhost:8080/editor', editor);
+  }
 }
