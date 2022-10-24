@@ -34,4 +34,8 @@ export class CrudService {
   cadastrarChecklist(checklist : ChecklistModel) : Observable<any> {
     return this.http.post('http://localhost:8080/checklist', checklist);
    }
+
+   listarChecklist() : Observable<any>{
+    return this.http.get('http://localhost:8080/checklist-all');
+  }
 }
