@@ -17,14 +17,14 @@ export class EditorComponent implements OnInit {
     editable: true,
     spellcheck: true,
     outline: false,
-    width: '43.5rem',
+    width: '41rem',
     height: '30rem',
     minHeight: '5rem',
     placeholder: 'Enter text here...',
     translate: 'no',
     defaultParagraphSeparator: 'p',
     defaultFontName: 'Arial',
-    defaultFontSize: '4',
+    defaultFontSize: '2',
   };
 
 }
