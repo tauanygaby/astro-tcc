@@ -29,15 +29,20 @@ export class EditorComponent implements OnInit {
   config: AngularEditorConfig = {
     editable: true,
     spellcheck: true,
+<<<<<<< HEAD
     outline: true,
     width: '43.5rem',
+=======
+    outline: false,
+    width: '41rem',
+>>>>>>> a956777eb382e63ecb81936c1c99cafc0dda0397
     height: '30rem',
     minHeight: '5rem',
     placeholder: 'Enter text here...',
     translate: 'no',
     defaultParagraphSeparator: 'p',
     defaultFontName: 'Arial',
-    defaultFontSize: '4',
+    defaultFontSize: '2',
   };
 
 }

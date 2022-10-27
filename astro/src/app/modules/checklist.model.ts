@@ -1,5 +1,7 @@
 export class ChecklistModel {
     texto: string;
-    email: string;
+    descricao: string;
+    data: Date;
+    email?: string;
     id: string;
 }
