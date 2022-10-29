@@ -14,8 +14,6 @@ import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 })
 export class ChecklistComponent implements OnInit {
 
-  check: Array<any> = new Array();
-
   checklist : ChecklistModel = new ChecklistModel();
 
   id : string;
@@ -61,11 +59,11 @@ openModal(template: TemplateRef<any>) {
     })
     console.log(this.checklist);
   }
+  
   cadastrarChecklist() {
     console.log(this.checklist);
     this.crudService.cadastrarChecklist(this.checklist).subscribe(checklist => {
       this.checklist = new ChecklistModel();
-      this.atualizarPage();
       
     }, err => {
       (console.log("Erro ao cadastrar checklist", err));

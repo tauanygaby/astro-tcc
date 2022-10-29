@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularEditorConfig } from '@kolkov/angular-editor';
+import { EditorModel } from '../modules/editor.model';
+import { CrudService } from '../service/crud.service';
 
 @Component({
   selector: 'app-editor',
@@ -8,23 +10,34 @@ import { AngularEditorConfig } from '@kolkov/angular-editor';
 })
 export class EditorComponent implements OnInit {
 
-  constructor() { }
+  editor: EditorModel = new EditorModel();
+
+  constructor(private crudService: CrudService) { }
 
   ngOnInit() {
+  }
+
+  salvarInfoEditor() {
+    console.log(this.editor);
+    this.crudService.cadastrarEditor(this.editor).subscribe(editor => {
+      this.editor = new EditorModel();
+    }, err => {
+      (console.log("Erro ao salvar info do editor", err));
+    })
   }
 
   config: AngularEditorConfig = {
     editable: true,
     spellcheck: true,
-    outline: false,
-    width: '41rem',
+    outline: true,
+    width: '43.5rem',
     height: '30rem',
     minHeight: '5rem',
     placeholder: 'Enter text here...',
     translate: 'no',
     defaultParagraphSeparator: 'p',
     defaultFontName: 'Arial',
-    defaultFontSize: '2',
+    defaultFontSize: '4',
   };
 
 }
