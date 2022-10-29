@@ -11,14 +11,15 @@ import { ResponseUpdate } from './../aluno-update.model';
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.css']
 })
-export class UserComponent implements OnInit {
+export class UserComponent implements OnInit{
 
   email: string;
   aluno: AlunoModel = new AlunoModel();
   updateAluno: ResponseUpdate = new ResponseUpdate();
   
-  constructor(private crudService: CrudService, private router: ActivatedRoute, private location: Location, private http: HttpClient){ }
-
+  constructor(private crudService: CrudService, private router: ActivatedRoute, public location: Location,
+    private http: HttpClient) { }
+  
   ngOnInit() {
     this.email = this.router.snapshot.paramMap.get('email');
     this.crudService.getUser(this.email).subscribe(res => {

@@ -35,6 +35,7 @@ export class CadastroComponent implements OnInit {
   cadastrar() {
     console.log(this.aluno);
     console.log(this.form.valid)
+    this.handleSuccess();
     this.crudService.cadastrarAluno(this.aluno).subscribe(aluno => {
       this.aluno = new AlunoModel();
       this.router.navigate(['/login']);
@@ -49,6 +50,12 @@ export class CadastroComponent implements OnInit {
     this.bsModalRef = this.modalService.show(AlertModalComponent);
     this.bsModalRef.content.type = 'danger';
     this.bsModalRef.content.message = 'Erro: ao cadastrar aluno';
+  }
+
+  handleSuccess() {
+    this.bsModalRef = this.modalService.show(AlertModalComponent);
+    this.bsModalRef.content.type = 'success';
+    this.bsModalRef.content.message = 'cadastro realizado com sucesso';
   }
 
   verificaValidTouched(campo: string) {

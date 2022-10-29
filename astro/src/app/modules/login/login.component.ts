@@ -20,14 +20,15 @@ export class LoginComponent implements OnInit {
   title =  'Codingvila Login With Google' ;
   auth2:  any ;
 
-  constructor(private crudService: CrudService, private router: Router, private modalService: BsModalService, private formBuilder: FormBuilder) { }
+  constructor(private crudService: CrudService, private router: Router, private modalService: BsModalService,
+    private formBuilder: FormBuilder) { }
 
   ngOnInit() {
     this.form = this.formBuilder.group({
       email: [null, Validators.required],
       senha: [null, Validators.required],
     })
-     this.googleAuthSDK();
+    this.googleAuthSDK();
   }
 
   callLogin() {
@@ -44,6 +45,12 @@ export class LoginComponent implements OnInit {
         console.log('Image URL: ' + profile.getImageUrl());
         console.log('Email: ' + profile.getEmail());
 
+        this.crudService.getUser(profile.getEmail().value).subscribe(aluno => {
+          this.router.navigate(['/user/' + profile.getEmail().value]);
+          this.aluno = new AlunoModel();
+          console.log(this.aluno);
+        });
+
       }, (error: any) => {
         alert(JSON.stringify(error, undefined, 2));
       });
@@ -55,7 +62,7 @@ export class LoginComponent implements OnInit {
     (<any>window)['googleSDKLoaded'] = () => {
       (<any>window)['gapi'].load('auth2', () => {
         this.auth2 = (<any>window)['gapi'].auth2.init({
-          client_id: 'YOUR CLIENT ID',
+          client_id: '261944408406-p1lf8j8v9saque7v3qpno7o2ah0llufn.apps.googleusercontent.com',
           plugin_name:'login',
           cookiepolicy: 'single_host_origin',
           scope: 'profile email'
@@ -75,10 +82,13 @@ export class LoginComponent implements OnInit {
   }
   
   entrar() {
+    this.handleSuccess()
     console.log(this.aluno);
     this.crudService.getUser(this.aluno.email).subscribe(aluno => {
       this.router.navigate(['/user/' + this.aluno.email]);
       this.aluno = new AlunoModel();
+      console.log(this.aluno);
+      
     }, err => {
       console.log("Erro ao entrar", err);
       this.handleError();
@@ -89,6 +99,12 @@ export class LoginComponent implements OnInit {
     this.bsModalRef = this.modalService.show(AlertModalComponent);
     this.bsModalRef.content.type = 'danger';
     this.bsModalRef.content.message = 'Erro: senha ou email inválido(s)';
+  }
+
+  handleSuccess() {
+    this.bsModalRef = this.modalService.show(AlertModalComponent);
+    this.bsModalRef.content.type = 'success';
+    this.bsModalRef.content.message = 'login realizado com sucesso';
   }
 
   verificaValidTouched(campo: string) {

@@ -37,7 +37,7 @@ export class EditorComponent implements OnInit {
     translate: 'no',
     defaultParagraphSeparator: 'p',
     defaultFontName: 'Arial',
-    defaultFontSize: '2',
+    defaultFontSize: '4',
   };
 
 }
