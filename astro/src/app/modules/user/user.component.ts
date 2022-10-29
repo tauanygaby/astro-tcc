@@ -55,6 +55,7 @@ export class UserComponent implements OnInit {
       console.log("Erro ao remover", err);
     })
   }
+  //img
   url="././assets/img/user.png";
 
   inputFileChange(event){

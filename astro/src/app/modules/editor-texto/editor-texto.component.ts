@@ -12,4 +12,8 @@ export class EditorTextoComponent implements OnInit {
   ngOnInit() {
   }
 
+  onDownloadPDF(){
+    
+  }
+
 }
