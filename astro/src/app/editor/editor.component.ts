@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularEditorConfig } from '@kolkov/angular-editor';
+import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import { EditorModel } from '../modules/editor.model';
 import { CrudService } from '../service/crud.service';
 
@@ -11,6 +11,8 @@ import { CrudService } from '../service/crud.service';
 export class EditorComponent implements OnInit {
 
   editor: EditorModel = new EditorModel();
+
+  public Editor = ClassicEditor;
 
   constructor(private crudService: CrudService) { }
 
@@ -26,18 +28,18 @@ export class EditorComponent implements OnInit {
     })
   }
 
-  config: AngularEditorConfig = {
-    editable: true,
-    spellcheck: true,
-    outline: true,
-    width: '43.5rem',
-    height: '30rem',
-    minHeight: '5rem',
-    placeholder: 'Enter text here...',
-    translate: 'no',
-    defaultParagraphSeparator: 'p',
-    defaultFontName: 'Arial',
-    defaultFontSize: '4',
-  };
+  // config: AngularEditorConfig = {
+  //   editable: true,
+  //   spellcheck: true,
+  //   outline: true,
+  //   width: '43.5rem',
+  //   height: '30rem',
+  //   minHeight: '5rem',
+  //   placeholder: 'Enter text here...',
+  //   translate: 'no',
+  //   defaultParagraphSeparator: 'p',
+  //   defaultFontName: 'Arial',
+  //   defaultFontSize: '4',
+  // };
 
 }

@@ -1,11 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Component, OnInit, TemplateRef } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { AngularEditorConfig } from '@kolkov/angular-editor';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { CrudService } from 'src/app/service/crud.service';
 import { ChecklistModel } from '../checklist.model';
-import { AngularEditorConfig } from '@kolkov/angular-editor';
-import { noAuto } from '@fortawesome/fontawesome-svg-core';
-import {  TemplateRef } from '@angular/core';
-import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 
 @Component({
   selector: 'app-checklist', 
@@ -19,6 +17,8 @@ export class ChecklistComponent implements OnInit {
   id : string;
 
   modalRef?: BsModalRef;
+
+  check: any[] = []
   
 
 
@@ -27,7 +27,7 @@ export class ChecklistComponent implements OnInit {
     private modalService: BsModalService,){ }
 
   ngOnInit() {
-    this.atualizarPage();
+    // this.atualizarPage();
 }
 
 load() {
@@ -38,27 +38,27 @@ openModal(template: TemplateRef<any>) {
   this.modalRef = this.modalService.show(template);
 }
 
-  atualizarPage(){
-    this.crudService.listarChecklist().subscribe(response => {
-      this.check = response.checklist.map((task)=>{
-        if (!task.data) return task;
+  // atualizarPage(){
+  //   this.crudService.listarChecklist().subscribe(response => {
+  //     this.check = response.checklist.map((task)=>{
+  //       if (!task.data) return task;
 
-       //conversão da data 
-        const dateSplitted = task.data.split('-').map((x: string) => Number(x))
-        console.log(dateSplitted)
+  //      //conversão da data 
+  //       const dateSplitted = task.data.split('-').map((x: string) => Number(x))
+  //       console.log(dateSplitted)
         
-        // task.data = new Date(dateSplitted[0], dateSplitted[1], dateSplitted[3])
-        // .toLocaleDateString("pt-br");
+  //       // task.data = new Date(dateSplitted[0], dateSplitted[1], dateSplitted[3])
+  //       // .toLocaleDateString("pt-br");
         
-        return task;
-      });
-      console.log(this.checklist);
-      console.log(this.check);
-    }, err => {
-      (console.log("erro ao listar", err));
-    })
-    console.log(this.checklist);
-  }
+  //       return task;
+  //     });
+  //     console.log(this.checklist);
+  //     console.log(this.check);
+  //   }, err => {
+  //     (console.log("erro ao listar", err));
+  //   })
+  //   console.log(this.checklist);
+  // }
   
   cadastrarChecklist() {
     console.log(this.checklist);
@@ -74,7 +74,7 @@ openModal(template: TemplateRef<any>) {
   remover(task: any) {
     this.crudService.deleteCheck(task).subscribe(checklist => {
       this.checklist = new ChecklistModel();
-      this.atualizarPage()
+      // this.atualizarPage()
     }, err => {
       console.log("Erro ao remover", err);
     })
