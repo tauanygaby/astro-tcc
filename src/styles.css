@@ -1,0 +1,56 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+.body {
+    /*background-image: linear-gradient(to bottom, #EA00A3,#8C00A3, #7E00AA);*/
+    background-image: linear-gradient(to bottom, #00B79D,#9F20DA, #E000D4);
+    background: #f6f9ff;
+    overflow: hidden; /* oculta a barra de rolagem, pois não tem necessidade na pág de login*/
+ }
+ 
+ * {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+  }
+ 
+ .logo { /*nome do Astro*/
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+  }
+ 
+  nav { /* cria o menu*/
+    padding: 0 20px;
+    justify-content: space-between;
+    background: rgb(14, 8, 57);
+    align-items: center;
+  }
+
+  .nav-list li { /*espaçamento*/
+    letter-spacing: 3px;
+    margin-left: 32px;
+  }
+ 
+  .nav-list { /*alinhamento*/
+    list-style: none; /*tira a bolinha de link*/
+    display: flex; /*alinha*/
+  }
+
+  .nav-list a{ 
+   color: aliceblue;
+ }
+
+ .logo{
+   color: aliceblue;
+ }
+
+ .nav-list a:hover{
+   background-color: #6f1470;
+ }
+
+  

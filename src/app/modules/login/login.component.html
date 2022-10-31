@@ -1,0 +1,81 @@
+<body class="body">
+  
+  <header>
+    <nav id="menu-h">
+      <a class="logo" href="/">Astro</a>
+      <ul class="icone">
+        <button class="menu">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="35"
+            height="30"
+            fill="currentColor"
+            class="bi bi-justify"
+            style="padding: 0"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"
+            />
+          </svg>
+        </button>
+        <li><a href="#">Sobre o astro</a></li>
+        <li><a href="#">Funcionalidades</a></li>
+        <li><a href="#">Comunidade</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="main-login">
+    <div class="left-login">
+      <h1>Bem-vindo(a)! <br>Sentimos sua falta.</h1>
+      <img src="../../../assets/img/foguete.svg" class="left-login-image" alt="Image-foguete">
+    </div>
+
+
+    <div class="right-login">
+
+      <div class="card-login" [formGroup]="form">
+
+        <h1>Login</h1>
+
+        <div class="social-media">
+          <li class="item-social-media"><a><i class="fa-brands fa-google" #loginRef></i></a></li>
+
+          <li class="item-social-media"><a><i class="fa-brands fa-facebook"></i></a></li>
+
+          <li class="item-social-media"><a><i class="fa-brands fa-github"></i></a></li>
+        </div>
+
+        <p class="descricao"> ou use sua conta de registro</p>
+
+        <div class="textfield">
+          <label>
+            <i class="fa-solid fa-user"></i>
+            <input type="text" formControlName="email" name="email" placeholder="Email" [(ngModel)]="aluno.email" required>
+          </label>
+          <div *ngIf="verificaValidTouched('email')" class="alert alert-danger" role="alert">
+            Email obrigatório
+          </div>
+        </div>
+
+        <div class="textfield">
+          <label>
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" formControlName="senha" name="senha" placeholder="Senha" [(ngModel)]="aluno.senha" required>
+          </label>
+          <div *ngIf="verificaValidTouched('senha')" class="alert alert-danger" role="alert">
+            Senha obrigatória
+          </div>
+        </div>
+
+        <button class="btn-login" (click)="entrar()">Entrar</button>
+        <p class="registro">Não possui uma conta? <a href="/cadastro">Registre-se agora</a></p>
+
+      </div>
+    </div>
+  </div>
+
+
+</body>
