@@ -87,7 +87,7 @@ openModal(template: TemplateRef<any>) {
       console.log(this.checklist);
          }, err => {
           alert("Erro! Quantidade de caracteres excede 255.");
-       console.log("Erro ao atualizar", err);
+       console.log("Erro ao editar", err);
      })
      }
 
