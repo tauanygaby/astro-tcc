@@ -11,7 +11,7 @@
     justify-content: space-around;
     align-items: center;
     font-family: system-ui, Helvetica, Arial, sans-serif;
-    background: #230a32;
+    background: #9446c1;
     height: 8vh;
   }
  
@@ -90,7 +90,7 @@ main.cards section.card button {
     margin-bottom: 16px 0;
 }
 
-main.cards section.card.contact button {
+/* main.cards section.card.contact button {
     background: linear-gradient(to right, #9F66FF, #DFCBFF);
 }
 main.cards section.card.shop button {
@@ -98,9 +98,9 @@ main.cards section.card.shop button {
 }
 main.cards section.card.about button {
     background: linear-gradient(to right, #FE5F8F, #FFC7D9);
-}
+} */
 
-main.cards section.card.contact {
+/* main.cards section.card.contact {
     box-shadow: 20px 20px 50px -30px #DBC4FF;
 }
 main.cards section.card.shop {
@@ -108,7 +108,7 @@ main.cards section.card.shop {
 }
 main.cards section.card.about {
     box-shadow: 20px 20px 50px -30px #FFC1D5;
-}
+} */
 
 @media screen and (max-width: 760px) {
     main.cards ul {
