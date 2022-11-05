@@ -20,6 +20,8 @@ import { LoginComponent } from './modules/login/login.component';
 import { UserComponent } from './modules/user/user.component';
 import { CrudService } from './service/crud.service';
 import { SharedModule } from './shared/shared.module';
+import { DiarioDeBordoComponent } from './modules/diario-de-bordo/diario-de-bordo.component';
+import { ModelosPreDefinidosComponent } from './modules/modelos-pre-definidos/modelos-pre-definidos.component';
 
 
 @NgModule({
@@ -33,7 +35,9 @@ import { SharedModule } from './shared/shared.module';
     UserComponent,
     EditorComponent,
     EditorTextoComponent,
-    ChecklistComponent
+    ChecklistComponent,
+    DiarioDeBordoComponent,
+    ModelosPreDefinidosComponent
   ],
   imports: [
     BrowserModule,

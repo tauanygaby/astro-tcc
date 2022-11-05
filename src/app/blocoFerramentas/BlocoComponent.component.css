@@ -58,8 +58,8 @@ main.cards section.card:first-child {
 }
 
 main.cards section.card .icon {
-    width: 64px;
-    height: 64px;
+    width: 60px;
+    height: 60px;
 }
 
 main.cards section.card img {
@@ -86,8 +86,14 @@ main.cards section.card button {
     cursor: pointer;
     font-size: 80%;
     font-weight: 500;
-    color: #fff;
+    color: #007bff;
     margin-bottom: 16px 0;
+}
+
+h1{
+    margin-left: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    
 }
 
 /* main.cards section.card.contact button {

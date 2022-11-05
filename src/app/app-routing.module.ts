@@ -8,6 +8,8 @@ import { LoginComponent } from './modules/login/login.component';
 import { UserComponent } from './modules/user/user.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ChecklistComponent } from './modules/checklist/checklist.component';
+import { DiarioDeBordoComponent } from './modules/diario-de-bordo/diario-de-bordo.component';
+import { ModelosPreDefinidosComponent } from './modules/modelos-pre-definidos/modelos-pre-definidos.component';
 
 
 const routes: Routes = [
@@ -18,6 +20,8 @@ const routes: Routes = [
   { path: 'editor', component: EditorTextoComponent },
   { path: 'user/:email', component: UserComponent},
   { path: 'checklist', component: ChecklistComponent },
+  { path: 'diarioDeBordo', component: DiarioDeBordoComponent },
+  { path: 'modeloDefinido', component: ModelosPreDefinidosComponent },
   { path: '', pathMatch: 'full', redirectTo: '/home' },
 ];
 
