@@ -1,27 +1,34 @@
-# Astro
+# astro-tcc
+-> passos para executar o nosso projeto
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.25.
+baixar o projeto zip
 
-## Development server
+entrar na pasta ---> ASTRO <---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+rodar -> git init <- no terminal
 
-## Code scaffolding
+Rodar -> git remote add origin https://github.com/tauanygaby/astro-tcc.git <-
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+rodar -> git remote -v <-
 
-## Build
+rodar -> npm i @angular/cli <-
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+rodar -> npm i <-
 
-## Running unit tests
+rodar -> ng serve <- 
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+-> clicar no link que aparece no terminal <-
 
-## Running end-to-end tests
+caso de erro no bootstrap rodar o comando -> npm i bootstrap --save <-
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+--------
 
-## Further help
+FIGMA
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+TELA INICIAL -> https://www.figma.com/file/7RTsBZSH2qC8GEyd6pfdtm/Untitled?node-id=1%3A8
+
+TELA DE LOGIN -> https://www.figma.com/file/Ca2jdUZtm8ue3btXiXhk1v/1-Projeto-de-telas-iniciais?node-id=533%3A4
+
+TELA DE CADASTRO -> https://www.figma.com/file/Ca2jdUZtm8ue3btXiXhk1v/1-Projeto-de-telas-iniciais?node-id=525%3A39
+
+TELA DO USUÁRIO -> https://www.figma.com/file/Ca2jdUZtm8ue3btXiXhk1v/1-Projeto-de-telas-iniciais?node-id=657%3A2

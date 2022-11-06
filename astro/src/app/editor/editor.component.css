@@ -1,0 +1,138 @@
+body{
+    margin: 0;
+    overflow: hidden;
+    background: linear-gradient(to right, #9F66FF, #DFCBFF);
+}
+
+
+body * {
+    box-sizing: border-box;
+}
+
+
+.editor{
+    margin-right: 400px;
+    margin-left: 400px;
+    margin-bottom: 10px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+}
+
+.exportar{
+    display: flex;
+}
+
+.meu-input{   
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgb(0, 15, 231);
+    color: rgb(21, 20, 20);
+    text-align: center;
+}
+
+#menu-h ul{ /*alinhamento*/
+    list-style: none; /*tira a bolinha de link*/
+    padding: 0;
+    background: rgb(14, 8, 57);
+    overflow: hidden;
+    align-items: unset;
+    margin: 0;
+}
+#menu-h ul li { /*alinhamento*/
+    list-style: none; /*tira a bolinha de link*/
+    display: inline-block; /*alinha*/
+    transition: background .4s;
+    padding: 0 20px;
+}
+#menu-h ul li a { /*alinhamento*/
+    padding: 10px;
+    color: #D9D9D9;
+    text-decoration: none;
+    display: block;
+}
+#menu-h ul li:hover { /*alinhamento*/
+    background-color: #6f1470;
+}
+
+.menu{
+    background-color: transparent;
+    color: white;
+    border: 0;
+    position: absolute;
+    right: 10px;
+    top: 14px;
+    display: none;
+    height: 100%;
+}
+#menu-h {
+    margin: 0;
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+.menu-link {
+    margin: 10px;
+}
+a {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    margin-left: 10px;
+    text-decoration: none;
+  }
+  .logo {
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+  }
+
+@media only screen and (max-width: 760px){
+    .main-editor{
+        flex-direction: column;
+        
+    }
+    .editor > h2 {
+        display: none;
+    }
+    #menu-h ul:hover{
+        height: 160px;
+    }
+    .logo {
+        font-size: 32px;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+      }
+      #menu-h ul{
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        align-items: unset;
+        margin: 0;
+        height: 0;
+     }
+     #menu-h ul li{
+        justify-content: center;
+        list-style: none;
+     }
+     #menu-h ul li a{
+        display: inline-block;
+        margin: 0;
+     }
+     #menu-h{
+        padding: 0;
+        display: contents;
+        align-items: unset;
+        justify-content: center;
+        align-items: center;
+     }
+     .menu{
+        align-items: unset;
+        display: flex;
+     }
+     header{
+        background: rgb(14, 8, 57);
+     }
+}

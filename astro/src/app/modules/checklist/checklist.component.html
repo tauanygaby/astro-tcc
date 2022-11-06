@@ -1,0 +1,107 @@
+<body>
+
+<header>
+    <nav id="menu-h">
+      <a class="logo" href="/">Astro</a>
+      <ul class="icone">
+        <button class="menu">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="35"
+            height="30"
+            fill="currentColor"
+            class="bi bi-justify"
+            style="padding: 0"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"
+            />
+          </svg>
+        </button>
+        <li><a href="#">Sobre o astro</a></li>
+        <li><a href="#">Funcionalidades</a></li>
+        <li><a href="#">Comunidade</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<div class="container">
+    <div class="row">
+       <div class="col-sm-12 p-0">
+               <div class="capa">
+                   <i class="left"></i>
+                   <div class="menu"></div>
+                   <img src="https://res.cloudinary.com/ashokpurohit/image/upload/v1571334703/add_qegctu.png" class="add" data-toggle="modal" data-target="#myModal">
+                    <h3>To Do List</h3>
+            </div>	
+       </div>
+    </div>
+    <div class="row">
+       <div class="col-sm-12 p-0">
+           <div class="content pt-3">
+            <ul id="list">
+              
+            </ul>
+        </div>
+       </div>
+     </div>
+     <thead>
+      <tr>
+        <th scope="col">Tarefa</th>
+        <th scope="col">Descrição</th>
+        <th scope="col">Data</th>
+        <th scope="col">Ação</th>
+      </tr>
+  </thead>
+
+  <div class="table-responsive" *ngFor="let task of check">
+    <table class="table">
+  <tbody>
+    <tr>
+      <td>{{task.id}}</td>
+      <td name="texto">{{task.texto}}</td>
+      <td name="descricao">{{task.descricao}} </td>
+      <td>&nbsp;{{task.data | date:'dd/MM/yyyy' }}</td>
+      <i class="fa-solid fa-trash" (click)="remover(task.id)"></i>&nbsp; 
+      <i class="fa-regular fa-pen-to-square" (click)="pegarDados(task.id)"></i>&nbsp; 
+    </tr>
+  </tbody>
+    </table>
+  </div> 
+</div>  
+
+<div class="addTarefa">
+  <button type="button" class="botaoAdd" (click)="openModal(template)">+</button>
+ 
+<ng-template #template>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Adiconar tarefa</h4>
+    <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+      <span aria-hidden="true" class="visually-hidden">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div>
+      <div class="itens_marcacao">
+        <label class="mb-0">Tarefa: </label> <input  type="text" id="input" name="texto" [(ngModel)]="checklist.texto" class="form-control mb-1" placeholder="Tarefa">
+        <label class="mb-0">Data: </label> <input type="date" id="date" class="form-control" name="date" [(ngModel)]="checklist.data">
+    </div>
+
+    <div>
+      <label class="mb-0">Descrição: </label> <input type="text" id="descField" name="descricao" [(ngModel)]="checklist.descricao" class="form-control mb-2" placeholder="Descrição">
+     </div>
+     <button type="submit" class="btn-login"(click)="cadastrarChecklist()">Salvar</button>
+    </div>
+  </div>
+</ng-template>
+</div>
+
+
+<button type="submit" class="btn-login"(click)="editar()">Editar</button>
+</body>
+
+
+
+

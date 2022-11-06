@@ -1,0 +1,274 @@
+.botaoAdd{
+  background-color: #e265b0;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  border: none;
+  font-size: 40px;
+  text-align: center;
+
+}
+.capa {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  background: linear-gradient(to right, #3E8AFF, #BBDEFF);
+}
+.capa i.left {
+position: absolute;
+  top: 15px;
+  left: 20px;
+border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 6px;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.capa .menu:after {
+  content: '\2807';
+  font-size: 30px;
+  color: white;
+}
+.capa .add{
+position: absolute;
+  bottom: -30px;
+  width: 60px;
+  right: 30px;
+  cursor:pointer;
+  z-index: 9;
+}
+.capa h3{
+color: #fff;
+position: absolute;
+  bottom: 0;
+  padding: 15px;
+}
+
+.content{
+  width:100%;
+  height: 50vh;
+  background-color: #FFF;
+  overflow: auto;
+}
+.content::-webkit-scrollbar { 
+  display: none; 
+}
+.content ul{
+  padding:0;
+  margin:0;
+}
+.item{
+  width:100%;
+  height: 60px;
+  min-height: 60px;
+  position: relative;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.item i.co{
+  position: absolute;
+  font-size: 25px;
+  padding-left:5px;
+  left:15px;
+  top:10px;
+}
+.item i.co:hover{
+  cursor: pointer;
+}
+.fa-check-square{
+  color:#6eb200;
+}
+.item p.text{
+  position: absolute;
+  padding:0;
+  margin:0;
+  font-size: 20px;
+  font-weight: bold;
+  left:60px;
+  top:7px;
+  color: #74749f;
+  max-width:285px;
+}
+.item p.text{
+    position: absolute;
+    padding:0;
+    margin:0;
+    font-size: 20px;
+    font-weight: bold;
+    left:60px;
+    top:7px;
+    color: #74749f;
+}
+
+.item p.desc{
+  position: absolute;
+    left: 60px;
+    bottom: 6px;
+    font-size: 12px;
+    color: #9e9e9e;
+    margin-bottom: 0;
+}
+
+.item p.date{
+  position: absolute;
+    right: 10px;
+    bottom: 0;
+    font-size: 12px;
+    color: #9e9e9e;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+.lineThrough{
+  text-decoration: line-through;
+  color : #ccc;
+}
+
+.item i.de{
+  position: absolute;
+  font-size: 25px;
+  right:15px;
+  top:10px;
+  display: none;
+}
+.fa-square-o:before{
+color: #e5e8ef;
+}
+.item i.de:hover{
+  color:#af0000;
+  cursor: pointer;
+}
+.item i.st{
+  position: absolute;
+  font-size: 25px;
+  right:15px;
+  top:10px;
+}
+.fa-star:before{
+color: #e5e8ef;
+}
+.disable{
+display: none !important;
+}
+.visible{
+display: block !important
+}
+.checked:before {
+color: orange;
+}
+
+#menu-h ul{ /*alinhamento*/
+  list-style: none; /*tira a bolinha de link*/
+  padding: 0;
+  background: rgb(14, 8, 57);
+  overflow: hidden;
+  align-items: unset;
+  margin: 0;
+}
+#menu-h ul li { /*alinhamento*/
+  list-style: none; /*tira a bolinha de link*/
+  display: inline-block; /*alinha*/
+  transition: background .4s;
+  padding: 0 20px;
+}
+#menu-h ul li a { /*alinhamento*/
+  padding: 10px;
+  color: #D9D9D9;
+  text-decoration: none;
+  display: block;
+}
+#menu-h ul li:hover { /*alinhamento*/
+  background-color: #6f1470;
+}
+
+.menu{
+  background-color: transparent;
+  color: white;
+  border: 0;
+  position: absolute;
+  right: 10px;
+  top: 14px;
+  display: none;
+  height: 100%;
+}
+#menu-h {
+  margin: 0;
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+.menu-link {
+  margin: 10px;
+}
+a {
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  margin-left: 10px;
+  text-decoration: none;
+}
+.logo {
+  font-size: 32px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+@media only screen and (max-width: 760px){
+  .main-login{
+      flex-direction: column;
+  }
+  .left-login > h1 {
+      display: none;
+  }
+  .left-login{
+      width: 100%;
+      height: auto;
+  }
+  .left-login-image{
+      width: 50vw;
+  }
+
+  .card-login{
+      width: 90%;
+  }
+  #menu-h ul:hover{
+      height: 160px;
+  }
+  .logo {
+      font-size: 32px;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+    }
+    #menu-h ul{
+      display: flex;
+      text-align: center;
+      flex-direction: column;
+      align-items: unset;
+      margin: 0;
+      height: 0;
+   }
+   #menu-h ul li{
+      justify-content: center;
+      list-style: none;
+   }
+   #menu-h ul li a{
+      display: inline-block;
+      margin: 0;
+   }
+   #menu-h{
+      padding: 0;
+      display: contents;
+      align-items: unset;
+      justify-content: center;
+      align-items: center;
+   }
+   .menu{
+      align-items: unset;
+      display: flex;
+   }
+   header{
+      background: rgb(14, 8, 57);
+   }
+}

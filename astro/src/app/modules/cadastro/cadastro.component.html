@@ -1,0 +1,108 @@
+<body class="body">
+  
+  <header>
+    <nav id="menu-h">
+      <a class="logo" href="/">Astro</a>
+      <ul class="icone">
+        <button class="menu">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="35"
+            height="30"
+            fill="currentColor"
+            class="bi bi-justify"
+            style="padding: 0"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"
+            />
+          </svg>
+        </button>
+        <li><a href="#">Sobre o astro</a></li>
+        <li><a href="#">Funcionalidades</a></li>
+        <li><a href="#">Comunidade</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="main-login">
+    <div class="left-login">
+      <h1>Cadastre-se <br>e faça parte do nosso time!</h1>
+      <img src="../../../assets/img/imgfuguete.svg" class="left-login-image" alt="Image-foguete">
+    </div>
+
+
+    <form class="right-login">
+
+      <div class="card-login" [formGroup]="form">
+
+        <h1>Cadastro</h1>
+
+        <p class="descricao"> ou crie uma conta</p>
+
+        <div class="textfield">
+          <label>
+            <i class="fa-solid fa-user"></i>
+            <input formControlName="nome" type="text" name="nome" placeholder="Nome" [(ngModel)]="aluno.nome" autofocus >
+          </label>
+          <div *ngIf="verificaValidTouched('nome')" class="alert alert-danger" role="alert">
+            Nome obrigatório
+          </div>
+        </div>
+
+        <div class="textfield">
+          <label>
+            <i class="fa-solid fa-user"></i>
+            <input formControlName="nickname" type="text" name="apelido" placeholder="Apelido" [(ngModel)]="aluno.nickname" required >
+          </label>
+          <div *ngIf="verificaValidTouched('apelido')" class="alert alert-danger" role="alert">
+            Apelido obrigatório
+          </div>
+        </div>
+
+        <div class="textfield">
+          <label>
+            <i class="fa-solid fa-user"></i>
+            <input formControlName="email" type="email" name="email" placeholder="Email" [(ngModel)]="aluno.email" required>
+          </label>
+          <div *ngIf="verificaValidTouched('email')" class="alert alert-danger" role="alert">
+            Email obrigatório
+          </div>
+        </div>
+
+        <div class="textfield">
+          <label>
+            <i class="fa-solid fa-lock"></i>
+            <input formControlName="senha" type="password" name="senha" placeholder="Senha" [(ngModel)]="aluno.senha" required>
+          </label>
+          <div *ngIf="verificaValidTouched('senha')" class="alert alert-danger" role="alert">
+            Senha obrigatória
+          </div>
+        </div>
+
+        <div class="textfield">
+          <label>
+            <i class="fa-solid fa-user"></i>
+            <input formControlName="instituicao" type="text" name="instituicao" placeholder="Instituição" [(ngModel)]="aluno.instituicao" required>
+          </label>
+          <div *ngIf="verificaValidTouched('instituicao')" class="alert alert-danger" role="alert">
+            Instituição obrigatória
+          </div>
+        </div>
+
+        <div>
+          <input type="checkbox" name="termos-politica" value="li-e-aceito"> Li e aceito os <a class="link" href="#" >termos de politica de privacidade </a> 
+        </div>
+
+        <button type="submit" class="btn-login"(click)="cadastrar()">Cadastro</button>
+
+        <p class="registro">Já possui uma conta? <a class=""href="/login">Entre agora</a></p>
+
+      </div>
+    </form>
+  </div>
+
+
+</body>

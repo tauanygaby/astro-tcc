@@ -1,0 +1,29 @@
+<body class="body">
+
+    <header>
+        <nav id="menu-h">
+            <a class="logo" href="/">Astro</a>
+            <ul class="icone">
+                <button class="menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="30" fill="currentColor"
+                        class="bi bi-justify" style="padding: 0" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z" />
+                    </svg>
+                </button>
+                <li><a href="#">Sobre o astro</a></li>
+                <li><a href="#">Funcionalidades</a></li>
+                <li><a href="#">Comunidade</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main-editor">
+        <div class="editor">
+            <h2>Modelo livre</h2>
+            <input class="meu-input" placeholder="Meu titulo">
+            <ckeditor [editor]="Editor"></ckeditor>
+            <button (click)="salvarInfoEditor()">Salvar informações</button>
+        </div>
+    </div>
+</body>

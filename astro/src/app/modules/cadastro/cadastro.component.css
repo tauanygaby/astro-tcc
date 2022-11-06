@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200&display=swap');
+
+body{
+    margin: 0;
+    font-family: 'Noto Sans', sans-serif;
+    overflow: hidden; /* oculta a barra de rolagem, pois não tem necessidade na pág de login*/
+}
+
+
+body * {
+    box-sizing: border-box;
+}
+
+.social-media{
+    display: flex;
+    list-style-type: none;
+}
+
+.item-social-media{
+    border: 1px solid #d0cdcd;
+    border-radius: 50%;
+    width: 38px;
+    height: 36px;
+    line-height: 35px;
+    text-align: center;
+}
+
+.item-social-media a {
+    color: #000000;
+    margin: 0;
+}
+.item-social-media:hover{
+    background-color: #ffffff;
+}
+
+.descricao{
+    font-size: 16px;
+    font-weight: 300;
+    color: #101010;
+    line-height: 30px;
+}
+
+.registro{
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.link{
+   color: #1c6ca8;
+}
+
+
+.main-login{
+    width: 100vw;
+    height: 100vh;
+   /* background-image: linear-gradient(to bottom, #4990c0,#a81eab, #ede2ed);*/
+    background-image: linear-gradient(to bottom, #3f5c84,#6f1470, #ede2ede2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.left-login{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.left-login > h1 {
+    font-size: 3vw;
+    color:rgb(255, 255, 255);
+}
+
+.left-login-image{
+    width: 30vw;
+}
+
+.right-login{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-login{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    background: rgba(254, 251, 253, 0.637);
+    /*background: rgba(180, 142, 227, 0.72);*/
+    backdrop-filter: blur(25px);
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #101010b0;
+}
+
+.card-login > h1 {
+    color: rgb(251, 251, 251);
+    font-weight: 800;
+    margin: 0;
+}
+
+.textfield {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.textfield > label{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background-color:rgb(226, 225, 226);
+    margin-bottom: 10px;
+    
+    color:black; /*caso queira mudar a cor do input que o user coloca*/
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px #2e2c2e8f;
+    outline: none;
+    box-sizing: border-box;
+}
+.textfield > label > input{
+    background-color:rgb(226, 225, 226);
+    border: none;
+    width: 80%;
+    outline-style: none;
+}
+
+.textfield > input::placeholder{
+    color: rgb(0, 0, 0);
+}
+
+.fa-brands{
+    width: 100%;
+    font-size: 24px;
+    color: #000000;
+}
+
+.fa-solid{
+    margin-right: 10px;
+}
+
+.btn-login{
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #ffffff;
+    background: rgb(14, 8, 57);;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #e8eae8;
+
+}
+.btn-login:hover{
+    background-color: #6f1470;
+}
+
+#menu-h ul{ /*alinhamento*/
+    list-style: none; /*tira a bolinha de link*/
+    padding: 0;
+    background: rgb(14, 8, 57);
+    overflow: hidden;
+    align-items: unset;
+    margin: 0;
+}
+#menu-h ul li { /*alinhamento*/
+    list-style: none; /*tira a bolinha de link*/
+    display: inline-block; /*alinha*/
+    transition: background .4s;
+    padding: 0 20px;
+}
+#menu-h ul li a { /*alinhamento*/
+    padding: 10px;
+    color: #D9D9D9;
+    text-decoration: none;
+    display: block;
+}
+#menu-h ul li:hover { /*alinhamento*/
+    background-color: #6f1470;
+}
+
+.menu{
+    background-color: transparent;
+    color: white;
+    border: 0;
+    position: absolute;
+    right: 10px;
+    top: 14px;
+    display: none;
+    height: 100%;
+}
+#menu-h {
+    margin: 0;
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+.menu-link {
+    margin: 10px;
+}
+a {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    margin-left: 10px;
+    text-decoration: none;
+  }
+  .logo {
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+  }
+
+@media only screen and (max-width: 760px){
+    .main-login{
+        flex-direction: column;
+    }
+    .left-login > h1 {
+        display: none;
+    }
+    .left-login{
+        width: 100%;
+        height: auto;
+    }
+    .left-login-image{
+        width: 50vw;
+    }
+
+    .card-login{
+        width: 90%;
+    }
+    #menu-h ul:hover{
+        height: 160px;
+    }
+    .logo {
+        font-size: 32px;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+      }
+      #menu-h ul{
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        align-items: unset;
+        margin: 0;
+        height: 0;
+     }
+     #menu-h ul li{
+        justify-content: center;
+        list-style: none;
+     }
+     #menu-h ul li a{
+        display: inline-block;
+        margin: 0;
+     }
+     #menu-h{
+        padding: 0;
+        display: contents;
+        align-items: unset;
+        justify-content: center;
+        align-items: center;
+     }
+     .menu{
+        align-items: unset;
+        display: flex;
+     }
+     header{
+        background: rgb(14, 8, 57);
+     }
+}
