@@ -52,7 +52,7 @@
     <div class="main-editor">
         <div class="editor">
             <h2>Modelo livre</h2>
-            <input class="meu-input" placeholder="Meu titulo">
+            <input name="tituloEditor" class="meu-input" placeholder="Meu titulo">
             <angular-editor [config]="config" [(ngModel)]="editor.texto"></angular-editor>
             <button (click)="salvarInfoEditor()">Salvar informações</button>
         </div>

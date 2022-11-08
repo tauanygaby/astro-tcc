@@ -1,16 +1,17 @@
 import { Component, OnInit, TemplateRef } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { AngularEditorConfig } from '@kolkov/angular-editor';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { CrudService } from 'src/app/service/crud.service';
 import { ChecklistModel } from '../checklist.model';
+import { jsPDF } from "jspdf";
+import autotable from "jspdf-autotable";
 
 @Component({
   selector: 'app-checklist', 
   templateUrl: './checklist.component.html',
   styleUrls: ['./checklist.component.css'],
 })
-export class ChecklistComponent implements OnInit {
+export class ChecklistComponent implements OnInit { 
 
   check: Array<any> = new Array();
 
@@ -37,6 +38,16 @@ openModal(template: TemplateRef<any>) {
   this.modalRef = this.modalService.show(template);
 }
 
+public onExport() {
+  const doc = new jsPDF("l", "pt", "A4");
+  const source = document.getElementById("content");
+  doc.setFontSize(12)
+  doc.html(source, {
+    callback: function(pdf) {
+      doc.output("dataurlnewwindow"); // preview do pdf
+    }
+  });
+}
   atualizarPage(){
     this.crudService.listarChecklist().subscribe(response => {
       this.check = response.checklist.map((task)=>{
@@ -102,5 +113,4 @@ openModal(template: TemplateRef<any>) {
         console.log(this.checklist);
       })
     }
-
 }

@@ -1,6 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { AngularEditorConfig } from '@kolkov/angular-editor';
-import { jsPDF } from "jspdf";
 import { EditorModel } from '../modules/editor.model';
 import { CrudService } from '../service/crud.service';
 
@@ -36,6 +35,7 @@ export class EditorComponent implements OnInit {
     })
   }
 
+    
   public SavePDF(): void {  
     let content=this.content.nativeElement;  
     let doc = new jsPDF();  
@@ -57,11 +57,12 @@ export class EditorComponent implements OnInit {
     doc.save('test.pdf');  
   }   
 
+  
   config: AngularEditorConfig = {
     editable: true,
     spellcheck: true,
     outline: true,
-    width: '43.5rem',
+    width: '60.9rem',
     height: '30rem',
     minHeight: '5rem',
     placeholder: 'Enter text here...',
