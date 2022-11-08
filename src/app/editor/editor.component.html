@@ -28,12 +28,32 @@
       </header>
 
       
+      <div class="container">  
+        <h1>Teste do exportar pdf</h1>  
+        <input type="button" value="Download PDF" class="btn btn-success" (click)="SavePDF()">  
+        <br/><br/>  
+        <div class="container" id="content" #content>
+            <table class="table table-dark">  
+                <tr>  
+                    <th>Id</th>  
+                    <th>Name</th>  
+                    <th>Salary</th>  
+                </tr>  
+                <tr *ngFor="let item of Data">  
+                    <th>{{item.Id}}</th>  
+                    <th>{{item.Name}}</th>  
+                    <th>{{item.Salary}}</th>  
+                </tr>  
+            </table>  
+        </div>  
+    </div>  
+
 
     <div class="main-editor">
         <div class="editor">
             <h2>Modelo livre</h2>
             <input class="meu-input" placeholder="Meu titulo">
-            <ckeditor [editor]="Editor"></ckeditor>
+            <angular-editor [config]="config" [(ngModel)]="editor.texto"></angular-editor>
             <button (click)="salvarInfoEditor()">Salvar informações</button>
         </div>
     </div>
