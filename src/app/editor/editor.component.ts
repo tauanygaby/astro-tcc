@@ -35,29 +35,6 @@ export class EditorComponent implements OnInit {
     })
   }
 
-    
-  public SavePDF(): void {  
-    let content=this.content.nativeElement;  
-    let doc = new jsPDF();  
-    let _elementHandlers =  
-    {  
-      '#editor':function(element,renderer){  
-        return true;  
-      }  
-    };  
-    doc.html(content.innerHTML),{  
-  
-      'width':190,  
-      'elementHandlers':_elementHandlers  
-    };  
-
-    console.log(doc.html);
-    
-  
-    doc.save('test.pdf');  
-  }   
-
-  
   config: AngularEditorConfig = {
     editable: true,
     spellcheck: true,

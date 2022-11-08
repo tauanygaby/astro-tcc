@@ -1,7 +1,6 @@
 import { Component, OnInit, TemplateRef } from '@angular/core';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { jsPDF } from "jspdf";
-import autotable from "jspdf-autotable";
 
 @Component({
   selector: 'app-diario-de-bordo',
