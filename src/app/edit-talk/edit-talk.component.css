@@ -1,0 +1,13 @@
+img {
+  width: 500px;
+  margin: (-24px) (-24px) 0px;
+  padding-bottom: 8px;
+}
+
+.mat-form-field {
+  display: block;
+}
+
+.mat-button {
+  text-transform: uppercase;
+}

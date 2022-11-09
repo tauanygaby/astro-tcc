@@ -28,7 +28,8 @@ export class CadastroComponent implements OnInit {
       nickname: [null, Validators.required],
       email: [null, Validators.required],
       senha: [null, Validators.required],
-      instituicao: [null, Validators.required]
+      instituicao: [null, Validators.required],
+      checkbox: [null, Validators.required]
     })
   }
 

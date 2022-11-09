@@ -53,11 +53,11 @@
         </div>
 
         <div class="textfield">
-          <label>
+          <label >
             <i class="fa-solid fa-user"></i>
-            <input formControlName="nickname" type="text" name="apelido" placeholder="Apelido" [(ngModel)]="aluno.nickname" required >
+            <input  formControlName="nickname" type="text" name="nickname" placeholder="Apelido" [(ngModel)]="aluno.nickname" required >
           </label>
-          <div *ngIf="verificaValidTouched('apelido')" class="alert alert-danger" role="alert">
+          <div *ngIf="verificaValidTouched('nickname')" class="alert alert-danger" role="alert">
             Apelido obrigatório
           </div>
         </div>
@@ -93,10 +93,10 @@
         </div>
 
         <div>
-          <input type="checkbox" name="termos-politica" value="li-e-aceito"> Li e aceito os <a class="link" href="#" >termos de politica de privacidade </a> 
+          <input formControlName="checkbox" type="checkbox" name="termos-politica" value="li-e-aceito" required> Li e aceito os <a class="link" href="#">termos de politica de privacidade</a> 
         </div>
 
-        <button type="submit" class="btn-login"(click)="cadastrar()">Cadastro</button>
+        <button *ngIf="form.valid" type="submit" class="btn-login"(click)="cadastrar()">Cadastro</button>
 
         <p class="registro">Já possui uma conta? <a class=""href="/login">Entre agora</a></p>
 
