@@ -14,11 +14,11 @@
           <mat-menu #menu="matMenu">
             <button mat-menu-item (click)="filterByDate(track.talks, -1)">
               <mat-icon>arrow_downward</mat-icon>
-              <span>Sort By(Date)</span>
+              <span>Classificar por(Data)</span>
             </button>
             <button mat-menu-item (click)="filterByDate(track.talks, 1)">
               <mat-icon>arrow_upward</mat-icon>
-              <span>Sort By(Date)</span>
+              <span>Classificar por(Data)</span>
             </button>
           </mat-menu>
           <button fxFlex="50" mat-icon-button aria-label="Example icon-button with a menu">
@@ -39,10 +39,10 @@
 
       <div fxLayout="row" fxLayoutAlign="baseline baseline">
         <button style="width: fit-content;" class="add-talk" (click)="addEditTalk(track, track)" color="primary"
-          mat-raised-button>Add talk</button>
+          mat-raised-button>Adicionar cartão</button>
         <span fxFlex style="text-align: right; cursor: pointer;"
-          (click)="track['collapsed'] = !track['collapsed']">Click to
-          {{ track['collapsed'] ? 'expand' : 'collapse'}}</span>
+          (click)="track['collapsed'] = !track['collapsed']">
+          {{ track['collapsed'] ? 'Expandir lista' : 'Recolher lista'}}</span>
       </div>
     </div>
 
