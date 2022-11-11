@@ -38,7 +38,7 @@
 
 .card-list-content {
   overflow: auto;
-  overflow-x: hidden;
+  overflow-x: auto;
   flex-grow: 1;
 }
 
