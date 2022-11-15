@@ -7,11 +7,11 @@ import { BoardService } from 'src/app/service/board.service';
 import { Board, Talk, Track } from '../schema.model';
 
 @Component({
-  selector: 'app-trello',
-  templateUrl: './trello.component.html',
-  styleUrls: ['./trello.component.css']
+  selector: 'app-gerenciador-tarefas',
+  templateUrl: './gerenciador-tarefas.component.html',
+  styleUrls: ['./gerenciador-tarefas.component.css']
 })
-export class TrelloComponent implements OnInit {
+export class GerenciadorTarefasComponent implements OnInit {
 
   boards: Board[] = [];
 

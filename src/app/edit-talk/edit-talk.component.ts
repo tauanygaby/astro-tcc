@@ -2,8 +2,8 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatChipInputEvent, MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { ColorPickerDialogComponent } from '../color-picker-dialog/color-picker-dialog.component';
+import { appConstants } from '../modules/gerenciadorTarefas/appConstants';
 import { Talk } from '../modules/schema.model';
-import { appConstants } from '../modules/trello/appConstants';
 
 @Component({
   selector: 'app-edit-talk',

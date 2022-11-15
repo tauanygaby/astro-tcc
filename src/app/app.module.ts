@@ -14,7 +14,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BlocoComponent } from './blocoFerramentas/BlocoComponent.component';
-import { CardTrelloComponent } from './card-trello/card-trello.component';
+import { CardTarefaComponent } from './card-tarefa/card-tarefa.component';
 import { ColorPickerDialogComponent } from './color-picker-dialog/color-picker-dialog.component';
 import { DeleteTalkComponent } from './delete-talk/delete-talk.component';
 import { DrawerComponent } from './drawer/drawer.component';
@@ -25,10 +25,10 @@ import { ChecklistComponent } from './modules/checklist/checklist.component';
 import { DiarioDeBordoComponent } from './modules/diario-de-bordo/diario-de-bordo.component';
 import { EditorTextoComponent } from './modules/editor-texto/editor-texto.component';
 import { FerramentasComponent } from './modules/ferramentas/ferramentas.component';
+import { GerenciadorTarefasComponent } from './modules/gerenciadorTarefas/gerenciador-tarefas.component';
 import { HomeComponent } from './modules/home/pages/home.component';
 import { LoginComponent } from './modules/login/login.component';
 import { ModelosPreDefinidosComponent } from './modules/modelos-pre-definidos/modelos-pre-definidos.component';
-import { TrelloComponent } from './modules/trello/trello.component';
 import { UserComponent } from './modules/user/user.component';
 import { CrudService } from './service/crud.service';
 import { SharedModule } from './shared/shared.module';
@@ -48,8 +48,8 @@ import { SharedModule } from './shared/shared.module';
     ChecklistComponent,
     DiarioDeBordoComponent,
     ModelosPreDefinidosComponent,
-    TrelloComponent,
-    CardTrelloComponent,
+    GerenciadorTarefasComponent,
+    CardTarefaComponent,
     DrawerComponent,
     EditTalkComponent,
     DeleteTalkComponent,

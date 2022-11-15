@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { GerenciadorTarefasComponent } from './gerenciador-tarefas.component';
 
-import { TrelloComponent } from './trello.component';
 
-describe('TrelloComponent', () => {
-  let component: TrelloComponent;
-  let fixture: ComponentFixture<TrelloComponent>;
+describe('GerenciadorTarefasComponent', () => {
+  let component: GerenciadorTarefasComponent;
+  let fixture: ComponentFixture<GerenciadorTarefasComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TrelloComponent ]
+      declarations: [ GerenciadorTarefasComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TrelloComponent);
+    fixture = TestBed.createComponent(GerenciadorTarefasComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

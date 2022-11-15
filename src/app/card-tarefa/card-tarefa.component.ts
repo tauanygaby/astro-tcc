@@ -1,13 +1,13 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { appConstants } from '../modules/gerenciadorTarefas/appConstants';
 import { IssueType } from '../modules/schema.model';
-import { appConstants } from '../modules/trello/appConstants';
 
 @Component({
-  selector: 'app-card-trello',
-  templateUrl: './card-trello.component.html',
-  styleUrls: ['./card-trello.component.css']
+  selector: 'app-card-tarefa',
+  templateUrl: './card-tarefa.component.html',
+  styleUrls: ['./card-tarefa.component.css']
 })
-export class CardTrelloComponent implements OnInit {
+export class CardTarefaComponent implements OnInit {
 
   issueTypesWithColor = appConstants.issueTypeListWithColor;
   issueTypes = Object.values(IssueType);

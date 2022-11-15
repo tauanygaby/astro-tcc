@@ -4,4 +4,5 @@ export class ResponseUpdate {
     nickname: string;
     senha: string;
     instituicao: string;
+    foto: Blob;
 }

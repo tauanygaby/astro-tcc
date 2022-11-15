@@ -32,7 +32,7 @@
         
         <div class="insertImg">
           <img [src]="url"><br>
-          <input type="file" accept="image/*" class="file" (change)="inputFileChange($event)"/>
+          <input type="file" accept="image/*" class="file" (change)="inputFileChange($event)" name="foto" [(ngModel)]="updateAluno.foto"/>
         </div>
         <div class="textfield">
           <label>

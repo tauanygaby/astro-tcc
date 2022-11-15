@@ -28,7 +28,8 @@ export class UserComponent implements OnInit{
         nome: res.aluno.nome,
         nickname: res.aluno.nickname,
         senha: res.aluno.senha,
-        instituicao: res.aluno.instituicao
+        instituicao: res.aluno.instituicao,
+        foto: res.aluno.foto
       }
       console.log(this.updateAluno);
     })
