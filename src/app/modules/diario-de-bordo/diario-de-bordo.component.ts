@@ -1,6 +1,8 @@
 import { Component, OnInit, TemplateRef } from '@angular/core';
-import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { jsPDF } from "jspdf";
+import { CrudService } from 'src/app/service/crud.service';
+import { DiarioModel } from '../diario.model';
+import { EditorModel } from '../editor.model';
 
 @Component({
   selector: 'app-diario-de-bordo',
@@ -9,11 +11,53 @@ import { jsPDF } from "jspdf";
 })
 export class DiarioDeBordoComponent implements OnInit {
 
-  modalRef?: BsModalRef;
+  diarioDeBordo: DiarioModel = new DiarioModel();
+  
+  constructor(private crudService: CrudService) 
+  {
+  }
 
-  constructor(private modalService: BsModalService,) { }
+  ngOnInit()
+  {
+    this.crudService..subscribe(res => {
+      this.updateAluno = {
+        id: res.aluno.id,
+        nome: res.aluno.nome,
+        nickname: res.aluno.nickname,
+        senha: res.aluno.senha,
+        instituicao: res.aluno.instituicao,
+        foto: res.aluno.foto
+  }
 
-  ngOnInit() {
+
+  atualizarPage(){
+       //conversão da data 
+        const dateSplitted = task.data.split('-').map((x: string) => Number(x));
+        console.log(dateSplitted);   
+  }
+
+  cadastrarChecklist() {
+    console.log(this.diarioDeBordo);
+    this.crudService.cadastrarDiario(this.diarioDeBordo).subscribe(diarioDeBordo => {
+      diarioDeBordo = new DiarioModel();
+
+      this.atualizarPage();
+      
+    }, err => {
+      alert("Erro ao cadastrar informações");
+      (console.log("Erro ao cadastrar informações", err));
+    })
+  }
+
+
+  atualizar() {
+    console.log(this.updateAluno);
+    this.crudService.atualizarAluno(this.email, this.updateAluno).subscribe(aluno => {
+      this.updateAluno = new ResponseUpdate();
+      this.load();
+    }, err => {
+      console.log("Erro ao atualizar", err);
+    })
   }
 
   public onExport() {
@@ -32,8 +76,5 @@ export class DiarioDeBordoComponent implements OnInit {
     // })
   }
   
-  openModal(template: TemplateRef<any>) {
-    this.modalRef = this.modalService.show(template);
-  }
 
 }
