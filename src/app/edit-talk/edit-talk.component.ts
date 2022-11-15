@@ -36,38 +36,6 @@ export class EditTalkComponent implements OnInit {
     this.dialogRef.close(this.formGroup.value);
   }
 
-  removeTag(tag: string) {
-    // Remove the tag from the tag control's value.
-    const tagsControl = this.formGroup.get('tags');
-    tagsControl.value.splice(tagsControl.value.indexOf(tag), 1);
-  }
 
-  addTag(event: MatChipInputEvent) {
-    const tagsControl = this.formGroup.get('tags');
 
-    // Create a new array of tags, if the talk doesn't have any,
-    // otherwise add the new tag to the existing array.
-    if (tagsControl.value) {
-      tagsControl.value.push({ name: event.value, color: '#e0e0e0' });
-    } else {
-      tagsControl.setValue([event.value]);
-    }
-
-    // Clear the input's value once the tag has been added.
-    event.input.value = '';
-  }
-
-  openColorPickerDialog(tag): void {
-    const dialogRef = this.colorPickerdialog.open(ColorPickerDialogComponent, {
-      data: {},
-      disableClose: true
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(result);
-      if (result) {
-        tag.color = result;
-      }
-    });
-  }
 }

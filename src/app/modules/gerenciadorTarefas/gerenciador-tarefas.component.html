@@ -1,3 +1,30 @@
+<header class="header">
+  <nav id="menu-h">
+    <a class="logo" href="/">Astro</a>
+    <ul class="icone">
+      <button class="menu">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="35"
+          height="30"
+          fill="currentColor"
+          class="bi bi-justify"
+          style="padding: 0"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"
+          />
+        </svg>
+      </button>
+      <li><a href="/home">Inicio</a></li>
+      <li><a href="/ferramentas">Ferramentas</a></li>
+      <li><a href="">Meu perfil</a></li> 
+    </ul>
+  </nav>
+</header> 
+
 <app-drawer>
   <div *ngFor="let board of boards; let boardIndex = index;" class="board" cdkDropList [cdkDropListData]="board.tracks"
     (cdkDropListDropped)="onTrackDrop($event)" cdkDropListOrientation="horizontal">
@@ -14,11 +41,11 @@
           <mat-menu #menu="matMenu">
             <button mat-menu-item (click)="filterByDate(track.talks, -1)">
               <mat-icon>arrow_downward</mat-icon>
-              <span>Sort By(Date)</span>
+              <span>Classificar por(Data)</span>
             </button>
             <button mat-menu-item (click)="filterByDate(track.talks, 1)">
               <mat-icon>arrow_upward</mat-icon>
-              <span>Sort By(Date)</span>
+              <span>Classificar por(Data)</span>
             </button>
           </mat-menu>
           <button fxFlex="50" mat-icon-button aria-label="Example icon-button with a menu">
@@ -39,10 +66,14 @@
 
       <div fxLayout="row" fxLayoutAlign="baseline baseline">
         <button style="width: fit-content;" class="add-talk" (click)="addEditTalk(track, track)" color="primary"
+<<<<<<< HEAD:src/app/modules/gerenciadorTarefas/gerenciador-tarefas.component.html
           mat-raised-button>Adicionar Tarefa</button>
+=======
+          mat-raised-button>Adicionar cartão</button>
+>>>>>>> c27a45c644dda29f9f0eeb6529b134f38064a6e1:src/app/modules/trello/trello.component.html
         <span fxFlex style="text-align: right; cursor: pointer;"
-          (click)="track['collapsed'] = !track['collapsed']">Click to
-          {{ track['collapsed'] ? 'expand' : 'collapse'}}</span>
+          (click)="track['collapsed'] = !track['collapsed']">
+          {{ track['collapsed'] ? 'Expandir lista' : 'Recolher lista'}}</span>
       </div>
     </div>
 

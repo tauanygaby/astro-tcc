@@ -29,10 +29,10 @@
 
 
     <div class="main-editor" id="content" #content>
-        <div class="editor" id="content" #content>
+        <div class="editor">
             <h2>Modelo livre</h2>
-            <input id="content" #content name="tituloEditor" class="meu-input" placeholder="Meu titulo">
-            <angular-editor id="content" #content [config]="config" [(ngModel)]="editor.texto"></angular-editor>
+            <input name="tituloEditor" class="meu-input" placeholder="Meu titulo">
+            <angular-editor [config]="config" [(ngModel)]="editor.texto"></angular-editor>
             <button (click)="salvarInfoEditor()">Salvar informações</button>
         </div>
     </div>

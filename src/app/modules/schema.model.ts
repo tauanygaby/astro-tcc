@@ -5,7 +5,7 @@ export interface Tag {
 export interface Talk {
     text: string;
     speaker?: string;
-    tags?: Tag[];
+    tags?: Tag[]
     image?: string;
     createdAt?: Date;
     issueType?: IssueType;
