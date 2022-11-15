@@ -74,7 +74,7 @@ export class CrudService {
     return this.http.delete('http://localhost:8080/deleteCheck/'.concat(id));
   }
 
-  listarEditor() : Observable<any>{
+  listarDiario() : Observable<any>{
     return this.http.get('http://localhost:8080/lista-diario');
   }
 

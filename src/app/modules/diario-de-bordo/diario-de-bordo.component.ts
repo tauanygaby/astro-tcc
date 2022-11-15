@@ -1,8 +1,7 @@
-import { Component, OnInit, TemplateRef } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { jsPDF } from "jspdf";
 import { CrudService } from 'src/app/service/crud.service';
 import { DiarioModel } from '../diario.model';
-import { EditorModel } from '../editor.model';
 
 @Component({
   selector: 'app-diario-de-bordo',
@@ -11,32 +10,30 @@ import { EditorModel } from '../editor.model';
 })
 export class DiarioDeBordoComponent implements OnInit {
 
+  diario: Array<any> = new Array();
+  
   diarioDeBordo: DiarioModel = new DiarioModel();
   
-  constructor(private crudService: CrudService) 
-  {
+  constructor(private crudService: CrudService) {}
+
+  ngOnInit() {
+    this.atualizarPage();
   }
-
-  ngOnInit()
-  {
-    this.crudService..subscribe(res => {
-      this.updateAluno = {
-        id: res.aluno.id,
-        nome: res.aluno.nome,
-        nickname: res.aluno.nickname,
-        senha: res.aluno.senha,
-        instituicao: res.aluno.instituicao,
-        foto: res.aluno.foto
-  }
-
-
+  
   atualizarPage(){
-       //conversão da data 
-        const dateSplitted = task.data.split('-').map((x: string) => Number(x));
-        console.log(dateSplitted);   
+    this.crudService.listarDiario().subscribe(response => {
+      this.diario = response.diarioDeBordo
+      console.log(this.diarioDeBordo);
+      console.log(this.diario);
+    }, err => {
+      (console.log("erro ao listar", err));
+    })
+    console.log(this.diarioDeBordo);
+    console.log(this.diario);
+    
   }
 
-  cadastrarChecklist() {
+  cadastrarDiario() {
     console.log(this.diarioDeBordo);
     this.crudService.cadastrarDiario(this.diarioDeBordo).subscribe(diarioDeBordo => {
       diarioDeBordo = new DiarioModel();
@@ -50,15 +47,15 @@ export class DiarioDeBordoComponent implements OnInit {
   }
 
 
-  atualizar() {
-    console.log(this.updateAluno);
-    this.crudService.atualizarAluno(this.email, this.updateAluno).subscribe(aluno => {
-      this.updateAluno = new ResponseUpdate();
-      this.load();
-    }, err => {
-      console.log("Erro ao atualizar", err);
-    })
-  }
+  // atualizar() {
+  //   console.log(this.updateAluno);
+  //   this.crudService.atualizarAluno(this.email, this.updateAluno).subscribe(aluno => {
+  //     this.updateAluno = new ResponseUpdate();
+  //     this.load();
+  //   }, err => {
+  //     console.log("Erro ao atualizar", err);
+  //   })
+  // }
 
   public onExport() {
     const doc = new jsPDF("p", "pt", "a4");
