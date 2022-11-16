@@ -32,6 +32,7 @@ import { ModelosPreDefinidosComponent } from './modules/modelos-pre-definidos/mo
 import { UserComponent } from './modules/user/user.component';
 import { CrudService } from './service/crud.service';
 import { SharedModule } from './shared/shared.module';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 
 @NgModule({
@@ -86,7 +87,8 @@ import { SharedModule } from './shared/shared.module';
     CommonModule,
     MatFormFieldModule,
     FormsModule,
-    MatSliderModule
+    MatSliderModule,
+    MatPaginatorModule
   ],
   entryComponents: [EditTalkComponent, DeleteTalkComponent],
   providers: [CrudService, HttpClientModule, Location],
