@@ -1,9 +1,9 @@
 import { Component, OnInit, TemplateRef } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { jsPDF } from "jspdf";
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { CrudService } from 'src/app/service/crud.service';
 import { ChecklistModel } from '../checklist.model';
-import { jsPDF } from "jspdf";
 
 @Component({
   selector: 'app-checklist', 

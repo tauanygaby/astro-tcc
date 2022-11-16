@@ -20,39 +20,46 @@
 
 
   <div class="geral">
-    
-        <div class="capa">
-          <i class="left"></i>
-          <div class="menu"></div>
-          <h1>Diário de bordo</h1>
-        </div>
-
-        <div class="card-diario">
-          <div class="itens_marcacao">
-              <label class="mb-0">Título: </label> <input  type="text" id="input" name="texto" [(ngModel)]="checklist.texto" class="form-control mb-1" placeholder="Titulo">
-              <label class="mb-0">Subtitulo: </label> <input  type="text" id="input" name="texto" [(ngModel)]="checklist.texto" class="form-control mb-1" placeholder="Subtitulo">
-              <div>
-                <div>
-                  <label class="mb-0">Capa:</label>
-                </div>
-                <input  class="mb-0" type="file" accept="image/*"/>
-              </div>
-
-              <label class="mb-0">Instituição: </label> <input  type="text" id="input" name="texto" [(ngModel)]="checklist.texto" class="form-control mb-1" placeholder="Instituição">
-          </div>
-       <button type="submit" class="btn-login"(click)="cadastrarChecklist()">Salvar</button>
-      </div>
+    <div class="capa">
+      <i class="left"></i>
+      <div class="menu"></div>
+      <h1>Diário de bordo</h1>
+    </div>
+    <ul>
+      <li>
+        <label class="mb-0">Titulo Capa</label> <input type="text" id="input" name="texto"
+              [(ngModel)]="diarioDeBordo.titulocapa" class="form-control mb-1" placeholder="Titulo">
+      </li>
+      <li>
+        <label class="mb-0">subtitulo Capa</label> <input type="text" id="input" name="texto"
+              [(ngModel)]="diarioDeBordo.subtitulocapa" class="form-control mb-1" placeholder="Subtitulo">
+      </li>
+      <li><label class="mb-0">imagem Capa</label></li>
+      <li><input class="mb-0" type="file" accept="image/*" /></li>
+      <li><label class="mb-0">Instituicao Capa</label> <input type="text" id="input" name="texto"
+        [(ngModel)]="diarioDeBordo.instituicaocapa" class="form-control mb-1" placeholder="Instituição"></li>
+        <br>
+        <br>
+        <li>
+          <label class="mb-0">titulo registro</label> <input type="text" id="input" name="texto"
+                [(ngModel)]="diarioDeBordo.tituloregis" class="form-control mb-1" placeholder="Titulo">
+        </li>
+        <li>
+          <label class="mb-0">subtitulo registro</label> <input type="text" id="input" name="texto"
+                [(ngModel)]="diarioDeBordo.subtituloregis" class="form-control mb-1" placeholder="Subtitulo">
+        </li>
+        <li><label class="mb-0">imagem registro</label></li>
+        <li><input class="mb-0" type="file" accept="image/*" /></li>
+        <li><label class="mb-0">integrantes registro</label> <input type="text" id="input" name="texto"
+            [(ngModel)]="diarioDeBordo.integrantesregis" class="form-control mb-1" placeholder="Integrantes"></li>
+    </ul>
+    <button type="submit" class="btn-login" (click)="cadastrarDiario()">Salvar</button>
   </div>
   <div>
   </div>
 
-  <mat-paginator [length]="100"
-              [pageSize]="10"
-              [pageSizeOptions]="[5, 10, 25, 100]"
-              aria-label="Select page">
-</mat-paginator>
 
-
-
+  <div class="registro">
+  </div>
 
 </body>
