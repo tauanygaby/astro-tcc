@@ -33,6 +33,7 @@ import { UserComponent } from './modules/user/user.component';
 import { CrudService } from './service/crud.service';
 import { SharedModule } from './shared/shared.module';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import {CdkAccordionModule} from '@angular/cdk/accordion';
 
 
 @NgModule({
@@ -88,7 +89,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatFormFieldModule,
     FormsModule,
     MatSliderModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    CdkAccordionModule
   ],
   entryComponents: [EditTalkComponent, DeleteTalkComponent],
   providers: [CrudService, HttpClientModule, Location],

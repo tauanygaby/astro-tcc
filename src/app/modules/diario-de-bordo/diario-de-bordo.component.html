@@ -20,46 +20,64 @@
 
 
   <div class="geral">
-    <div class="capa">
-      <i class="left"></i>
-      <div class="menu"></div>
-      <h1>Diário de bordo</h1>
-    </div>
-    <ul>
-      <li>
-        <label class="mb-0">Titulo Capa</label> <input type="text" id="input" name="texto"
-              [(ngModel)]="diarioDeBordo.titulocapa" class="form-control mb-1" placeholder="Titulo">
-      </li>
-      <li>
-        <label class="mb-0">subtitulo Capa</label> <input type="text" id="input" name="texto"
-              [(ngModel)]="diarioDeBordo.subtitulocapa" class="form-control mb-1" placeholder="Subtitulo">
-      </li>
-      <li><label class="mb-0">imagem Capa</label></li>
-      <li><input class="mb-0" type="file" accept="image/*" /></li>
-      <li><label class="mb-0">Instituicao Capa</label> <input type="text" id="input" name="texto"
-        [(ngModel)]="diarioDeBordo.instituicaocapa" class="form-control mb-1" placeholder="Instituição"></li>
-        <br>
-        <br>
-        <li>
-          <label class="mb-0">titulo registro</label> <input type="text" id="input" name="texto"
-                [(ngModel)]="diarioDeBordo.tituloregis" class="form-control mb-1" placeholder="Titulo">
-        </li>
-        <li>
-          <label class="mb-0">subtitulo registro</label> <input type="text" id="input" name="texto"
-                [(ngModel)]="diarioDeBordo.subtituloregis" class="form-control mb-1" placeholder="Subtitulo">
-        </li>
-        <li><label class="mb-0">imagem registro</label></li>
-        <li><input class="mb-0" type="file" accept="image/*" /></li>
-        <li><label class="mb-0">integrantes registro</label> <input type="text" id="input" name="texto"
-            [(ngModel)]="diarioDeBordo.integrantesregis" class="form-control mb-1" placeholder="Integrantes"></li>
-    </ul>
-    <button type="submit" class="btn-login" (click)="cadastrarDiario()">Salvar</button>
+    
+        <div class="capa">
+          <i class="left"></i>
+          <div class="menu"></div>
+          <h1>Diário de bordo</h1>
+        </div>
+
+        <div class="card-diario">
+          <div class="itens_marcacao">
+            <div>
+              <input  class="titulo" type="text" id="input" name="texto" [(ngModel)]="diarioDeBordo.titulocapa" placeholder="Titulo">
+            </div>
+
+            <div>
+              <input  class="subtitulo" type="text" id="input" name="texto" [(ngModel)]="diarioDeBordo.subtitulocapa"  placeholder="Subtítulo">
+            </div>
+
+          <div>
+            <img [src]="url"><br>
+              <input type="file" name="picture__input" alt="Imagem de capa" accept="image/*" class="picture" id="picture__input" (change)="inputFileChange($event)"/>
+          </div>
+
+          <div>
+            <input  class="instituicao" type="text" id="input" name="texto" [(ngModel)]="diarioDeBordo.instituicaocapa" placeholder="Instituição">
+          </div>
+      </div>
+      
+      </div>
   </div>
   <div>
   </div>
-
-
-  <div class="registro">
-  </div>
-
 </body>
+
+<cdk-accordion class="example-accordion">
+  <cdk-accordion-item
+    *ngFor="let item of items; let index = index;"
+    #accordionItem="cdkAccordionItem"
+    class="example-accordion-item"
+    role="button"
+    tabindex="0"
+    [attr.id]="'accordion-header-' + index"
+    [attr.aria-expanded]="accordionItem.expanded"
+    [attr.aria-controls]="'accordion-body-' + index">
+    <div class="example-accordion-item-header" (click)="accordionItem.toggle()">
+      {{ item }}
+      <span class="example-accordion-item-description">
+        Click to {{ accordionItem.expanded ? 'close' : 'open' }}
+      </span>
+    </div>
+    <div
+      class="example-accordion-item-body"
+      role="region"
+      [style.display]="accordionItem.expanded ? '' : 'none'"
+      [attr.id]="'accordion-body-' + index"
+      [attr.aria-labelledby]="'accordion-header-' + index">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis
+      excepturi incidunt ipsum deleniti labore, tempore non nam doloribus blanditiis
+      veritatis illo autem iure aliquid ullam rem tenetur deserunt velit culpa?
+    </div>
+  </cdk-accordion-item>
+</cdk-accordion>
