@@ -75,7 +75,7 @@ public onExport() {
       this.atualizarPage();
       
     }, err => {
-      alert("Erro! Quantidade de caracteres excede 255.");
+      alert("Erro! Preencha todos os campos");
       (console.log("Erro ao cadastrar checklist", err));
     })
   }
@@ -96,7 +96,7 @@ public onExport() {
     this.crudService.salvar(this.checklist).subscribe(checklist => {
       console.log(this.checklist);
          }, err => {
-          alert("Erro! Quantidade de caracteres excede 255.");
+          alert("Erro!");
        console.log("Erro ao editar", err);
      })
      }

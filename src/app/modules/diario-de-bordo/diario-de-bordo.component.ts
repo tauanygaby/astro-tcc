@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
 import { jsPDF } from "jspdf";
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { CrudService } from 'src/app/service/crud.service';
 import { DiarioModel } from '../diario.model';
 
@@ -10,26 +11,48 @@ import { DiarioModel } from '../diario.model';
 })
 export class DiarioDeBordoComponent implements OnInit {
 
-  diario: Array<any> = new Array();
+  diarios: Array<any> = new Array();
   
   diarioDeBordo: DiarioModel = new DiarioModel();
+
+  modalRef?: BsModalRef;
   
-  constructor(private crudService: CrudService) {}
+  constructor(private crudService: CrudService,
+    private modalService: BsModalService,) {}
 
   ngOnInit() {
     this.atualizarPage();
   }
+
+  openModal(template: TemplateRef<any>) {
+    this.modalRef = this.modalService.show(template);
+  }
+  // atualizarPage(){
+  //   this.crudService.listarDiario().subscribe(response => {
+  //     this.check = response.checklist.map((task)=>{        
+  //       return task;
+  //     });
+  //     console.log(this.diarioDeBordo);
+  //     console.log(this.check);
+    
+      
+  //   }, err => {
+  //     (console.log("erro ao listar", err));
+  //   })
+  //   console.log(this.diarioDeBordo);
+  // }
+
   
   atualizarPage(){
     this.crudService.listarDiario().subscribe(response => {
-      this.diario = response.diarioDeBordo
+      this.diarios = response.diarioDeBordo
       console.log(this.diarioDeBordo);
-      console.log(this.diario);
+      console.log(this.diarios);
     }, err => {
       (console.log("erro ao listar", err));
     })
     console.log(this.diarioDeBordo);
-    console.log(this.diario);
+    console.log(this.diarios);
     
   }
 
@@ -37,7 +60,7 @@ export class DiarioDeBordoComponent implements OnInit {
     console.log(this.diarioDeBordo);
     this.crudService.cadastrarDiario(this.diarioDeBordo).subscribe(diarioDeBordo => {
       diarioDeBordo = new DiarioModel();
-
+      alert("Cadastro realizado com sucesso!");
       this.atualizarPage();
       
     }, err => {
@@ -47,15 +70,6 @@ export class DiarioDeBordoComponent implements OnInit {
   }
 
 
-  // atualizar() {
-  //   console.log(this.updateAluno);
-  //   this.crudService.atualizarAluno(this.email, this.updateAluno).subscribe(aluno => {
-  //     this.updateAluno = new ResponseUpdate();
-  //     this.load();
-  //   }, err => {
-  //     console.log("Erro ao atualizar", err);
-  //   })
-  // }
 
   public onExport() {
     const doc = new jsPDF("p", "pt", "a4");

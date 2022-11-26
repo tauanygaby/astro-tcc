@@ -12,9 +12,6 @@
   width: 100%;
 }
 
-
-
-
 .card-diario{
   margin-left: 25%;
   margin-top: 20px;
@@ -57,9 +54,8 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 img {
-  
   background-color: #aaa;
-  width: 700px;
+  width: 400px;
   height: 400px;
 }
 
@@ -78,11 +74,10 @@ img {
   text-align: center;
 }
 
-.capa .add{
-position: absolute;
-  bottom: -30px;
-  width: 60px;
-  right: 30px;
+.botaoAdd{
+  font-size: 30px;
+  padding: 20px;
+  width: 100%;
   cursor:pointer;
   z-index: 9;
 }

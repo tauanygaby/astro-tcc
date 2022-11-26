@@ -27,57 +27,74 @@
           <h1>Diário de bordo</h1>
         </div>
 
-        <div class="card-diario">
-          <div class="itens_marcacao">
-            <div>
-              <input  class="titulo" type="text" id="input" name="texto" [(ngModel)]="diarioDeBordo.titulocapa" placeholder="Titulo">
-            </div>
-
-            <div>
-              <input  class="subtitulo" type="text" id="input" name="texto" [(ngModel)]="diarioDeBordo.subtitulocapa"  placeholder="Subtítulo">
-            </div>
-
+        <div>
+          <button type="button" class="botaoAdd" (click)="openModal(template)">Novo diário de bordo</button>
+        <ng-template #template>
           <div>
-            <img [src]="url"><br>
-              <input type="file" name="picture__input" alt="Imagem de capa" accept="image/*" class="picture" id="picture__input" (change)="inputFileChange($event)"/>
-          </div>
-
-          <div>
-            <input  class="instituicao" type="text" id="input" name="texto" [(ngModel)]="diarioDeBordo.instituicaocapa" placeholder="Instituição">
-          </div>
-      </div>
+            <div class="itens_marcacao">
+              <div>
+                <input  class="titulo" type="text" id="input" name="texto" [(ngModel)]="diarioDeBordo.titulocapa" placeholder="Titulo">
+              </div>
       
-      </div>
+              <div>
+                <input  class="subtitulo" type="text" id="input" name="texto" [(ngModel)]="diarioDeBordo.subtitulocapa"  placeholder="Subtítulo">
+              </div>
+      
+            <div>
+              <img [src]="url"><br>
+                <input type="file" name="picture__input" alt="Imagem de capa" accept="image/*" class="picture" id="picture__input" (change)="inputFileChange($event)"/>
+            </div>
+            
+      
+            <div>
+              <input  class="instituicao" type="text" id="input" name="texto" [(ngModel)]="diarioDeBordo.instituicaocapa" placeholder="Instituição">
+            </div>
+
+            <button type="submit" class="btn-login" (click)="cadastrarDiario()">Salvar</button>
+        </div>
+        
+        </div>
+        </ng-template>
+        </div>
+
+        <div>
+          <button type="button" class="botaoAdd" (click)="openModal(registro)">Registro</button>
+          <ng-template #registro>
+            <div>
+              <input  class="titulo" type="text" id="input" name="texto" [(ngModel)]="diarioDeBordo.tituloregis" placeholder="Titulo">
+            </div>
+
+            <div>
+              <input  class="titulo" type="date" id="input" name="date" [(ngModel)]="diarioDeBordo.dataregis" placeholder="Data do registro">
+            </div>
+
+            <div>
+              <input  class="registro" type="text" id="input" name="registro" [(ngModel)]="diarioDeBordo.registro" placeholder="Seu registro">
+            </div>
+
+            <div>
+              <img [src]="url"><br>
+                <input type="file" name="picture__input" alt="Imagem de capa" accept="image/*" class="picture" id="picture__input" (change)="inputFileChange($event)"/>
+            </div>
+
+            <div>
+              <input  class="integrantes" type="text" id="input" name="integrantes" [(ngModel)]="diarioDeBordo.integrantesregis" placeholder="Registro feito por:">
+            </div>
+
+            <button type="submit" class="btn-login" (click)="cadastrarDiario()">Salvar</button>
+
+          </ng-template>
+
+        </div>
+
+        <div>
+        <h1>Listagem dos registros</h1>
+        </div>
+
+
+  
+
   </div>
   <div>
   </div>
 </body>
-
-<cdk-accordion class="example-accordion">
-  <cdk-accordion-item
-    *ngFor="let item of items; let index = index;"
-    #accordionItem="cdkAccordionItem"
-    class="example-accordion-item"
-    role="button"
-    tabindex="0"
-    [attr.id]="'accordion-header-' + index"
-    [attr.aria-expanded]="accordionItem.expanded"
-    [attr.aria-controls]="'accordion-body-' + index">
-    <div class="example-accordion-item-header" (click)="accordionItem.toggle()">
-      {{ item }}
-      <span class="example-accordion-item-description">
-        Click to {{ accordionItem.expanded ? 'close' : 'open' }}
-      </span>
-    </div>
-    <div
-      class="example-accordion-item-body"
-      role="region"
-      [style.display]="accordionItem.expanded ? '' : 'none'"
-      [attr.id]="'accordion-body-' + index"
-      [attr.aria-labelledby]="'accordion-header-' + index">
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis
-      excepturi incidunt ipsum deleniti labore, tempore non nam doloribus blanditiis
-      veritatis illo autem iure aliquid ullam rem tenetur deserunt velit culpa?
-    </div>
-  </cdk-accordion-item>
-</cdk-accordion>
