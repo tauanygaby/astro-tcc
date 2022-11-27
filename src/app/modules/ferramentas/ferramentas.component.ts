@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { UsuarioService } from 'src/app/service/usuario.service';
 
 @Component({
   selector: 'app-ferramentas',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FerramentasComponent implements OnInit {
 
-  constructor() { }
+  constructor(private usuarioService: UsuarioService, private router: Router) { }
 
   ngOnInit() {
+    console.log(this.usuarioService.obterIdUsuarioLogado());
+  }
+
+  public pageUser() {
+    this.router.navigate(['/user/' + this.usuarioService.obterIdUsuarioLogado()]);
+  }
+
+  logout() {
+    this.usuarioService.deslogar()
+    console.log(this.usuarioService.deslogar());
   }
 
 }

@@ -2,7 +2,7 @@
 
   <header class="header">
     <nav id="menu-h">
-      <a class="logo" href="/">Astro</a>
+      <span class="logo" >Astro</span>
       <ul class="icone">
         <button class="menu">
           <svg
@@ -20,8 +20,10 @@
             />
           </svg>
         </button>
-        <li><a href="/home">Inicio</a></li>
         <li><a href="/ferramentas">Ferramentas</a></li>
+            <button mat-icon-button (click)="logout()">
+      <mat-icon>logout</mat-icon>
+    </button>
       </ul>
     </nav>
   </header>
@@ -74,3 +76,4 @@
   </div>
 
 </body>
+  <router-outlet></router-outlet>
