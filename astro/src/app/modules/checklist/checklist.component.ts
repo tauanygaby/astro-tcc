@@ -107,19 +107,5 @@ openModal(template: TemplateRef<any>) {
       })
     }
 
-  config: AngularEditorConfig = {
-    editable: true,
-    spellcheck: true,
-    outline: false,
-    showToolbar: false,
-    width: '43.5rem',
-    height: '2rem',
-    placeholder: 'Enter text here...',
-    translate: 'no',
-    defaultParagraphSeparator: 'p',
-    defaultFontName: 'Arial',
-    defaultFontSize: '2',
-   
-  };
 
 }

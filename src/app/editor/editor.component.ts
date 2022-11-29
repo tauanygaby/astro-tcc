@@ -41,15 +41,14 @@ export class EditorComponent implements OnInit {
   config: AngularEditorConfig = {
     editable: true,
     spellcheck: true,
-    outline: true,
+    outline: false,
     width: '60.9rem',
-    height: '30rem',
+    height: '50rem',
     minHeight: '5rem',
-    placeholder: 'Enter text here...',
-    translate: 'no',
+    placeholder: 'Insira seu texto aqui...',
+    translate: 'yes',
     defaultParagraphSeparator: 'p',
-    defaultFontName: 'Arial',
-    defaultFontSize: '4',
+    showToolbar: false,
   };
 
 }
