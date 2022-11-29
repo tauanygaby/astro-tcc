@@ -1,7 +1,8 @@
 import { Location } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { UsuarioService } from 'src/app/service/usuario.service';
 import { CrudService } from '../../service/crud.service';
 import { AlunoModel } from '../aluno.model';
 import { ResponseUpdate } from './../aluno-update.model';
@@ -17,11 +18,11 @@ export class UserComponent implements OnInit{
   aluno: AlunoModel = new AlunoModel();
   updateAluno: ResponseUpdate = new ResponseUpdate();
   
-  constructor(private crudService: CrudService, private router: ActivatedRoute, public location: Location,
-    private http: HttpClient) { }
+  constructor(private crudService: CrudService, private activatedRouter: ActivatedRoute, public location: Location,
+    private http: HttpClient, private usuarioService: UsuarioService, private router: Router) { }
   
   ngOnInit() {
-    this.email = this.router.snapshot.paramMap.get('email');
+    this.email = this.activatedRouter.snapshot.paramMap.get('email');
     this.crudService.getUser(this.email).subscribe(res => {
       this.updateAluno = {
         id: res.aluno.id,
@@ -68,5 +69,14 @@ export class UserComponent implements OnInit{
         this.url=event.target.result;
           }
         }
-      }
-    }
+  }
+  logout() {
+    this.usuarioService.deslogar()
+    console.log(this.usuarioService.deslogar());
+  }
+
+  public pageUser() {
+    this.router.navigate(['/user/' + this.usuarioService.obterIdUsuarioLogado()]);
+  }
+  
+}

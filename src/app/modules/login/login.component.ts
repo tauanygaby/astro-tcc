@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { CrudService } from 'src/app/service/crud.service';
+import { UsuarioService } from 'src/app/service/usuario.service';
 import { AlertModalComponent } from 'src/app/shared/alert-modal/alert-modal.component';
 import { AlunoModel } from '../aluno.model';
 
@@ -17,11 +18,11 @@ export class LoginComponent implements OnInit {
   aluno: AlunoModel = new AlunoModel();
   bsModalRef: BsModalRef;
   form!: FormGroup;
-  title =  'Codingvila Login With Google' ;
-  auth2:  any ;
+  title = 'Codingvila Login With Google';
+  auth2: any;
 
   constructor(private crudService: CrudService, private router: Router, private modalService: BsModalService,
-    private formBuilder: FormBuilder) { }
+    private formBuilder: FormBuilder, private usuarioService: UsuarioService) { }
 
   ngOnInit() {
     this.form = this.formBuilder.group({
@@ -63,7 +64,7 @@ export class LoginComponent implements OnInit {
       (<any>window)['gapi'].load('auth2', () => {
         this.auth2 = (<any>window)['gapi'].auth2.init({
           client_id: '261944408406-p1lf8j8v9saque7v3qpno7o2ah0llufn.apps.googleusercontent.com',
-          plugin_name:'login',
+          plugin_name: 'login',
           cookiepolicy: 'single_host_origin',
           scope: 'profile email'
         });
@@ -80,15 +81,15 @@ export class LoginComponent implements OnInit {
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'google-jssdk'));
   }
-  
+
   entrar() {
     this.handleSuccess()
-    console.log(this.aluno);
-    this.crudService.getUser(this.aluno.email).subscribe(aluno => {
+    return this.crudService.getUser(this.aluno.email).subscribe((resposta) => {
+      window.localStorage.setItem('token', btoa(JSON.stringify(resposta['token'])));
+      window.localStorage.setItem('usuario', btoa(JSON.stringify([this.aluno])));
       this.router.navigate(['/user/' + this.aluno.email]);
-      this.aluno = new AlunoModel();
+      resposta(true);
       console.log(this.aluno);
-      
     }, err => {
       console.log("Erro ao entrar", err);
       this.handleError();

@@ -1,7 +1,7 @@
 <body class="body">
   <header class="header">
     <nav id="menu-h">
-      <a class="logo" href="/">Astro</a>
+      <a class="logo" href="/ferramentas">Astro</a>
       <ul class="icone">
         <button class="menu">
           <svg
@@ -19,9 +19,11 @@
             />
           </svg>
         </button>
-        <li><a href="/home">Inicio</a></li>
         <li><a href="/ferramentas">Ferramentas</a></li>
-        <li><a href="">Meu perfil</a></li> 
+        <li><a (click)="pageUser()" >Meu perfil</a></li> 
+        <button mat-icon-button (click)="logout()">
+          <mat-icon>logout</mat-icon>
+        </button>
       </ul>
     </nav>
   </header>

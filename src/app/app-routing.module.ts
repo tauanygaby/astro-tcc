@@ -1,6 +1,7 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './../guard/auth.guard';
 import { CadastroComponent } from './modules/cadastro/cadastro.component';
 import { ChecklistComponent } from './modules/checklist/checklist.component';
 import { DiarioDeBordoComponent } from './modules/diario-de-bordo/diario-de-bordo.component';
@@ -14,17 +15,16 @@ import { UserComponent } from './modules/user/user.component';
 
 
 const routes: Routes = [
-  { path: 'login', component: LoginComponent },
-  { path: 'cadastro', component: CadastroComponent },
-  { path: 'ferramentas', component: FerramentasComponent },
-  { path: 'home', component: HomeComponent },
-  { path: 'editor', component: EditorTextoComponent },
-  { path: 'user/:email', component: UserComponent},
-  { path: 'checklist', component: ChecklistComponent },
-  { path: 'diarioDeBordo', component: DiarioDeBordoComponent },
-  { path: 'modeloDefinido', component: ModelosPreDefinidosComponent },
-  { path: 'trello', component: GerenciadorTarefasComponent },
-  { path: '', pathMatch: 'full', redirectTo: '/home' },
+  { path: '', component: HomeComponent },
+  { path: 'user/:email', component: UserComponent, canActivate: [AuthGuard] },
+  { path: 'ferramentas', component: FerramentasComponent, canActivate: [AuthGuard] },
+  { path: 'editor', component: EditorTextoComponent, canActivate: [AuthGuard] },
+  { path: 'checklist', component: ChecklistComponent, canActivate: [AuthGuard] },
+  { path: 'diarioDeBordo', component: DiarioDeBordoComponent, canActivate: [AuthGuard] },
+  { path: 'modeloDefinido', component: ModelosPreDefinidosComponent, canActivate: [AuthGuard] },
+  { path: 'trello', component: GerenciadorTarefasComponent, canActivate: [AuthGuard] },
+  { path: 'login', component: LoginComponent},
+  { path: 'cadastro', component: CadastroComponent},
 ];
 
 @NgModule({
