@@ -73,6 +73,18 @@ img {
   outline: none;
   text-align: center;
 }
+.botaoAdd2{
+  background-color: #ae6491;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  font-size: 30px;
+  text-align: center;
+  border: none;
+  margin-left: 85%;
+  margin-top: 170px;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+}
 
 .botaoAdd{
   font-size: 30px;

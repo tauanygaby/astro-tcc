@@ -5,6 +5,8 @@ import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { CrudService } from 'src/app/service/crud.service';
 import { ChecklistModel } from '../checklist.model';
 
+
+
 @Component({
   selector: 'app-checklist', 
   templateUrl: './checklist.component.html',

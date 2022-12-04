@@ -25,10 +25,12 @@
           <i class="left"></i>
           <div class="menu"></div>
           <h1>Diário de bordo</h1>
+          <div>
+            <button type="button" class="botaoAdd2" (click)="openModal(template)">+</button>
+          </div>
         </div>
 
         <div>
-          <button type="button" class="botaoAdd" (click)="openModal(template)">Novo diário de bordo</button>
         <ng-template #template>
           <div>
             <div class="itens_marcacao">
@@ -58,8 +60,10 @@
         </div>
 
         <div>
-          <button type="button" class="botaoAdd" (click)="openModal(registro)">Registro</button>
-          <ng-template #registro>
+          <h1>Listagem dos registros</h1>
+          </div>
+
+        <div>
             <div>
               <input  class="titulo" type="text" id="input" name="texto" [(ngModel)]="diarioDeBordo.tituloregis" placeholder="Titulo">
             </div>
@@ -83,17 +87,9 @@
 
             <button type="submit" class="btn-login" (click)="cadastrarDiario()">Salvar</button>
 
-          </ng-template>
+         
 
         </div>
-
-        <div>
-        <h1>Listagem dos registros</h1>
-        </div>
-
-
-  
-
   </div>
   <div>
   </div>
