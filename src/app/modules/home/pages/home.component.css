@@ -4,8 +4,11 @@
 body {
   margin: 0;
   font-family: "Noto Sans", sans-serif;
-  overflow: hidden; /* oculta a barra de rolagem, pois não tem necessidade na pág de login*/
+  overflow: hidden;
+  /* oculta a barra de rolagem, pois não tem necessidade na pág de login*/
   background: #3f5c84;
+  height: 120vh;
+  width: 100%;
 }
 
 .img { 
@@ -90,60 +93,56 @@ a {
 ul {
   display: inline-flex;
 }
-.container {
-  float: left;
-  display: contents;
-  width: 400%;
-  height: 400%;
-  background: #f6f9ff;
-}
-.container-inferior {
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  height: 100%;
-  background: #f6f9ff;
-}
 #menu-h {
   width: 100%;
   position: absolute;
 }
+
 #menu-h ul {
   /*alinhamento*/
-  list-style: none; /*tira a bolinha de link*/
+  list-style: none;
+  /*tira a bolinha de link*/
   padding: 0;
   background: rgb(14, 8, 57);
   overflow: hidden;
   align-items: unset;
   margin: 0;
 }
+
 #menu-h ul li {
   /*alinhamento*/
-  list-style: none; /*tira a bolinha de link*/
-  display: inline-block; /*alinha*/
+  list-style: none;
+  /*tira a bolinha de link*/
+  display: inline-block;
+  /*alinha*/
   transition: background 0.4s;
   padding: 0 20px;
 }
+
 #menu-h ul li a {
   /*alinhamento*/
   padding: 10px;
   color: #d9d9d9;
   text-decoration: none;
   display: block;
+  transition: background .4s;
 }
-#menu-h ul li a:hover {
+
+#menu-h ul li:hover {
   background-color: #6f1470;
 }
+
 #menu-icon ul li a:hover {
   background-color: #6f1470;
 }
+
 .icon {
   display: flex;
   float: right;
   margin: 0;
   height: 0;
 }
+
 .menu {
   background-color: transparent;
   color: white;
@@ -154,6 +153,7 @@ ul {
   display: none;
   height: 100%;
 }
+
 .user {
   background-color: transparent;
   color: white;
@@ -163,6 +163,7 @@ ul {
   top: 14px;
   display: none;
 }
+
 #menu-icon ul:hover {
   margin: 0;
   text-align: center;
@@ -171,11 +172,15 @@ ul {
   height: 180px;
   padding: 25px;
 }
+
 #menu-icon ul li {
-  list-style: none; /*tira a bolinha de link*/
+  list-style: none;
+  /*tira a bolinha de link*/
   flex-direction: column;
-  display: contents; /*alinha*/
+  display: contents;
+  /*alinha*/
 }
+
 #menu-icon ul li a {
   /*alinhamento*/
   padding: 10px;
@@ -183,23 +188,28 @@ ul {
   text-decoration: none;
   transition: background 0.4s;
 }
+
 #menu-icon {
   position: absolute;
   flex-direction: column;
   display: contents;
 }
+
 #menu-h {
   margin: 0;
   display: block;
   position: relative;
 }
+
 .menu-link {
   margin: 10px;
 }
+
 .user {
   flex-direction: column;
   display: flex;
 }
+
 a {
   font-size: 20px;
   color: rgb(255, 255, 255);
@@ -212,17 +222,76 @@ a {
   letter-spacing: 4px;
 }
 
+.cards {
+  background: #ede8f7;
+  display: flex;
+  padding: 32px;
+}
+
+.cards section.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: white;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  max-height: 468px;
+  margin-right: 30px;
+}
+
+.cards section.card:first-child {
+  margin-left: 90px;
+}
+
+.cards section.card .icon {
+  width: 64px;
+  height: 64px;
+}
+
+.cards section.card img {
+  width: 100%;
+}
+
+.cards section.card h3 {
+  font-size: 100%;
+  margin: 16px 0;
+}
+
+.cards section.card span {
+  font-weight: 300;
+  max-width: 240px;
+  font-size: 80%;
+  margin-bottom: 16px;
+}
+
+.cards section.card {
+  box-shadow: 20px 20px 50px -30px #905ee0;
+}
+
+h4 {
+  padding-top: 70px;
+  align-items: center;
+  color: #230a32;
+}
+
 @media screen and (max-width: 760px) {
+
+  body {
+    height: 238vh;
+  }
 
   #menu-h ul:hover {
     height: 160px;
   }
+
   .logo {
     margin-top: 5rem;
     font-size: 32px;
     text-transform: uppercase;
     letter-spacing: 4px;
   }
+
   #menu-h ul {
     display: flex;
     text-align: center;
@@ -231,16 +300,19 @@ a {
     margin: 0;
     height: 0;
   }
+
   #menu-h ul li {
     justify-content: center;
     list-style: none;
   }
+
   #menu-h ul li a {
     display: flex;
     transition: background 0.4s;
     flex-direction: column;
     margin: 0;
   }
+
   #menu-h {
     padding: 0;
     height: 5vh;
@@ -248,9 +320,11 @@ a {
     justify-content: center;
     align-items: center;
   }
+
   #menu-icon ul:hover {
     height: 180px;
   }
+
   #menu-icon ul li {
     justify-content: center;
     list-style: none;
@@ -261,6 +335,7 @@ a {
     display: flex;
     margin: 0;
   }
+
   #menu-icon {
     align-items: unset;
     padding: 0;
@@ -268,39 +343,38 @@ a {
     justify-content: center;
     align-items: center;
   }
+
   .icon {
     margin: 0;
     height: 0;
   }
+
   .menu {
     display: flex;
     margin: 0 5vh;
   }
+
   .user {
     display: flex;
   }
+
   .img {
     object-fit: cover;
     width: 100%;
     height: 80vh;
   }
-  .container-inferior {
-    width: 100%;
-    display: flex;
-    height: 300vh;
-  }
-  .container {
-    float: left;
-    display: contents;
-    width: 80%;
-    height: 400%;
-  }
+
   .texto-home {
     font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
     position: relative;
     font-size: 4vw;
   }
-  .main-home{
+
+  h4{
+    justify-content: center;
+    margin-top: 50px;
+  }
+  .main-home {
     width: 100vw;
     height: 80vh;
     display: flex;
@@ -308,6 +382,7 @@ a {
     justify-content: center;
     align-items: center;
   }
+
   .texto-home-cabecalho {
     position: absolute;
     margin-top: 50vh;
@@ -317,15 +392,18 @@ a {
     backdrop-filter: blur(25px);
     border-radius: 15px;
   }
+
   .nav-inferior {
     justify-content: left;
   }
+
   .img-rosto {
     width: 100px;
     height: 100px;
     border-radius: 50px;
     margin: 10px;
   }
+
   .barra-inferior {
     position: absolute;
     height: 20vh;
@@ -342,22 +420,47 @@ a {
     text-align: center;
     color: white;
   }
+
   .texto_barra-inferior h2 {
     justify-content: center;
   }
+
   .texto_barra-inferior ul {
     display: flex;
     align-items: center;
     justify-content: center;
   }
+
   li {
-    list-style: none; /*tira a bolinha de link*/
-    display: flex; /*alinha*/
+    list-style: none;
+    /*tira a bolinha de link*/
+    display: flex;
+    /*alinha*/
     padding: 10px;
   }
+
   a {
     font-size: 20px;
     color: rgb(255, 255, 255);
     text-decoration: none;
+  }
+
+  .cards ul {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .cards section.card {
+    margin-left: 0;
+    margin-bottom: 32px;
+  }
+
+  .cards section.card:last-child {
+    margin-bottom: 0;
+  }
+
+  .cards section.card button {
+    font-size: 70%;
   }
 }

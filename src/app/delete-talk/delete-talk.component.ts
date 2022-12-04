@@ -1,6 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material';
-import { Talk } from '../modules/schema.model';
+import { Task } from '../modules/schema.model';
 
 @Component({
   selector: 'app-delete-talk',
@@ -9,7 +9,7 @@ import { Talk } from '../modules/schema.model';
 })
 export class DeleteTalkComponent implements OnInit {
 
-  constructor(@Inject(MAT_DIALOG_DATA) public talk: Talk) { }
+  constructor(@Inject(MAT_DIALOG_DATA) public talk: Task) { }
 
   ngOnInit() {
   }

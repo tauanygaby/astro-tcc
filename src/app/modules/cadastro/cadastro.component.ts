@@ -36,9 +36,9 @@ export class CadastroComponent implements OnInit {
   cadastrar() {
     console.log(this.aluno);
     console.log(this.form.valid)
-    this.handleSuccess();
     this.crudService.cadastrarAluno(this.aluno).subscribe(aluno => {
       this.aluno = new AlunoModel();
+      this.handleSuccess();
       this.router.navigate(['/login']);
     }, err => {
       (console.log("Erro ao cadastrar", err));

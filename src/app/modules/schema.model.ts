@@ -2,13 +2,12 @@ export interface Tag {
     name: string;
     color?: string;
 }
-export interface Talk {
-    text: string;
-    speaker?: string;
-    tags?: Tag[]
+export interface Task {
+    id: number;
+    descricao: string;
+    tipo: Tag[]
+    responsavel: string;
     image?: string;
-    createdAt?: Date;
-    issueType?: IssueType;
 }
 
 // export interface Issue {
@@ -24,13 +23,13 @@ export enum IssueType {
     Story = 'story'
 }
 
-export interface Track {
-    title: string;
-    talks: Talk[];
+export interface Trello {
+    titulo: string;
+    tasks: Task[];
     id: string;
 }
 
 export interface Board {
     title: string;
-    tracks: Track[];
+    trello: Trello[];
 }

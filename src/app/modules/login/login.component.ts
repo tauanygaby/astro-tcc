@@ -83,10 +83,10 @@ export class LoginComponent implements OnInit {
   }
 
   entrar() {
-    this.handleSuccess()
     return this.crudService.getUser(this.aluno.email).subscribe((resposta) => {
       window.localStorage.setItem('token', btoa(JSON.stringify(resposta['token'])));
       window.localStorage.setItem('usuario', btoa(JSON.stringify([this.aluno])));
+      this.handleSuccess()
       this.router.navigate(['/user/' + this.aluno.email]);
       resposta(true);
       console.log(this.aluno);
