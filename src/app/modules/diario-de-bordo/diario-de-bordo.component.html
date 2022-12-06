@@ -28,6 +28,9 @@
           <div>
             <button type="button" class="botaoAdd2" (click)="openModal(template)">+</button>
           </div>
+          <div>
+            <button type="button" class="botaoAdd2" (click)="openModal(temp)">+</button>
+          </div>
         </div>
 
         <div>
@@ -60,11 +63,8 @@
         </div>
 
         <div>
-          <h1>Listagem dos registros</h1>
-          </div>
-
-        <div>
-            <div>
+          <ng-template #temp>
+          <div>
               <input  class="titulo" type="text" id="input" name="texto" [(ngModel)]="diarioDeBordo.tituloregis" placeholder="Titulo">
             </div>
 
@@ -87,7 +87,55 @@
 
             <button type="submit" class="btn-login" (click)="cadastrarDiario()">Salvar</button>
 
-         
+          </ng-template>
+        </div>
+
+        <div>
+          <h1>Listagem dos registros</h1>   
+      
+
+      <div class="form-group">
+        <label class="control-label">Escolha o diario</label>
+        <select [(ngModel)]="diarioDeBordo"  name="diario" class="form-control">
+            
+          <option *ngFor="let diario of diarios" [ngValue]="diario">
+              {{diario.titulocapa}}
+            </option>
+
+        </select>
+
+        <div class="table-responsive" id="content" #content>
+          <table class="table">
+  
+            <tr>
+              <th class="columnTarefa">Subtitulo</th>
+            </tr>
+  
+          </table>
+        
+        <div class="container" id="content" #content></div>
+        <div class="table-responsive">
+          <table class="table">
+            <tbody>
+              <tr>
+                <td class="columnTarefa" name="subtitulo">{{diarioDeBordo.subtitulocapa}}</td>
+              
+                <div class="icones">
+                  <button class="icone">
+                    <i class="fa-regular fa-pen-to-square"></i>&nbsp;
+                  </button>
+                  <button class="icone">
+                    <i class="fa-solid fa-trash"></i>&nbsp;
+                  </button>
+                </div>
+              </tr>
+            </tbody>
+            
+          </table>
+          
+        </div>
+      </div>
+    </div> 
 
         </div>
   </div>

@@ -34,6 +34,11 @@ import { CrudService } from './service/crud.service';
 import { SharedModule } from './shared/shared.module';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {CdkAccordionModule} from '@angular/cdk/accordion';
+import { PlanoDePesquisaComponent } from './modules/plano-de-pesquisa/plano-de-pesquisa.component';
+import { RelatorioDePesquisaComponent } from './modules/relatorio-de-pesquisa/relatorio-de-pesquisa.component';
+import { FichamentoComponent } from './modules/fichamento/fichamento.component';
+import { MeusProjetosComponent } from './modules/meus-projetos/meus-projetos.component';
+import { TermosDePoliticaComponent } from './modules/termos-de-politica/termos-de-politica.component';
 
 
 @NgModule({
@@ -55,7 +60,12 @@ import {CdkAccordionModule} from '@angular/cdk/accordion';
     DrawerComponent,
     EditTalkComponent,
     DeleteTalkComponent,
-    ColorPickerDialogComponent
+    ColorPickerDialogComponent,
+    PlanoDePesquisaComponent,
+    RelatorioDePesquisaComponent,
+    FichamentoComponent,
+    MeusProjetosComponent,
+    TermosDePoliticaComponent
   ],
   imports: [
     MatDialogModule,

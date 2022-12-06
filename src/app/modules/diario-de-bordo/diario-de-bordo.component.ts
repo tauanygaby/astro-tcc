@@ -27,33 +27,18 @@ export class DiarioDeBordoComponent implements OnInit {
   openModal(template: TemplateRef<any>) {
     this.modalRef = this.modalService.show(template);
   }
-  // atualizarPage(){
-  //   this.crudService.listarDiario().subscribe(response => {
-  //     this.check = response.checklist.map((task)=>{        
-  //       return task;
-  //     });
-  //     console.log(this.diarioDeBordo);
-  //     console.log(this.check);
-    
-      
-  //   }, err => {
-  //     (console.log("erro ao listar", err));
-  //   })
-  //   console.log(this.diarioDeBordo);
-  // }
 
   
   atualizarPage(){
     this.crudService.listarDiario().subscribe(response => {
-      this.diarios = response.diarioDeBordo
-      console.log(this.diarioDeBordo);
-      console.log(this.diarios);
-    }, err => {
-      (console.log("erro ao listar", err));
-    })
-    console.log(this.diarioDeBordo);
-    console.log(this.diarios);
-    
+      this.diarios = response.diarios.map((teste)=>{
+        console.log(teste);
+        return teste;
+      })
+      }, err => {
+        alert("Erro ao listar infos");
+        (console.log("Erro ao listar infos", err));
+      })
   }
 
   cadastrarDiario() {
@@ -68,6 +53,7 @@ export class DiarioDeBordoComponent implements OnInit {
       (console.log("Erro ao cadastrar informações", err));
     })
   }
+
 
 
 
@@ -97,5 +83,6 @@ export class DiarioDeBordoComponent implements OnInit {
             }
           }
         }
+        
 
 }
