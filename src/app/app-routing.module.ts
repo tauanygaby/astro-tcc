@@ -11,6 +11,7 @@ import { FichamentoComponent } from './modules/fichamento/fichamento.component';
 import { GerenciadorTarefasComponent } from './modules/gerenciadorTarefas/gerenciador-tarefas.component';
 import { HomeComponent } from './modules/home/pages/home.component';
 import { LoginComponent } from './modules/login/login.component';
+import { MeusProjetosComponent } from './modules/meus-projetos/meus-projetos.component';
 import { ModelosPreDefinidosComponent } from './modules/modelos-pre-definidos/modelos-pre-definidos.component';
 import { PlanoDePesquisaComponent } from './modules/plano-de-pesquisa/plano-de-pesquisa.component';
 import { UserComponent } from './modules/user/user.component';
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'diarioDeBordo', component: DiarioDeBordoComponent, canActivate: [AuthGuard] },
   { path: 'planoDePesquisa', component: PlanoDePesquisaComponent, canActivate: [AuthGuard] },
   { path: 'fichamento', component: FichamentoComponent, canActivate: [AuthGuard] },
+  { path: 'meusTrabalhos', component: MeusProjetosComponent, canActivate: [AuthGuard] },
   { path: 'modeloDefinido', component: ModelosPreDefinidosComponent, canActivate: [AuthGuard] },
   { path: 'trello', component: GerenciadorTarefasComponent, canActivate: [AuthGuard] },
   { path: 'login', component: LoginComponent},
