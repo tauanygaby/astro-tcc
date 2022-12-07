@@ -2,7 +2,7 @@ export interface Tag {
     name: string;
     color?: string;
 }
-export interface Task {
+export interface Tal {
     id: number;
     descricao: string;
     tipo: Tag[]
@@ -25,11 +25,30 @@ export enum IssueType {
 
 export interface Trello {
     titulo: string;
-    tasks: Task[];
+    tasks: Talk[];
     id: string;
 }
 
 export interface Board {
     title: string;
     trello: Trello[];
+}
+export interface Talk {
+    text: string;
+    speaker?: string;
+    tags?: Tag[]
+    image?: string;
+    createdAt?: Date;
+    issueType?: IssueType;
+}
+
+export interface Track {
+    title: string;
+    talks: Talk[];
+    id: string;
+}
+
+export interface Board {
+    title: string;
+    tracks: Track[];
 }

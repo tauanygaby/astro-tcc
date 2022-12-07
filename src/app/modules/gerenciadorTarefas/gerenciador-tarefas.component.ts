@@ -4,8 +4,8 @@ import { MatDialog } from '@angular/material';
 import { DeleteTalkComponent } from 'src/app/delete-talk/delete-talk.component';
 import { EditTalkComponent } from 'src/app/edit-talk/edit-talk.component';
 import { BoardService } from 'src/app/service/board.service';
-import { Board, Trello } from '../schema.model';
-import { Task } from './../schema.model';
+import { Board } from '../schema.model';
+import { Talk, Track } from './../schema.model';
 @Component({
   selector: 'app-gerenciador-tarefas',
   templateUrl: './gerenciador-tarefas.component.html',
@@ -23,10 +23,13 @@ export class GerenciadorTarefasComponent implements OnInit {
   }
 
   trackIds(boardIndex): string[] {
-    return this.boards[boardIndex].trello.map(track => track.id);
+    return this.boards[boardIndex].tracks.map(track => track.id);
   }
 
-  onTalkDrop(event: CdkDragDrop<Task[]>) {
+  onTalkDrop(event: CdkDragDrop<Talk[]>) {
+    // In case the destination container is different from the previous container, we
+    // need to transfer the given talk to the target data array. This happens if
+    // a talk has been dropped on a different track.
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
     } else {
@@ -37,29 +40,35 @@ export class GerenciadorTarefasComponent implements OnInit {
     }
   }
 
-  onTrackDrop(event: CdkDragDrop<Trello[]>) {
+  onTrackDrop(event: CdkDragDrop<Track[]>) {
     moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
   }
 
-  addEditTalk(task: Task, trello: Trello, edit = false) {
-    this._dialog.open(EditTalkComponent, {data: {task, edit}, width: '500px'})
+  addEditTalk(talk: Talk, track: Track, edit = false) {
+    // Use the injected dialog service to launch the previously created edit-talk
+    // component. Once the dialog closes, we assign the updated talk data to
+    // the specified talk.
+    this._dialog.open(EditTalkComponent, {data: {talk, edit}, width: '500px'})
       .afterClosed()
-      .subscribe(newTalkData => edit ? Object.assign(task, newTalkData) : trello.tasks.unshift(newTalkData));
+      .subscribe(newTalkData => edit ? Object.assign(talk, newTalkData) : track.talks.unshift(newTalkData));
   }
 
-  deleteTalk(talk: Task, track: Trello) {
+  deleteTalk(talk: Talk, track: Track) {
+    // Open a dialog
     this._dialog.open(DeleteTalkComponent, {data: talk, width: '500px'})
       .afterClosed()
       .subscribe(response => {
+        // Wait for it to close and delete the talk if the user agreed.
         if (response) {
-          track.tasks.splice(track.tasks.indexOf(talk), 1);
+          track.talks.splice(track.talks.indexOf(talk), 1);
         }
       });
   }
 
-  // filterByDate(talks, asc = 1) {
-  //   talks = [...talks.sort((a: any, b: any) => (asc) * (new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()))];
-  //   console.log(talks);
-  // }
+  
+  filterByDate(talks, asc = 1) {
+    talks = [...talks.sort((a: any, b: any) => (asc) * (new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()))];
+    console.log(talks);
+  }
 
 }
