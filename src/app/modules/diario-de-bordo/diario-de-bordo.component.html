@@ -108,7 +108,11 @@
           <table class="table">
   
             <tr>
-              <th class="columnTarefa">Subtitulo</th>
+              <th class="columnTarefa">Titulo do registro</th>
+              <th class="columnTarefa">Registro</th>
+              <th class="columnTarefa">Foto do registro</th>
+              <th class="columnTarefa">Quem fez </th>
+              <th class="columnTarefa">Quando</th>
             </tr>
   
           </table>
@@ -118,16 +122,12 @@
           <table class="table">
             <tbody>
               <tr>
-                <td class="columnTarefa" name="subtitulo">{{diarioDeBordo.subtitulocapa}}</td>
-              
-                <div class="icones">
-                  <button class="icone">
-                    <i class="fa-regular fa-pen-to-square"></i>&nbsp;
-                  </button>
-                  <button class="icone">
-                    <i class="fa-solid fa-trash"></i>&nbsp;
-                  </button>
-                </div>
+                <td class="columnTarefa" name="tituloRegistro">{{diarioDeBordo.tituloregis}}</td>
+                <td class="columnTarefa" name="data">{{diarioDeBordo.dataregis}}</td>
+                <td class="columnTarefa" name="integrantes">{{diarioDeBordo.integrantesregis}}</td>
+                <td class="columnTarefa" name="registro">{{diarioDeBordo.registro}}</td>
+                <td class="columnTarefa" name="img">{{inputFileChange($event)}}</td>
+                
               </tr>
             </tbody>
             

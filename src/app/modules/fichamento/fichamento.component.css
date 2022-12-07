@@ -1,0 +1,222 @@
+
+
+.capa {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    background: linear-gradient(to right, #3E8AFF, #BBDEFF);
+  }
+  
+  
+  .hearder{
+    width: 100%;
+  }
+  
+  .card-diario{
+    margin-left: 25%;
+    margin-top: 20px;
+    width: 50%;
+    height: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    background: rgba(255, 255, 255, 0.672);
+    /*background: rgba(180, 142, 227, 0.72);*/
+    backdrop-filter: blur(25px);
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #101010b0;
+  }
+  
+  .itens_marcacao{
+    align-items: center;
+    text-align: center;
+  }
+  
+  .titulo{
+  font-size: 26px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  .subtitulo{
+    margin-bottom: 100px;
+    font-size: 20px;
+    width: 100%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: none;
+    outline: none;
+    text-align: center
+  }
+  
+  img {
+    background-color: #aaa;
+    width: 400px;
+    height: 400px;
+  }
+  
+  .columnTarefa{
+    width: 10%;
+    text-align: left;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+   
+  }
+  
+  .picture{
+    
+  }
+  .instituicao{
+    margin-top: 130px;
+    font-size: 20px;
+    width: 100%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: none;
+    outline: none;
+    text-align: center;
+  }
+  .botaoAdd2{
+    background-color: #ae6491;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+    text-align: center;
+    border: none;
+    margin-left: 85%;
+    margin-top: 170px;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+  }
+  
+  .botaoAdd{
+    font-size: 30px;
+    padding: 20px;
+    width: 100%;
+    cursor:pointer;
+    z-index: 9;
+  }
+  .capa h1{
+  color: #fff;
+  position: absolute;
+  padding: 15px;
+  margin-top: 75px;
+  font-family:Helvetica;
+  }
+  
+  #menu-h ul{ /*alinhamento*/
+    list-style: none; /*tira a bolinha de link*/
+    padding: 0;
+    background: rgb(14, 8, 57);
+    overflow: hidden;
+    align-items: unset;
+    margin: 0;
+  }
+  #menu-h ul li { /*alinhamento*/
+    list-style: none; /*tira a bolinha de link*/
+    display: inline-block; /*alinha*/
+    transition: background .4s;
+    padding: 0 20px;
+  }
+  #menu-h ul li a { /*alinhamento*/
+    padding: 10px;
+    color: #D9D9D9;
+    text-decoration: none;
+    display: block;
+  }
+  #menu-h ul li:hover { /*alinhamento*/
+    background-color: #6f1470;
+  }
+  
+  .menu{
+    background-color: transparent;
+    color: white;
+    border: 0;
+    position: absolute;
+    right: 10px;
+    top: 14px;
+    display: none;
+    height: 100%;
+  }
+  #menu-h {
+    margin: 0;
+    display: flex;
+    position: relative;
+    width: 100%;
+  }
+  .menu-link {
+    margin: 10px;
+  }
+  a {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    margin-left: 10px;
+    text-decoration: none;
+  }
+  .logo {
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+  }
+  
+  @media only screen and (max-width: 760px){
+    .main-login{
+        flex-direction: column;
+    }
+    .left-login > h1 {
+        display: none;
+    }
+    .left-login{
+        width: 100%;
+        height: auto;
+    }
+    .left-login-image{
+        width: 50vw;
+    }
+  
+    .card-login{
+        width: 90%;
+    }
+    #menu-h ul:hover{
+        height: 160px;
+    }
+    .logo {
+        font-size: 32px;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+      }
+      #menu-h ul{
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        align-items: unset;
+        margin: 0;
+        height: 0;
+     }
+     #menu-h ul li{
+        justify-content: center;
+        list-style: none;
+     }
+     #menu-h ul li a{
+        display: inline-block;
+        margin: 0;
+     }
+     #menu-h{
+        padding: 0;
+        display: contents;
+        align-items: unset;
+        justify-content: center;
+        align-items: center;
+     }
+     .menu{
+        align-items: unset;
+        display: flex;
+     }
+     header{
+        background: rgb(14, 8, 57);
+     }
+  
+  }
+  

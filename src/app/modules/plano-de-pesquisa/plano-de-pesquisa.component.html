@@ -1,1 +1,203 @@
-<p>plano-de-pesquisa works!</p>
+<body>
+
+  <header class="header">
+    <nav id="menu-h">
+      <a class="logo" href="/">Astro</a>
+      <ul class="icone">
+        <button class="menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="35" height="30" fill="currentColor" class="bi bi-justify"
+            style="padding: 0" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z" />
+          </svg>
+        </button>
+        <li><a href="/home">Inicio</a></li>
+        <li><a href="/ferramentas">Ferramentas</a></li>
+        <li><a href="">Meu perfil</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <div class="geral">
+    <div class="capa">
+      <i class="left"></i>
+      <h1>Plano de pesquisa</h1>
+    </div>
+    <div>
+      <div class="card-diario">
+        <div class="itens_marcacao">
+          <div>
+            <label class="titulo1">Plano de pesquisa</label>
+          </div>
+          <div>
+            <textarea class="textAreaTitulo" name="msg" id="msg" placeholder="Instituição. Ex.: Colégio Técnico de Campinas - Cotuca
+            Desenvolvimento de sistemas
+            "></textarea>
+          </div>
+
+          <div>
+            <img [src]="url"><br>
+              <input type="file" name="picture__input" alt="Imagem de capa" accept="image/*" class="picture" id="picture__input" (change)="inputFileChange($event)"/>
+          </div>
+
+          <div>
+            <div>
+              <label class="titulo1">Titulo</label>
+            </div>
+            <div>
+              <textarea class="textAreaTitulo" name="msg" id="msg" placeholder="Seu titulo. Ex.: Astro: Sistema web gerenciador de Trabalhos de Conclusão de Curso(TCC)"></textarea>
+            </div>
+          </div>
+          <div>
+            <div>
+              <label class="titulo1">Integrantes</label>
+            </div>
+              <textarea class="textAreaTitulo" name="msg" id="msg"
+               placeholder="Integrantes
+  Nome, RA
+              "></textarea>
+          </div>
+          <div>
+            <div>
+              <label class="titulo1">Orientador(a)</label>
+            </div>
+            
+            <textarea class="textAreaTitulo" name="msg" id="msg" placeholder="Orientador(a)"></textarea>
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="card-diario">
+        <div class="itens_marcacao">
+          <div>
+            <div>
+              <label class="titulo1">Sumário</label>
+            </div>
+            
+            <textarea class="textAreaSum" name="msg" id="msg" 
+            placeholder="Sumário do trabalho
+            Ex.:
+            Introdução                                                                                                                    1
+            Objetivo Geral                                                                                                              2
+            Problema                                                                                                                     2
+            Introdução                                                                                                                    1
+            Objetivo Geral                                                                                                              2
+            Problema                                                                                                                     2
+            Cronograma                                                                                                                 
+"></textarea>
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="card-diario">
+        <div class="itens_marcacao">
+          <textarea class="textArea" name="msg" id="msg" 
+          placeholder="Titulo de inicio
+          Ex.: Astro: Sistema web gerenciador de Trabalhos de Conclusão de Curso(TCC)"></textarea>
+        <div>
+          <div>
+            <label class="titulo1">Introdução</label>
+          </div>
+
+          <div>
+            <textarea class="textArea" name="msg" id="msg" placeholder="Introdução"></textarea>
+          </div>
+        </div>
+        <div>
+          <div>
+            <label class="titulo1">Objetivo geral</label>
+          </div>
+          <div>
+            <textarea class="textArea" name="msg" id="msg" placeholder="Objetivo geral"></textarea>
+          </div>     
+        </div>
+
+        <div>
+          <div>
+            <label class="titulo1">Problema</label>
+          </div>
+          <div>
+            <textarea class="textArea" name="msg" id="msg" placeholder="Problema"></textarea>
+          </div>
+        </div>
+
+        <div>
+          <div>
+            <label class="titulo1">Cronograma</label>
+          </div>
+          <div>
+            <textarea class="textArea" name="msg" id="msg" placeholder="Cronograma"></textarea>
+          </div>
+        </div>
+
+        <div>
+          <div>
+            <label class="titulo1">Justificativa</label>
+          </div>
+          <div>
+            <textarea class="textArea" name="msg" id="msg" placeholder="Justificativa"></textarea>
+          </div>
+          
+        </div>
+
+        <div>
+          <div>
+            <label class="titulo1">Hipótese</label>
+          </div>
+          <div>
+            <textarea class="textArea" name="msg" id="msg" placeholder="Hipótese"></textarea>
+          </div>
+          
+        </div>
+
+        <div>
+          <div>
+            <label class="titulo1">Materiais</label>
+          </div>
+          <div>
+            <textarea class="textArea" name="msg" id="msg" placeholder="Materiais"></textarea>
+          </div>
+          
+        </div>
+
+        <div>
+          <div>
+            <label class="titulo1">Metodologias</label>
+          </div>
+          <div>
+            <textarea class="textArea" name="msg" id="msg" placeholder="Metodologias"></textarea>
+          </div>
+          
+        </div>
+        </div>
+      </div>
+
+      <div class="card-diario">
+        <div class="itens_marcacao">
+          <div>
+            <div>
+              <label class="titulo1">Referências</label>
+            </div>
+            <textarea class="textAreaRef" name="msg" id="msg" 
+            placeholder="Referências. 
+  Ex.: GUIA 2: Gestão de Tempo e Trabalho em Equipe. Decola Beta, [S. l.], v. 7, n. 3, p. 3-31, 2018. E-book (32 p.).
+GUIA 7: Plano de Pesquisa. Decola Beta, [S. l.], v. 7, n. 3, p. 3-28, 2018. E-book (29 p.).
+            "></textarea>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <button type="submit" class="btn-login" (click)="cadastrarDiario()">Salvar</button>
+  </div>
+  <div>
+  </div>
+
+
+  <div class="registro">
+  </div>
+
+</body>

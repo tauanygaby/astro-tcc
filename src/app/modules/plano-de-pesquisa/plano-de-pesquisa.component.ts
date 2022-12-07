@@ -12,4 +12,16 @@ export class PlanoDePesquisaComponent implements OnInit {
   ngOnInit() {
   }
 
+      //img
+      url="././assets/img/imagemDeCapa.png";
+      inputFileChange(event){
+        if (event.target.files){
+          var reader = new FileReader();
+          reader.readAsDataURL(event.target.files[0]);
+          reader.onload=(event:any)=>{
+            this.url=event.target.result;
+              }
+            }
+          }
+
 }
