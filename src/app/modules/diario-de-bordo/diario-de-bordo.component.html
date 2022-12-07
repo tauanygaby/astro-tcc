@@ -25,12 +25,14 @@
           <i class="left"></i>
           <div class="menu"></div>
           <h1>Diário de bordo</h1>
-          <div>
-            <button type="button" class="botaoAdd2" (click)="openModal(template)">+</button>
-          </div>
-          <div>
-            <button type="button" class="botaoAdd2" (click)="openModal(temp)">+</button>
-          </div>
+          <button class="botaoPrinter" (click)="onExport()"> [?]
+          </button>
+         <div>
+          <button type="button" class="botaoAdd2" (click)="openModal(template)">+</button>
+          <button type="button" class="botaoAdd2" (click)="openModal(temp)">+</button>
+         </div>
+            
+          
         </div>
 
         <div>
@@ -109,10 +111,10 @@
   
             <tr>
               <th class="columnTarefa">Titulo do registro</th>
-              <th class="columnTarefa">Registro</th>
-              <th class="columnTarefa">Foto do registro</th>
+              <th class="columnTarefa">Data</th>
               <th class="columnTarefa">Quem fez </th>
-              <th class="columnTarefa">Quando</th>
+              <th class="columnTarefa">Registro </th>
+              <th class="columnTarefa">Foto do registro</th>
             </tr>
   
           </table>
@@ -124,8 +126,9 @@
               <tr>
                 <td class="columnTarefa" name="tituloRegistro">{{diarioDeBordo.tituloregis}}</td>
                 <td class="columnTarefa" name="data">{{diarioDeBordo.dataregis}}</td>
-                <td class="columnTarefa" name="integrantes">{{diarioDeBordo.integrantesregis}}</td>
                 <td class="columnTarefa" name="registro">{{diarioDeBordo.registro}}</td>
+                <td class="columnTarefa" name="integrantes">{{diarioDeBordo.integrantesregis}}</td>
+                
                 <td class="columnTarefa" name="img">{{inputFileChange($event)}}</td>
                 
               </tr>
